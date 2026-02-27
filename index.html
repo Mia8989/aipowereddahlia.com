@@ -2011,7 +2011,7 @@
             var lw = img.width * logoScale;
             var lh = img.height * logoScale;
             var logoX = (c.width - lw) / 2;
-            var logoY = (c.height - lh) / 2 - 60;
+            var logoY = (c.height - lh) / 2 - 40;
             ctx.drawImage(img, logoX, logoY, lw, lh);
 
             // Draw "AI POWERED DAHLIA" text same width as logo, right underneath
@@ -2022,10 +2022,9 @@
             var fontSize = 60;
             ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
             var textWidth = ctx.measureText('AI POWERED DAHLIA').width;
-            // Scale font to match logo width
             fontSize = Math.floor(fontSize * (lw * 0.95) / textWidth);
             ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
-            var textY = logoY + lh + 20;
+            var textY = logoY + lh - 65;
             ctx.fillText('AI POWERED DAHLIA', c.width / 2, textY);
 
             app.loadImage(c.toDataURL('image/png'));
