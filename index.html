@@ -241,13 +241,14 @@
             align-items: center;
             gap: 10px;
         }
-        .nav-logo img { height: 38px; width: auto; }
+        .nav-logo img { height: 32px; width: auto; }
         .nav-logo-text {
             font-family: 'Clash Display', sans-serif;
             font-weight: 600;
             font-size: 1rem;
             color: var(--text-primary);
             letter-spacing: -0.01em;
+            white-space: nowrap;
         }
         .nav-links {
             display: flex;
@@ -687,7 +688,7 @@
             grid-template-areas: "stack";
             place-items: center;
             margin-top: 72px;
-            padding-bottom: 40px;
+            padding-bottom: 120px;
         }
         .li-card {
             grid-area: stack;
@@ -702,7 +703,7 @@
             backdrop-filter: blur(12px);
             transform: skewY(-8deg);
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            cursor: pointer;
+            cursor: default;
             text-decoration: none;
             color: inherit;
             position: relative;
@@ -730,7 +731,7 @@
             transition: opacity 0.5s;
             pointer-events: none;
         }
-        .li-card:nth-child(1):hover { filter: grayscale(0); transform: skewY(-8deg) translateY(-10px); }
+        .li-card:nth-child(1):hover { filter: grayscale(0); transform: skewY(-8deg) translateY(-10px); z-index: 10; }
         .li-card:nth-child(1):hover::after { opacity: 0; }
         .li-card:nth-child(1):hover::before { opacity: 1; }
         /* Card 2 (middle) */
@@ -747,7 +748,7 @@
             transition: opacity 0.5s;
             pointer-events: none;
         }
-        .li-card:nth-child(2):hover { filter: grayscale(0); transform: skewY(-8deg) translate(64px, 30px); }
+        .li-card:nth-child(2):hover { filter: grayscale(0); transform: skewY(-8deg) translate(64px, 30px); z-index: 10; }
         .li-card:nth-child(2):hover::after { opacity: 0; }
         .li-card:nth-child(2):hover::before { opacity: 1; }
         /* Card 3 (front) */
@@ -756,15 +757,15 @@
         }
         .li-card:nth-child(3):hover { transform: skewY(-8deg) translate(128px, 70px); }
         .li-card:nth-child(3)::before { opacity: 1; }
-        /* Spread on back-card hover */
+        /* Spread on back-card hover — push siblings far enough to reveal full content */
         .testimonials-stack:has(.li-card:nth-child(1):hover) .li-card:nth-child(2) {
-            transform: skewY(-8deg) translate(96px, 128px);
+            transform: skewY(-8deg) translate(96px, 160px);
         }
         .testimonials-stack:has(.li-card:nth-child(1):hover) .li-card:nth-child(3) {
-            transform: skewY(-8deg) translate(160px, 176px);
+            transform: skewY(-8deg) translate(160px, 220px);
         }
         .testimonials-stack:has(.li-card:nth-child(2):hover) .li-card:nth-child(3) {
-            transform: skewY(-8deg) translate(160px, 160px);
+            transform: skewY(-8deg) translate(160px, 200px);
         }
         /* Card inner */
         .li-card-header {
@@ -822,6 +823,11 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+        .li-card:hover .li-card-body {
+            -webkit-line-clamp: unset;
+            display: block;
+            overflow: visible;
+        }
         .li-card-footer {
             display: flex;
             align-items: center;
@@ -870,13 +876,13 @@
                 transform: skewY(-6deg) translateY(-10px);
             }
             .testimonials-stack:has(.li-card:nth-child(1):hover) .li-card:nth-child(2) {
-                transform: skewY(-6deg) translate(40px, 68px);
+                transform: skewY(-6deg) translate(40px, 100px);
             }
             .testimonials-stack:has(.li-card:nth-child(1):hover) .li-card:nth-child(3) {
-                transform: skewY(-6deg) translate(72px, 96px);
+                transform: skewY(-6deg) translate(72px, 140px);
             }
             .testimonials-stack:has(.li-card:nth-child(2):hover) .li-card:nth-child(3) {
-                transform: skewY(-6deg) translate(72px, 84px);
+                transform: skewY(-6deg) translate(72px, 120px);
             }
             .li-avatar { width: 36px; height: 36px; }
             .li-name { font-size: 0.82rem; }
@@ -1077,7 +1083,7 @@
 
         @media (max-width: 768px) {
             section { padding: 96px 0; }
-            .nav-logo img { height: 34px; }
+            .nav-logo img { height: 30px; }
 
             .hamburger { display: flex; }
             .nav-links {
@@ -1473,7 +1479,7 @@
             <h2 class="section-heading">Don't Take Our Word for It.</h2>
             <div class="testimonials-stack gs-reveal">
                 <!-- Card 1 (back) -->
-                <a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener" class="li-card">
+                <div class="li-card">
                     <div class="li-card-header">
                         <div class="li-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&fit=crop&crop=face" alt="Jessica M."></div>
                         <div class="li-meta">
@@ -1482,7 +1488,7 @@
                         </div>
                         <svg class="li-icon" width="20" height="20" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
                     </div>
-                    <p class="li-card-body">Dahlia's team automated our entire content pipeline. What used to take 20 hours a week now runs on autopilot. Game changer.</p>
+                    <p class="li-card-body">AI Powered Dahlia automated our entire content pipeline from strategy to posting. What used to take our team 20+ hours a week now runs on complete autopilot. Genuinely a game changer for our brand.</p>
                     <div class="li-card-footer">
                         <span>Dec 2025</span>
                         <div class="li-reactions">
@@ -1490,9 +1496,9 @@
                             <span class="li-reaction"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> 8</span>
                         </div>
                     </div>
-                </a>
+                </div>
                 <!-- Card 2 (middle) -->
-                <a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener" class="li-card">
+                <div class="li-card">
                     <div class="li-card-header">
                         <div class="li-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=face" alt="Marcus T."></div>
                         <div class="li-meta">
@@ -1501,7 +1507,7 @@
                         </div>
                         <svg class="li-icon" width="20" height="20" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
                     </div>
-                    <p class="li-card-body">We hired Dahlia to build our AI agent for lead qualification. It now handles 80% of inbound so our sales team only talks to qualified prospects.</p>
+                    <p class="li-card-body">We hired Dahlia's team to build a custom AI agent for lead qualification. It now handles 80% of our inbound so the sales team only talks to qualified prospects. ROI was immediate.</p>
                     <div class="li-card-footer">
                         <span>Jan 2026</span>
                         <div class="li-reactions">
@@ -1509,9 +1515,9 @@
                             <span class="li-reaction"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> 14</span>
                         </div>
                     </div>
-                </a>
+                </div>
                 <!-- Card 3 (front) -->
-                <a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener" class="li-card">
+                <div class="li-card">
                     <div class="li-card-header">
                         <div class="li-avatar"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=96&h=96&fit=crop&crop=face" alt="Priya S."></div>
                         <div class="li-meta">
@@ -1520,7 +1526,7 @@
                         </div>
                         <svg class="li-icon" width="20" height="20" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
                     </div>
-                    <p class="li-card-body">The SEO + AEO strategy alone tripled our organic traffic in 4 months. Dahlia doesn't just consult, she builds the systems and they work.</p>
+                    <p class="li-card-body">The SEO + AEO strategy AI Powered Dahlia built tripled our organic traffic in 4 months. Dahlia doesn't just consult, she builds the systems and they actually work. Best investment we made this year.</p>
                     <div class="li-card-footer">
                         <span>Feb 2026</span>
                         <div class="li-reactions">
@@ -1528,7 +1534,7 @@
                             <span class="li-reaction"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> 23</span>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
