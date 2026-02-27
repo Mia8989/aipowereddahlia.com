@@ -888,7 +888,7 @@
             min-height: 500px;
             max-height: 720px;
             overflow: hidden;
-            background: #000;
+            background: var(--bg-primary);
         }
         .liquid-section canvas {
             position: absolute;
@@ -903,28 +903,30 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
+            padding-bottom: 64px;
             z-index: 2;
             pointer-events: none;
         }
         .liquid-logo-text {
             font-family: 'Clash Display', 'Satoshi', sans-serif;
             font-weight: 600;
-            font-size: clamp(1.6rem, 4vw, 2.8rem);
-            letter-spacing: 0.06em;
+            font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+            letter-spacing: 0.08em;
             color: #fff;
-            text-shadow: 0 2px 24px rgba(0,0,0,0.4);
-            margin-top: 16px;
-            opacity: 0.92;
+            text-transform: uppercase;
         }
         @media (max-width: 768px) {
             .liquid-section {
                 height: 60vh;
                 min-height: 360px;
             }
+            .liquid-overlay {
+                padding-bottom: 40px;
+            }
             .liquid-logo-text {
-                font-size: 1.3rem;
-                letter-spacing: 0.04em;
+                font-size: 1.1rem;
+                letter-spacing: 0.06em;
             }
         }
 
@@ -1491,7 +1493,9 @@
     <!-- LIQUID EFFECT -->
     <section class="liquid-section" id="liquid">
         <canvas id="liquid-canvas"></canvas>
-        <!-- Text overlay removed - logo contains text already -->
+        <div class="liquid-overlay">
+            <span class="liquid-logo-text">AI Powered Dahlia</span>
+        </div>
     </section>
 
     <!-- CTA -->
@@ -1944,7 +1948,26 @@
     var canvas = document.getElementById('liquid-canvas');
     if (canvas) {
         var app = LiquidBackground(canvas);
-        app.loadImage('https://aipowereddahlia.com/assets/images/logo-white.png');
+        // Composite white logo onto black background before loading
+        var img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = function() {
+            var c = document.createElement('canvas');
+            c.width = 1024;
+            c.height = 1024;
+            var ctx = c.getContext('2d');
+            // Black background matching site
+            ctx.fillStyle = '#0A0A0A';
+            ctx.fillRect(0, 0, c.width, c.height);
+            // Center logo on the canvas
+            var scale = Math.min(c.width * 0.6 / img.width, c.height * 0.6 / img.height);
+            var w = img.width * scale;
+            var h = img.height * scale;
+            ctx.drawImage(img, (c.width - w) / 2, (c.height - h) / 2, w, h);
+            // Feed composited image to liquid effect
+            app.loadImage(c.toDataURL('image/png'));
+        };
+        img.src = 'assets/images/logo-white.png';
         app.liquidPlane.material.metalness = 0.75;
         app.liquidPlane.material.roughness = 0.25;
         app.liquidPlane.uniforms.displacementScale.value = 5;
