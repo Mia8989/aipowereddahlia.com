@@ -618,6 +618,213 @@
             color: var(--text-muted);
         }
 
+        /* ===== LINKEDIN TESTIMONIALS ===== */
+        .testimonials {
+            background: var(--bg-elevated);
+            overflow: hidden;
+        }
+        .testimonials-stack {
+            display: grid;
+            grid-template-areas: "stack";
+            place-items: center;
+            margin-top: 72px;
+            padding-bottom: 40px;
+        }
+        .li-card {
+            grid-area: stack;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            min-height: 200px;
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid var(--border-default);
+            background: rgba(22, 22, 22, 0.9);
+            backdrop-filter: blur(12px);
+            transform: skewY(-8deg);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+        .li-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(92, 225, 230, 0.03), rgba(140, 82, 255, 0.03));
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+        /* Card 1 (back) */
+        .li-card:nth-child(1) {
+            filter: grayscale(100%);
+        }
+        .li-card:nth-child(1)::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            background: rgba(10, 10, 10, 0.55);
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+        .li-card:nth-child(1):hover { filter: grayscale(0); transform: skewY(-8deg) translateY(-10px); }
+        .li-card:nth-child(1):hover::after { opacity: 0; }
+        .li-card:nth-child(1):hover::before { opacity: 1; }
+        /* Card 2 (middle) */
+        .li-card:nth-child(2) {
+            transform: skewY(-8deg) translate(64px, 40px);
+            filter: grayscale(100%);
+        }
+        .li-card:nth-child(2)::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            background: rgba(10, 10, 10, 0.55);
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+        .li-card:nth-child(2):hover { filter: grayscale(0); transform: skewY(-8deg) translate(64px, 30px); }
+        .li-card:nth-child(2):hover::after { opacity: 0; }
+        .li-card:nth-child(2):hover::before { opacity: 1; }
+        /* Card 3 (front) */
+        .li-card:nth-child(3) {
+            transform: skewY(-8deg) translate(128px, 80px);
+        }
+        .li-card:nth-child(3):hover { transform: skewY(-8deg) translate(128px, 70px); }
+        .li-card:nth-child(3)::before { opacity: 1; }
+        /* Spread on back-card hover */
+        .testimonials-stack:has(.li-card:nth-child(1):hover) .li-card:nth-child(2) {
+            transform: skewY(-8deg) translate(96px, 128px);
+        }
+        .testimonials-stack:has(.li-card:nth-child(1):hover) .li-card:nth-child(3) {
+            transform: skewY(-8deg) translate(160px, 176px);
+        }
+        .testimonials-stack:has(.li-card:nth-child(2):hover) .li-card:nth-child(3) {
+            transform: skewY(-8deg) translate(160px, 160px);
+        }
+        /* Card inner */
+        .li-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .li-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-brand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .li-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .li-meta { flex: 1; min-width: 0; }
+        .li-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .li-badge {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+        .li-title {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        .li-icon {
+            flex-shrink: 0;
+            color: #0a66c2;
+        }
+        .li-card-body {
+            font-size: 0.9rem;
+            line-height: 1.65;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .li-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: auto;
+        }
+        .li-reactions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .li-reaction {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        /* Mobile */
+        @media (max-width: 768px) {
+            .testimonials-stack {
+                margin-top: 48px;
+                place-items: start;
+            }
+            .li-card {
+                width: min(260px, 72vw);
+                min-height: 160px;
+                padding: 18px;
+            }
+            .li-card:nth-child(2) {
+                transform: skewY(-6deg) translate(28px, 24px);
+            }
+            .li-card:nth-child(2):hover {
+                transform: skewY(-6deg) translate(28px, 14px);
+            }
+            .li-card:nth-child(3) {
+                transform: skewY(-6deg) translate(56px, 48px);
+            }
+            .li-card:nth-child(3):hover {
+                transform: skewY(-6deg) translate(56px, 38px);
+            }
+            .li-card:nth-child(1) {
+                transform: skewY(-6deg);
+            }
+            .li-card:nth-child(1):hover {
+                transform: skewY(-6deg) translateY(-10px);
+            }
+            .testimonials-stack:has(.li-card:nth-child(1):hover) .li-card:nth-child(2) {
+                transform: skewY(-6deg) translate(40px, 68px);
+            }
+            .testimonials-stack:has(.li-card:nth-child(1):hover) .li-card:nth-child(3) {
+                transform: skewY(-6deg) translate(72px, 96px);
+            }
+            .testimonials-stack:has(.li-card:nth-child(2):hover) .li-card:nth-child(3) {
+                transform: skewY(-6deg) translate(72px, 84px);
+            }
+            .li-avatar { width: 36px; height: 36px; }
+            .li-name { font-size: 0.82rem; }
+            .li-title { font-size: 0.7rem; }
+            .li-card-body { font-size: 0.78rem; -webkit-line-clamp: 3; }
+        }
+
         /* ===== ABOUT ===== */
         .about {
             background: var(--bg-elevated);
@@ -1124,6 +1331,73 @@
                 </div>
             </div>
             <p class="results-disclaimer">Results vary by engagement. Figures reflect combined outcomes across all active client accounts.</p>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <p class="section-label">What Clients Say</p>
+            <h2 class="section-heading">Don't Take Our Word for It.</h2>
+            <div class="testimonials-stack gs-reveal">
+                <!-- Card 1 (back) -->
+                <a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener" class="li-card">
+                    <div class="li-card-header">
+                        <div class="li-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&fit=crop&crop=face" alt="Jessica M."></div>
+                        <div class="li-meta">
+                            <div class="li-name">Jessica M. <svg class="li-badge" viewBox="0 0 16 16" fill="#0a66c2"><path d="M13.5 2h-11A.5.5 0 002 2.5v11a.5.5 0 00.5.5h11a.5.5 0 00.5-.5v-11a.5.5 0 00-.5-.5zM6 12H4V6.5h2V12zm-1-6.3a1.15 1.15 0 110-2.3 1.15 1.15 0 010 2.3zM12 12h-2V9.2c0-.7-.3-1.2-.9-1.2-.5 0-.8.3-.9.7V12H6.2V6.5h1.9v.7c.3-.4.8-.8 1.6-.8 1.2 0 2.1.8 2.1 2.4V12z"/></svg></div>
+                            <div class="li-title">CEO, Boutique Wellness Brand</div>
+                        </div>
+                        <svg class="li-icon" width="20" height="20" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+                    </div>
+                    <p class="li-card-body">Dahlia's team automated our entire content pipeline. What used to take 20 hours a week now runs on autopilot. Game changer.</p>
+                    <div class="li-card-footer">
+                        <span>Dec 2025</span>
+                        <div class="li-reactions">
+                            <span class="li-reaction"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/></svg> 47</span>
+                            <span class="li-reaction"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> 8</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Card 2 (middle) -->
+                <a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener" class="li-card">
+                    <div class="li-card-header">
+                        <div class="li-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=face" alt="Marcus T."></div>
+                        <div class="li-meta">
+                            <div class="li-name">Marcus T. <svg class="li-badge" viewBox="0 0 16 16" fill="#0a66c2"><path d="M13.5 2h-11A.5.5 0 002 2.5v11a.5.5 0 00.5.5h11a.5.5 0 00.5-.5v-11a.5.5 0 00-.5-.5zM6 12H4V6.5h2V12zm-1-6.3a1.15 1.15 0 110-2.3 1.15 1.15 0 010 2.3zM12 12h-2V9.2c0-.7-.3-1.2-.9-1.2-.5 0-.8.3-.9.7V12H6.2V6.5h1.9v.7c.3-.4.8-.8 1.6-.8 1.2 0 2.1.8 2.1 2.4V12z"/></svg></div>
+                            <div class="li-title">Founder, SaaS Startup</div>
+                        </div>
+                        <svg class="li-icon" width="20" height="20" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+                    </div>
+                    <p class="li-card-body">We hired Dahlia to build our AI agent for lead qualification. It now handles 80% of inbound — our sales team only talks to qualified prospects.</p>
+                    <div class="li-card-footer">
+                        <span>Jan 2026</span>
+                        <div class="li-reactions">
+                            <span class="li-reaction"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/></svg> 89</span>
+                            <span class="li-reaction"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> 14</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Card 3 (front) -->
+                <a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener" class="li-card">
+                    <div class="li-card-header">
+                        <div class="li-avatar"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=96&h=96&fit=crop&crop=face" alt="Priya S."></div>
+                        <div class="li-meta">
+                            <div class="li-name">Priya S. <svg class="li-badge" viewBox="0 0 16 16" fill="#0a66c2"><path d="M13.5 2h-11A.5.5 0 002 2.5v11a.5.5 0 00.5.5h11a.5.5 0 00.5-.5v-11a.5.5 0 00-.5-.5zM6 12H4V6.5h2V12zm-1-6.3a1.15 1.15 0 110-2.3 1.15 1.15 0 010 2.3zM12 12h-2V9.2c0-.7-.3-1.2-.9-1.2-.5 0-.8.3-.9.7V12H6.2V6.5h1.9v.7c.3-.4.8-.8 1.6-.8 1.2 0 2.1.8 2.1 2.4V12z"/></svg></div>
+                            <div class="li-title">Marketing Director, Healthcare Org</div>
+                        </div>
+                        <svg class="li-icon" width="20" height="20" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+                    </div>
+                    <p class="li-card-body">The SEO + AEO strategy alone tripled our organic traffic in 4 months. Dahlia doesn't just consult — she builds the systems and they work.</p>
+                    <div class="li-card-footer">
+                        <span>Feb 2026</span>
+                        <div class="li-reactions">
+                            <span class="li-reaction"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/></svg> 156</span>
+                            <span class="li-reaction"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> 23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
