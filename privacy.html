@@ -6,15 +6,31 @@
     <title>Privacy Policy | AI Powered Dahlia</title>
     <meta name="description" content="Privacy Policy for AI Powered Dahlia. Learn how we collect, use, and protect your information.">
     <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://aipowereddahlia.com/privacy.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon-256.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon-256.png">
+
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
+        :root {
+            --bg-primary: #0A0A0A;
+            --bg-surface: #161616;
+            --text-primary: #F5F5F5;
+            --text-secondary: rgba(245,245,245,0.6);
+            --border-default: rgba(255,255,255,0.08);
+            --gradient-brand: linear-gradient(135deg, #5ce1e6, #8c52ff, #fbc5ff);
+        }
         body {
             font-family: 'Satoshi', sans-serif;
-            background: #0A0A0A;
-            color: #F5F5F5;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
         }
@@ -25,17 +41,66 @@
         /* Nav */
         .nav {
             position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(10, 10, 10, 0.85);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            background: rgba(10, 10, 10, 0.88);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border-default);
             padding: 16px 0;
         }
         .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
         .nav-logo img { height: 32px; width: auto; }
-        .nav-logo-text { font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: 1rem; color: #F5F5F5; white-space: nowrap; }
-        .nav-back { font-size: 0.9rem; color: rgba(245,245,245,0.6); transition: color 0.3s; }
-        .nav-back:hover { color: #5ce1e6; }
+        .nav-logo-text { font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: 1rem; color: var(--text-primary); white-space: nowrap; }
+        .nav-links {
+            display: flex; align-items: center; gap: 36px; list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.9rem; font-weight: 500; color: var(--text-secondary);
+            transition: color 0.2s; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 1px; background: var(--gradient-brand); transition: width 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--text-primary); opacity: 1; }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            padding: 10px 22px !important; font-size: 0.85rem !important;
+            background: var(--bg-surface) !important; color: var(--text-primary) !important;
+            font-weight: 600 !important; border-radius: 8px;
+            border: 1px solid transparent !important;
+            background-image: linear-gradient(var(--bg-surface), var(--bg-surface)), var(--gradient-brand) !important;
+            background-origin: border-box !important; background-clip: padding-box, border-box !important;
+        }
+        .nav-cta:hover {
+            box-shadow: 0 0 20px rgba(92, 225, 230, 0.15), 0 0 40px rgba(140, 82, 255, 0.1) !important;
+            transform: translateY(-1px);
+        }
+        .nav-cta::after { display: none !important; }
+
+        /* Nav Dropdown */
+        .nav-dropdown { position: relative; }
+        .nav-dropdown > a { cursor: default; }
+        .nav-dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+            background: rgba(17, 17, 17, 0.96); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--border-default); border-radius: 12px;
+            padding: 12px 0; min-width: 220px; margin-top: 12px; z-index: 101;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+        .nav-dropdown-menu a {
+            display: block; padding: 10px 20px; font-size: 0.88rem;
+            color: var(--text-secondary); transition: all 0.2s;
+        }
+        .nav-dropdown-menu a:hover { color: var(--text-primary); background: rgba(140, 82, 255, 0.06); }
+        .nav-dropdown-menu a::after { display: none; }
+
+        /* Hamburger */
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px;
+            cursor: pointer; background: none; border: none; padding: 4px;
+        }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--text-primary); transition: all 0.3s; }
 
         /* Content */
         .privacy-hero {
@@ -61,48 +126,99 @@
             font-size: 1.3rem;
             font-weight: 600;
             margin: 48px 0 16px;
-            color: #F5F5F5;
+            color: var(--text-primary);
         }
         .privacy-content h2:first-child { margin-top: 0; }
         .privacy-content p {
-            color: rgba(245,245,245,0.6);
+            color: var(--text-secondary);
             margin-bottom: 16px;
             font-size: 0.95rem;
         }
         .privacy-content ul {
-            color: rgba(245,245,245,0.6);
+            color: var(--text-secondary);
             margin: 0 0 16px 24px;
             font-size: 0.95rem;
         }
         .privacy-content li { margin-bottom: 8px; }
         .divider {
             border: none;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            border-top: 1px solid var(--border-default);
             margin: 48px 0;
         }
 
         /* Footer */
         .footer {
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding: 40px 0;
-            text-align: center;
+            padding: 56px 0 28px;
+            border-top: 1px solid transparent;
+            border-image: linear-gradient(90deg, transparent, rgba(92, 225, 230, 0.2), rgba(140, 82, 255, 0.2), rgba(251, 197, 255, 0.15), transparent) 1;
         }
-        .footer p {
-            color: rgba(245,245,245,0.4);
-            font-size: 0.8rem;
+        .footer-inner {
+            display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px;
+            margin-bottom: 48px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 24px;
         }
-        .footer a { color: rgba(245,245,245,0.4); }
+        .footer-brand p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.65; margin-top: 16px; max-width: 300px; }
+        .footer-col h4 {
+            font-family: 'Satoshi', sans-serif; font-size: 0.8rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-primary); margin-bottom: 16px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { font-size: 0.88rem; color: var(--text-secondary); transition: color 0.2s; }
+        .footer-col a:hover { color: var(--text-primary); opacity: 1; }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 28px; border-top: 1px solid var(--border-default);
+            font-size: 0.8rem; color: rgba(245,245,245,0.3);
+            max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px;
+        }
+        .footer-bottom a { color: rgba(245,245,245,0.3); }
+        .footer-bottom a:hover { color: var(--text-primary); opacity: 1; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+                background: rgba(17, 17, 17, 0.98); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+                flex-direction: column; align-items: flex-start; padding: 80px 32px 32px; gap: 24px;
+                border-left: 1px solid var(--border-default); transition: right 0.3s ease;
+            }
+            .nav-links.open { right: 0; }
+            .nav-dropdown-menu {
+                position: static; transform: none; background: transparent;
+                border: none; padding: 0; margin: 0; display: block;
+                backdrop-filter: none; -webkit-backdrop-filter: none; min-width: auto;
+            }
+            .nav-dropdown-menu a { padding: 8px 16px; font-size: 0.85rem; }
+            .nav-cta { width: 100%; text-align: center; display: flex; justify-content: center; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+        }
     </style>
 </head>
 <body>
 
     <nav class="nav">
         <div class="nav-inner">
-            <a href="/" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="assets/images/logo-white.png" alt="AI Powered Dahlia">
                 <span class="nav-logo-text">AI Powered Dahlia</span>
             </a>
-            <a href="/" class="nav-back">&larr; Back to Home</a>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-dropdown">
+                    <a href="#">Services</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="social-media-automation.html">Social Media Automation</a>
+                        <a href="linkedin-on-autopilot.html">LinkedIn on Autopilot</a>
+                        <a href="ai-agents.html">AI Agents</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="nav-cta">Book a Call</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
 
@@ -175,7 +291,7 @@
             </ul>
 
             <h2>Contact Us</h2>
-            <p>If you have questions about this privacy policy or how we handle your data, reach out to us through our <a href="#contact">contact page</a>.</p>
+            <p>If you have questions about this privacy policy or how we handle your data, reach out to us through our <a href="contact.html">contact page</a>.</p>
 
             <hr class="divider">
 
@@ -185,10 +301,60 @@
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 AI Powered Dahlia. All rights reserved. <a href="/">Home</a></p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div style="display:flex;align-items:center;gap:10px;">
+                    <img src="assets/images/logo-white.png" alt="AI Powered Dahlia" style="height:36px;width:auto;">
+                    <span class="nav-logo-text">AI Powered Dahlia</span>
+                </div>
+                <p>AI strategy and marketing automation agency. Intelligent systems that drive measurable growth.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="social-media-automation.html">Social Media</a></li>
+                    <li><a href="linkedin-on-autopilot.html">LinkedIn Autopilot</a></li>
+                    <li><a href="ai-agents.html">AI Agents</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://x.com/dahlia_imanbay" target="_blank" rel="noopener">X</a></li>
+                    <li><a href="https://www.instagram.com/dahlia_imanbay/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://bsky.app/profile/dahlia-imanbay.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+                    <li><a href="https://www.youtube.com/@DahliaImanbay" target="_blank" rel="noopener">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 AI Powered Dahlia. All rights reserved.</span>
+            <span><a href="privacy.html">Privacy Policy</a></span>
         </div>
     </footer>
+
+    <script>
+    (function() {
+        var hamburger = document.getElementById('hamburger');
+        var navLinks = document.getElementById('navLinks');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('open');
+                hamburger.classList.toggle('open');
+            });
+            navLinks.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('open');
+                    hamburger.classList.remove('open');
+                });
+            });
+        }
+    })();
+    </script>
 
 </body>
 </html>
