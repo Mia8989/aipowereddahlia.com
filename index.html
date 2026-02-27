@@ -368,116 +368,138 @@
             100% { transform: translateX(-50%); }
         }
 
-        /* ===== PROBLEM SECTION ===== */
+        /* ===== PROBLEM SECTION (editorial numbered) ===== */
         .problem {
             background: var(--bg-elevated);
         }
-        .problem-grid {
+        .problem-list {
+            margin-top: 56px;
+            max-width: 800px;
+        }
+        .problem-item {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 48px;
+            grid-template-columns: 72px 1fr;
+            gap: 24px;
+            padding: 36px 0;
+            border-bottom: 1px solid var(--border-default);
+            align-items: start;
         }
-        .problem-card {
-            padding: 32px 28px;
-            border-radius: 12px;
-            border: 1px solid var(--border-default);
-            background: var(--bg-surface);
-            transition: border-color 0.3s;
+        .problem-item:first-child {
+            border-top: 1px solid var(--border-default);
         }
-        .problem-card:hover { border-color: var(--border-hover); }
-        .problem-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            background: var(--accent-glow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
+        .problem-num {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1;
+            color: var(--accent);
+            opacity: 0.4;
         }
-        .problem-icon svg {
-            width: 22px;
-            height: 22px;
-            stroke: var(--accent);
-            fill: none;
-            stroke-width: 1.5;
-            stroke-linecap: round;
-            stroke-linejoin: round;
+        .problem-text h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
         }
-        .problem-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        .problem-card p {
+        .problem-text p {
             color: var(--text-secondary);
-            font-size: 0.92rem;
-            line-height: 1.65;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 520px;
         }
 
         /* ===== SERVICES BENTO GRID ===== */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto;
             gap: 16px;
             margin-top: 48px;
         }
         .service-card {
-            padding: 32px 28px;
-            border-radius: 12px;
+            padding: 36px 30px;
+            border-radius: 16px;
             border: 1px solid var(--border-default);
             background: var(--bg-elevated);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
         .service-card:hover {
             border-color: var(--border-hover);
-            transform: translateY(-2px);
         }
-        .service-card:hover::before { opacity: 1; }
         .service-card.large {
             grid-column: span 2;
         }
-        .service-icon {
-            width: 42px;
-            height: 42px;
-            border-radius: 10px;
-            background: var(--accent-glow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 18px;
-            transition: transform 0.3s;
+
+        /* Featured cards — gradient backgrounds */
+        .service-card.featured {
+            background: linear-gradient(145deg, rgba(124, 92, 252, 0.12) 0%, var(--bg-elevated) 60%);
+            border-color: rgba(124, 92, 252, 0.2);
+            padding: 44px 36px;
         }
-        .service-card:hover .service-icon { transform: scale(1.08); }
-        .service-icon svg {
-            width: 20px;
-            height: 20px;
+        .service-card.featured:hover {
+            border-color: rgba(124, 92, 252, 0.35);
+        }
+        .service-card.featured h3 {
+            font-size: 1.35rem;
+        }
+
+        /* Watermark icon (large faded bg icon) */
+        .service-watermark {
+            position: absolute;
+            right: -12px;
+            bottom: -12px;
+            width: 120px;
+            height: 120px;
+            opacity: 0.04;
+            pointer-events: none;
+            transition: opacity 0.4s;
+        }
+        .service-card:hover .service-watermark {
+            opacity: 0.08;
+        }
+        .service-watermark svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--text-primary);
+            fill: none;
+            stroke-width: 0.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Small inline icon */
+        .service-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+        .service-tag svg {
+            width: 14px;
+            height: 14px;
             stroke: var(--accent);
             fill: none;
             stroke-width: 1.5;
             stroke-linecap: round;
             stroke-linejoin: round;
         }
+
         .service-card h3 {
             margin-bottom: 10px;
+            font-size: 1.15rem;
         }
         .service-card p {
             color: var(--text-secondary);
             font-size: 0.92rem;
-            line-height: 1.65;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
         }
 
         /* ===== HOW IT WORKS ===== */
@@ -701,8 +723,10 @@
             .nav-links.open { right: 0; }
             .nav-cta { width: 100%; text-align: center; justify-content: center; }
 
-            .problem-grid { grid-template-columns: 1fr; }
+            .problem-item { grid-template-columns: 48px 1fr; gap: 16px; padding: 28px 0; }
+            .problem-num { font-size: 2.2rem; }
             .services-grid { grid-template-columns: 1fr; }
+            .service-card.featured { padding: 32px 24px; }
             .steps {
                 grid-template-columns: 1fr;
                 gap: 48px;
@@ -772,7 +796,7 @@
             perspective: 800px;
             will-change: transform;
         }
-        .tilt-card .service-icon,
+        .tilt-card .service-tag,
         .tilt-card h3 {
             transform: translateZ(20px);
         }
@@ -946,27 +970,27 @@
             <p class="section-label">The Challenge</p>
             <h2 class="section-heading">AI Should Work for You. Not the Other Way Around.</h2>
             <p class="section-subtext">Most businesses buy AI tools they never fully use, chase trends that don't fit, and lose time to processes that should have been automated long ago.</p>
-            <div class="problem-grid">
-                <div class="problem-card gs-reveal">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="problem-list">
+                <div class="problem-item gs-reveal">
+                    <span class="problem-num">01</span>
+                    <div class="problem-text">
+                        <h3>Hours Lost to Manual Work</h3>
+                        <p>Content creation, scheduling, follow-ups, reporting. Your team spends hours on tasks that AI handles in minutes.</p>
                     </div>
-                    <h3>Hours Lost to Manual Work</h3>
-                    <p>Content creation, scheduling, follow-ups, reporting. Your team spends hours on tasks that AI handles in minutes.</p>
                 </div>
-                <div class="problem-card gs-reveal">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"/><path d="M2 20h20"/><path d="M14 12v.01"/></svg>
+                <div class="problem-item gs-reveal">
+                    <span class="problem-num">02</span>
+                    <div class="problem-text">
+                        <h3>Tools That Don't Connect</h3>
+                        <p>Your CRM, email platform, social scheduler, and analytics all run separately. No unified system, no unified view.</p>
                     </div>
-                    <h3>Tools That Don't Connect</h3>
-                    <p>Your CRM, email platform, social scheduler, and analytics all run separately. No unified system, no unified view of performance.</p>
                 </div>
-                <div class="problem-card gs-reveal">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+                <div class="problem-item gs-reveal">
+                    <span class="problem-num">03</span>
+                    <div class="problem-text">
+                        <h3>Competitors Are Shipping Faster</h3>
+                        <p>While you evaluate which tool to try next, others are running AI-driven campaigns, automated funnels, and intelligent content systems.</p>
                     </div>
-                    <h3>Competitors Are Shipping Faster</h3>
-                    <p>While you evaluate which tool to try next, others are running AI-driven campaigns, automated funnels, and intelligent content systems.</p>
                 </div>
             </div>
         </div>
@@ -979,59 +1003,45 @@
             <h2 class="section-heading">Full-Service AI for Marketing, Growth, and Operations</h2>
             <p class="section-subtext">Not one-off tools. Integrated systems built around your business that compound over time.</p>
             <div class="services-grid">
-                <div class="service-card large gs-reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
-                    </div>
+                <div class="service-card large featured gs-reveal">
+                    <div class="service-tag"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg> Core Service</div>
                     <h3>AI Agent Development</h3>
                     <p>Custom AI agents that automate workflows, handle customer inquiries, qualify leads, and run operations 24/7. Built to integrate with your existing stack.</p>
+                    <div class="service-watermark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg></div>
                 </div>
                 <div class="service-card gs-reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-                    </div>
+                    <div class="service-tag"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg> Strategy</div>
                     <h3>AI Strategy Consulting</h3>
                     <p>Clear, actionable roadmaps for integrating AI into your operations. We find the highest-impact opportunities and build the plan to execute.</p>
                 </div>
                 <div class="service-card gs-reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-                    </div>
+                    <div class="service-tag"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Automation</div>
                     <h3>Social Media Automation</h3>
                     <p>AI-driven content creation, bulk scheduling, and performance analytics across every platform. Consistent presence without the daily grind.</p>
                 </div>
-                <div class="service-card large gs-reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
-                    </div>
+                <div class="service-card large featured gs-reveal">
+                    <div class="service-tag"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg> Search &amp; Discovery</div>
                     <h3>SEO, AEO & GEO</h3>
                     <p>Search optimization built for where search is going, not just where it's been. We optimize for traditional search engines, answer engines like featured snippets and voice search, and generative AI platforms like ChatGPT and Google AI Overviews.</p>
+                    <div class="service-watermark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></div>
                 </div>
                 <div class="service-card gs-reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                    </div>
+                    <div class="service-tag"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg> Development</div>
                     <h3>Website Design & Development</h3>
                     <p>High-converting websites with built-in AI features. Chat agents, lead qualification, and smart analytics from day one.</p>
                 </div>
                 <div class="service-card gs-reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    </div>
+                    <div class="service-tag"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Nurture</div>
                     <h3>Email Marketing</h3>
                     <p>Automated campaigns, drip sequences, and AI-powered personalization. From welcome flows to re-engagement, we build the systems that nurture and convert.</p>
                 </div>
                 <div class="service-card gs-reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
-                    </div>
+                    <div class="service-tag"><svg viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg> Content</div>
                     <h3>Video & Content Production</h3>
                     <p>AI-assisted video production, multi-language voiceover, and content repurposing. Create once, distribute everywhere.</p>
                 </div>
                 <div class="service-card gs-reveal">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg>
-                    </div>
+                    <div class="service-tag"><svg viewBox="0 0 24 24"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg> Education</div>
                     <h3>Webinars & Training</h3>
                     <p>Live and on-demand AI education for teams. We teach your people to use AI confidently, so the systems keep working after we leave.</p>
                 </div>
@@ -1440,7 +1450,7 @@
             });
 
             // --- Stagger cards with scale + fade (OHZI fluid entrance) ---
-            ['.problem-grid', '.services-grid', '.results-grid', '.steps'].forEach(function(selector) {
+            ['.problem-list', '.services-grid', '.results-grid', '.steps'].forEach(function(selector) {
                 var grid = document.querySelector(selector);
                 if (!grid) return;
                 var cards = grid.children;
