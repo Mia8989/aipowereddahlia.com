@@ -598,6 +598,38 @@
             color: var(--cyan);
             position: relative;
             z-index: 2;
+            overflow: hidden;
+        }
+        /* Rotating gradient ring on step numbers */
+        .step-number::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, var(--cyan), var(--accent), var(--pink), var(--cyan));
+            opacity: 0;
+            transition: opacity 0.5s;
+            z-index: -1;
+            animation: stepSpin 4s linear infinite;
+        }
+        .step-number::after {
+            content: '';
+            position: absolute;
+            inset: 1px;
+            border-radius: 50%;
+            background: var(--bg-primary);
+            z-index: -1;
+        }
+        .step-number.animated::before {
+            opacity: 1;
+        }
+        /* Pulse glow when animating */
+        .step-number.animated {
+            box-shadow: 0 0 20px rgba(92, 225, 230, 0.15), 0 0 40px rgba(140, 82, 255, 0.1);
+            border-color: transparent;
+        }
+        @keyframes stepSpin {
+            to { transform: rotate(360deg); }
         }
         .step h3 { margin-bottom: 12px; }
         .step p {
@@ -1907,6 +1939,19 @@
                 });
             });
 
+            // --- Step number spinning ring animation ---
+            document.querySelectorAll('.step-number').forEach(function(num, i) {
+                ScrollTrigger.create({
+                    trigger: num,
+                    start: 'top 85%',
+                    onEnter: function() {
+                        gsap.delayedCall(i * 0.25, function() {
+                            num.classList.add('animated');
+                        });
+                    }
+                });
+            });
+
             // --- Scroll-line reveals (horizontal wipe) ---
             document.querySelectorAll('.scroll-line').forEach(function(line) {
                 gsap.to(line, {
@@ -2006,25 +2051,24 @@
             ctx.fillStyle = '#0A0A0A';
             ctx.fillRect(0, 0, c.width, c.height);
 
-            // Draw logo centered, upper portion
-            var logoScale = Math.min(c.width * 0.5 / img.width, c.height * 0.4 / img.height);
+            // Draw logo centered, larger with cropped image
+            var logoScale = Math.min(c.width * 0.7 / img.width, c.height * 0.5 / img.height);
             var lw = img.width * logoScale;
             var lh = img.height * logoScale;
             var logoX = (c.width - lw) / 2;
-            var logoY = (c.height - lh) / 2 - 40;
+            var logoY = (c.height - lh) / 2 - 30;
             ctx.drawImage(img, logoX, logoY, lw, lh);
 
             // Draw "AI POWERED DAHLIA" text same width as logo, right underneath
             ctx.fillStyle = '#ffffff';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'top';
-            // Size the text to match logo width
             var fontSize = 60;
             ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
             var textWidth = ctx.measureText('AI POWERED DAHLIA').width;
             fontSize = Math.floor(fontSize * (lw * 0.95) / textWidth);
             ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
-            var textY = logoY + lh - 65;
+            var textY = logoY + lh + 8;
             ctx.fillText('AI POWERED DAHLIA', c.width / 2, textY);
 
             app.loadImage(c.toDataURL('image/png'));
