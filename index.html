@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Powered Dahlia | Marketing Automation Agency</title>
+    <meta name="description" content="AI Powered Dahlia is a marketing automation agency that combines advanced AI tools with proven business strategies. Automate social media, build conversion-focused websites, and scale your marketing.">
+    <meta name="keywords" content="AI Marketing Automation, Social Media Automation, AI Agents, Marketing Agency, Website Builder, AI Video Production, Marketing Automation Agency">
+    <meta name="author" content="AI Powered Dahlia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipowereddahlia.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Powered Dahlia | Marketing Automation Agency">
+    <meta property="og:description" content="AI-driven marketing automation that saves you time and grows your business. Social media, websites, AI agents, and video production.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aipowereddahlia.com/">
+    <meta property="og:site_name" content="AI Powered Dahlia">
+    <meta property="og:image" content="https://aipowereddahlia.com/assets/images/hero-image.png">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Powered Dahlia | Marketing Automation Agency">
+    <meta name="twitter:description" content="AI-driven marketing automation that saves you time and grows your business.">
+    <meta name="twitter:image" content="https://aipowereddahlia.com/assets/images/hero-image.png">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AI Powered Dahlia",
+        "url": "https://aipowereddahlia.com",
+        "logo": "https://aipowereddahlia.com/assets/images/logo-white.png",
+        "description": "Marketing automation agency combining advanced AI tools with proven business strategies to deliver measurable results.",
+        "founder": {
+            "@type": "Person",
+            "name": "Dahlia Imanbay",
+            "url": "https://dahliaimanbay.com"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/dahlia-imanbay/",
+            "https://x.com/dahlia_imanbay",
+            "https://www.instagram.com/dahlia_imanbay/"
+        ],
+        "serviceType": ["Marketing Automation", "Social Media Management", "Website Development", "AI Video Production"],
+        "areaServed": "Worldwide"
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1e1e1e;
+            line-height: 1.6;
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        /* ===== COLOR SYSTEM ===== */
+        :root {
+            --primary: #1e1e1e;
+            --accent-cyan: #5ce1e6;
+            --accent-purple: #8b67f6;
+            --accent-lavender: #a78bfa;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --section-label: #8b67f6;
+            --gradient-dark: radial-gradient(circle at 30% 50%, #1a0533 0%, #0d0d2b 50%, #000000 100%);
+            --gradient-card: linear-gradient(135deg, #f0e6ff 0%, #ffffff 65%);
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 0;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        .nav.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .nav-logo img {
+            height: 40px;
+            width: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.85;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover { opacity: 1; }
+        .nav-cta {
+            background: var(--accent-purple);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 100px;
+            opacity: 1 !important;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(139, 103, 246, 0.4);
+        }
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .nav-hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            transition: transform 0.3s;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: var(--gradient-dark);
+            margin: 0;
+            padding: 140px 0 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('assets/images/hero-bg.png');
+            background-size: contain;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+        }
+        .hero-inner {
+            position: relative;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-content {
+            padding: 40px 0 80px;
+        }
+        .hero-label {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-purple);
+            margin-bottom: 16px;
+        }
+        .hero-heading {
+            margin-bottom: 8px;
+        }
+        .hero-heading .typing-line {
+            display: block;
+            font-size: clamp(28px, 5vw, 75px);
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--accent-cyan);
+            min-height: 1.2em;
+        }
+        .typing-cursor {
+            position: relative;
+        }
+        .typing-cursor::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            border-right: 2px solid var(--white);
+            animation: blink 0.5s infinite ease-in;
+        }
+        @keyframes blink {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .hero-heading .static-line {
+            display: block;
+            font-size: clamp(28px, 5vw, 75px);
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--white);
+        }
+        .hero-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--white);
+            opacity: 0.9;
+            margin-top: 20px;
+            max-width: 520px;
+        }
+        .hero-image {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .hero-image img {
+            max-height: 520px;
+            object-fit: contain;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 16px 32px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            border: none;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary {
+            background: var(--accent-purple);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(139, 103, 246, 0.4);
+        }
+        .btn-outline-light {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+        .btn-outline-light:hover {
+            border-color: var(--white);
+        }
+        .btn-outline-dark {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-outline-dark:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* ===== FEATURES STRIP ===== */
+        .features {
+            position: relative;
+            z-index: 2;
+            margin-top: -60px;
+        }
+        .features-card {
+            background: var(--gradient-card);
+            border-radius: 12px;
+            padding: 48px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .feature-item { text-align: left; }
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 20px;
+        }
+        .feature-item h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .feature-item p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .section-label {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--section-label);
+            margin-bottom: 12px;
+        }
+        .section-heading {
+            font-size: clamp(24px, 3.5vw, 48px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .about-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            max-width: 680px;
+            margin: 0 auto 32px;
+        }
+
+        /* ===== LOGO CAROUSEL ===== */
+        .logos {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+        .logos h2 {
+            text-align: center;
+            font-size: clamp(20px, 3vw, 32px);
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        .logo-track {
+            display: flex;
+            animation: scroll-logos 30s linear infinite;
+            gap: 60px;
+            align-items: center;
+        }
+        .logo-track img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: filter 0.3s, opacity 0.3s;
+            flex-shrink: 0;
+        }
+        .logo-track img:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+        @keyframes scroll-logos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ===== PACKAGES SECTION ===== */
+        .packages {
+            padding: 80px 0;
+        }
+        .packages-header {
+            max-width: 720px;
+            margin-bottom: 48px;
+        }
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .package-card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .package-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+        }
+        .package-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .package-card h4 {
+            font-size: 19px;
+            font-weight: 700;
+            margin: 20px 0 12px;
+        }
+        .package-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+            flex: 1;
+        }
+        .package-card .btn {
+            margin-top: 20px;
+            align-self: flex-start;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: 0 0 80px;
+        }
+        .cta-card {
+            background: var(--gradient-card);
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            padding: 80px 60px;
+        }
+        .cta-content {
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cta-content .section-heading {
+            font-size: clamp(22px, 3vw, 42px);
+            line-height: 1.1;
+        }
+        .cta-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin: 16px 0 24px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+            opacity: 0.7;
+            margin-top: 16px;
+            max-width: 320px;
+        }
+        .footer-links h4 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-links a {
+            font-size: 14px;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .footer-links a:hover { opacity: 1; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            opacity: 0.5;
+        }
+        .footer-socials {
+            display: flex;
+            gap: 16px;
+        }
+        .footer-socials a {
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+        .footer-socials a:hover { opacity: 1; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .hero-content { padding: 20px 0 40px; }
+            .hero-description { margin: 20px auto 0; }
+            .hero-buttons { justify-content: center; }
+            .hero-image img { max-height: 360px; margin: 0 auto; }
+            .features-card { grid-template-columns: 1fr; padding: 32px; gap: 32px; }
+            .feature-item { text-align: center; }
+            .feature-icon { margin: 0 auto 16px; }
+            .packages-grid { grid-template-columns: 1fr; max-width: 480px; }
+            .packages-header { text-align: center; }
+            .cta-card { padding: 48px 32px; }
+            .footer-inner { grid-template-columns: 1fr; text-align: center; }
+            .footer-brand p { margin: 16px auto 0; }
+            .footer-bottom { flex-direction: column; gap: 12px; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(0,0,0,0.95);
+                padding: 24px;
+                gap: 16px;
+                backdrop-filter: blur(10px);
+            }
+            .hero { padding-top: 100px; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .hero-buttons .btn { width: 100%; max-width: 280px; justify-content: center; }
+            .features { margin-top: -30px; }
+            .logo-track { gap: 40px; }
+            .logo-track img { height: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="assets/images/logo-white.png" alt="AI Powered Dahlia" loading="eager">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact" class="nav-cta">Get a Free Quote</a></li>
+            </ul>
+            <div class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="hero-label">Lost in Marketing Tasks? We automate it.</p>
+                <div class="hero-heading">
+                    <span class="typing-line typing-cursor" id="typingText">Social Media</span>
+                    <span class="static-line">Marketing<br>Champions</span>
+                </div>
+                <p class="hero-description">You run a business. You wear many hats. Updating a website, posting on social channels, answering customer queries and tracking analytics drain your time and energy. Our AI-driven tools and systems automate these tasks, so you work smarter and earn more.</p>
+                <div class="hero-buttons">
+                    <a href="/contact" class="btn btn-primary">Get Your Free Quote</a>
+                    <a href="#services" class="btn btn-outline-light">See How It Works</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/hero-image.png" alt="AI-powered marketing automation illustration" loading="eager" width="540" height="540">
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="container">
+            <div class="features-card">
+                <div class="feature-item">
+                    <img src="assets/images/icon-simplify.png" alt="Simplify operations" class="feature-icon" width="64" height="64">
+                    <h3>Simplify marketing operations</h3>
+                    <p>AI systems plan, create and schedule content across your channels. You save hours each day.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="assets/images/icon-authority.png" alt="Establish authority" class="feature-icon" width="64" height="64">
+                    <h3>Establish authority</h3>
+                    <p>AI tools help you create high-quality thought leadership content fast. You become the voice of your industry.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="assets/images/icon-convert.png" alt="Attract and convert" class="feature-icon" width="64" height="64">
+                    <h3>Attract and convert</h3>
+                    <p>Conversion-focused websites and AI agents turn visitors into clients and keep them engaged.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container">
+            <p class="section-label">About</p>
+            <h2 class="section-heading">Automate Your Growth</h2>
+            <p class="about-text">AI Powered Dahlia is a marketing automation agency that combines advanced AI tools with proven business strategies to deliver measurable results. Our clients cut up to half of their marketing workload while seeing steady revenue growth.</p>
+            <a href="#services" class="btn btn-outline-dark">See How We Work</a>
+        </div>
+    </section>
+
+    <!-- TRUSTED BRANDS -->
+    <section class="logos">
+        <div class="container">
+            <h2>Trusted by Leading Brands and Partners</h2>
+        </div>
+        <div class="logo-track" id="logoTrack">
+            <img src="assets/logos/tedx.webp" alt="TEDx Marvila" loading="lazy">
+            <img src="assets/logos/pawsic.webp" alt="PAWSIC" loading="lazy">
+            <img src="assets/logos/education-first.webp" alt="Education First" loading="lazy">
+            <img src="assets/logos/gap.webp" alt="GAP" loading="lazy">
+            <img src="assets/logos/marks-spencer.webp" alt="Marks & Spencer" loading="lazy">
+            <img src="assets/logos/john-lewis.webp" alt="John Lewis & Partners" loading="lazy">
+            <img src="assets/logos/topshop.webp" alt="Topshop" loading="lazy">
+            <img src="assets/logos/intobeauty.webp" alt="IntoBeauty" loading="lazy">
+            <img src="assets/logos/keepuspstd.webp" alt="KeepUsPostd" loading="lazy">
+            <img src="assets/logos/base10.webp" alt="Base10" loading="lazy">
+            <img src="assets/logos/steve-madden.webp" alt="Steve Madden" loading="lazy">
+            <img src="assets/logos/aldo.webp" alt="Aldo" loading="lazy">
+            <!-- Duplicate for seamless loop -->
+            <img src="assets/logos/tedx.webp" alt="TEDx Marvila" loading="lazy">
+            <img src="assets/logos/pawsic.webp" alt="PAWSIC" loading="lazy">
+            <img src="assets/logos/education-first.webp" alt="Education First" loading="lazy">
+            <img src="assets/logos/gap.webp" alt="GAP" loading="lazy">
+            <img src="assets/logos/marks-spencer.webp" alt="Marks & Spencer" loading="lazy">
+            <img src="assets/logos/john-lewis.webp" alt="John Lewis & Partners" loading="lazy">
+            <img src="assets/logos/topshop.webp" alt="Topshop" loading="lazy">
+            <img src="assets/logos/intobeauty.webp" alt="IntoBeauty" loading="lazy">
+            <img src="assets/logos/keepuspstd.webp" alt="KeepUsPostd" loading="lazy">
+            <img src="assets/logos/base10.webp" alt="Base10" loading="lazy">
+            <img src="assets/logos/steve-madden.webp" alt="Steve Madden" loading="lazy">
+            <img src="assets/logos/aldo.webp" alt="Aldo" loading="lazy">
+        </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="packages" id="services">
+        <div class="container">
+            <div class="packages-header">
+                <p class="section-label">What We Offer</p>
+                <h2 class="section-heading">Select the package that works for you</h2>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <img src="assets/images/package-social.png" alt="Social Media on Autopilot" loading="lazy">
+                    <h4>Social Media on Autopilot</h4>
+                    <p>Let us handle your social channels. We plan, create and schedule posts in bulk across multiple platforms. Our organic-only approach grows your audience without ads. Enjoy consistent content, time savings and community engagement.</p>
+                    <a href="/contact" class="btn btn-outline-dark">Get a Free Quote</a>
+                </div>
+                <div class="package-card">
+                    <img src="assets/images/package-website.png" alt="Custom Site with AI Agent" loading="lazy">
+                    <h4>Custom Site with AI Agent</h4>
+                    <p>Get a tailor-made website built for your brand. A built-in AI chat and voice agent answers questions, qualifies leads and books meetings around the clock. Your visitors convert faster and never slip through the cracks.</p>
+                    <a href="/contact" class="btn btn-outline-dark">Get a Free Quote</a>
+                </div>
+                <div class="package-card">
+                    <img src="assets/images/package-video.png" alt="AI Video Production" loading="lazy">
+                    <h4>AI Video Production</h4>
+                    <p>Generate high-quality video content quickly. Use cinematic generative models, AI avatars and multi-language voices. Get custom branding integration for healthcare and mission-driven organizations. Cut production costs and time.</p>
+                    <a href="/contact" class="btn btn-outline-dark">Get a Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <p class="section-label">Get Started</p>
+                    <h2 class="section-heading">Ready to stop working on marketing and start seeing results?</h2>
+                    <p>Our AI strategies are built for busy business owners like you. Schedule a free call today and learn how automation transforms your business.</p>
+                    <a href="/contact" class="btn btn-outline-dark">Schedule a Free Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="assets/images/logo-white.png" alt="AI Powered Dahlia" style="height:36px;width:auto;">
+                    <p>AI-driven marketing automation agency. We combine advanced AI tools with proven business strategies to deliver measurable results for busy business owners.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://x.com/dahlia_imanbay" target="_blank" rel="noopener">X (Twitter)</a></li>
+                        <li><a href="https://www.instagram.com/dahlia_imanbay/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@DahliaImanbay" target="_blank" rel="noopener">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2024 AI Powered Dahlia. All rights reserved.</span>
+                <span><a href="/privacy">Privacy Policy</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Typing effect
+        (function() {
+            const words = ['Social Media', 'Automations', 'Website', 'Branding'];
+            const el = document.getElementById('typingText');
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let pauseEnd = 0;
+
+            function type() {
+                const current = words[wordIndex];
+
+                if (!isDeleting) {
+                    el.textContent = current.slice(0, ++charIndex);
+                    if (charIndex === current.length) {
+                        isDeleting = true;
+                        pauseEnd = Date.now() + 1800;
+                    }
+                } else {
+                    if (Date.now() < pauseEnd) {
+                        requestAnimationFrame(type);
+                        return;
+                    }
+                    el.textContent = current.slice(0, --charIndex);
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                    }
+                }
+
+                const speed = isDeleting ? 60 : 120;
+                setTimeout(type, speed);
+            }
+
+            type();
+        })();
+
+        // Nav scroll effect
+        window.addEventListener('scroll', function() {
+            document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.getElementById('navLinks').classList.remove('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
