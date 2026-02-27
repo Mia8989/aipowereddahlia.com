@@ -162,23 +162,46 @@
         .btn:active { transform: scale(0.98); }
 
         .btn-primary {
+            position: relative;
+            background: var(--bg-surface);
+            color: var(--text-primary);
+            font-weight: 600;
+            border: 1px solid transparent;
+            background-image: linear-gradient(var(--bg-surface), var(--bg-surface)), var(--gradient-brand);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
             background: var(--gradient-brand);
-            color: #0A0A0A;
-            font-weight: 700;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            z-index: 0;
+        }
+        .btn-primary:hover::before {
+            opacity: 0.12;
         }
         .btn-primary:hover {
-            box-shadow: 0 4px 28px rgba(92, 225, 230, 0.25), 0 4px 16px rgba(140, 82, 255, 0.2);
-            transform: translateY(-2px);
+            box-shadow: 0 0 24px rgba(92, 225, 230, 0.15), 0 0 48px rgba(140, 82, 255, 0.1);
+            transform: translateY(-1px);
+        }
+        .btn-primary span, .btn-primary .btn-arrow {
+            position: relative;
+            z-index: 1;
         }
 
         .btn-ghost {
             background: transparent;
-            color: var(--text-primary);
-            border: 1px solid rgba(140, 82, 255, 0.25);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-default);
         }
         .btn-ghost:hover {
-            border-color: rgba(92, 225, 230, 0.4);
-            background: rgba(140, 82, 255, 0.06);
+            border-color: rgba(140, 82, 255, 0.3);
+            color: var(--text-primary);
+            background: rgba(140, 82, 255, 0.04);
         }
 
         .btn-outline {
@@ -254,12 +277,16 @@
         .nav-cta {
             padding: 10px 22px;
             font-size: 0.85rem;
-            background: var(--gradient-brand) !important;
-            color: #0A0A0A !important;
-            font-weight: 700 !important;
+            background: var(--bg-surface) !important;
+            color: var(--text-primary) !important;
+            font-weight: 600 !important;
+            border: 1px solid transparent !important;
+            background-image: linear-gradient(var(--bg-surface), var(--bg-surface)), var(--gradient-brand) !important;
+            background-origin: border-box !important;
+            background-clip: padding-box, border-box !important;
         }
         .nav-cta:hover {
-            box-shadow: 0 4px 24px rgba(92, 225, 230, 0.3), 0 2px 12px rgba(140, 82, 255, 0.2) !important;
+            box-shadow: 0 0 20px rgba(92, 225, 230, 0.15), 0 0 40px rgba(140, 82, 255, 0.1) !important;
             transform: translateY(-1px);
         }
         .nav-cta::after { display: none; }
@@ -853,6 +880,54 @@
         }
         .about-link:hover { gap: 10px; }
 
+        /* ===== LIQUID EFFECT ===== */
+        .liquid-section {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            min-height: 500px;
+            max-height: 720px;
+            overflow: hidden;
+            background: #000;
+        }
+        .liquid-section canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .liquid-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .liquid-logo-text {
+            font-family: 'Clash Display', 'Satoshi', sans-serif;
+            font-weight: 600;
+            font-size: clamp(1.6rem, 4vw, 2.8rem);
+            letter-spacing: 0.06em;
+            color: #fff;
+            text-shadow: 0 2px 24px rgba(0,0,0,0.4);
+            margin-top: 16px;
+            opacity: 0.92;
+        }
+        @media (max-width: 768px) {
+            .liquid-section {
+                height: 60vh;
+                min-height: 360px;
+            }
+            .liquid-logo-text {
+                font-size: 1.3rem;
+                letter-spacing: 0.04em;
+            }
+        }
+
         /* ===== CTA SECTION ===== */
         .cta-section {
             text-align: center;
@@ -1369,7 +1444,7 @@
                         </div>
                         <svg class="li-icon" width="20" height="20" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
                     </div>
-                    <p class="li-card-body">We hired Dahlia to build our AI agent for lead qualification. It now handles 80% of inbound — our sales team only talks to qualified prospects.</p>
+                    <p class="li-card-body">We hired Dahlia to build our AI agent for lead qualification. It now handles 80% of inbound so our sales team only talks to qualified prospects.</p>
                     <div class="li-card-footer">
                         <span>Jan 2026</span>
                         <div class="li-reactions">
@@ -1388,7 +1463,7 @@
                         </div>
                         <svg class="li-icon" width="20" height="20" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
                     </div>
-                    <p class="li-card-body">The SEO + AEO strategy alone tripled our organic traffic in 4 months. Dahlia doesn't just consult — she builds the systems and they work.</p>
+                    <p class="li-card-body">The SEO + AEO strategy alone tripled our organic traffic in 4 months. Dahlia doesn't just consult, she builds the systems and they work.</p>
                     <div class="li-card-footer">
                         <span>Feb 2026</span>
                         <div class="li-reactions">
@@ -1411,6 +1486,12 @@
                 <a href="/about" class="about-link">More about us <span class="btn-arrow">&#8594;</span></a>
             </div>
         </div>
+    </section>
+
+    <!-- LIQUID EFFECT -->
+    <section class="liquid-section" id="liquid">
+        <canvas id="liquid-canvas"></canvas>
+        <!-- Text overlay removed - logo contains text already -->
     </section>
 
     <!-- CTA -->
@@ -1734,6 +1815,16 @@
                 });
             });
 
+            // --- Testimonials section reveal ---
+            document.querySelectorAll('.testimonials .gs-reveal').forEach(function(el) {
+                gsap.fromTo(el, {
+                    opacity: 0, y: 30
+                }, {
+                    opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
+                    scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+                });
+            });
+
             // --- About section fade ---
             document.querySelectorAll('.about .gs-reveal').forEach(function(el) {
                 gsap.fromTo(el, {
@@ -1844,6 +1935,36 @@
             });
         }
     })();
+    </script>
+
+    <!-- Liquid Effect (ES Module) -->
+    <script type="module">
+    import LiquidBackground from 'https://cdn.jsdelivr.net/npm/threejs-components@0.0.22/build/backgrounds/liquid1.min.js';
+
+    var canvas = document.getElementById('liquid-canvas');
+    if (canvas) {
+        var app = LiquidBackground(canvas);
+        app.loadImage('https://aipowereddahlia.com/assets/images/logo-white.png');
+        app.liquidPlane.material.metalness = 0.75;
+        app.liquidPlane.material.roughness = 0.25;
+        app.liquidPlane.uniforms.displacementScale.value = 5;
+        app.setRain(false);
+
+        // Pause rendering when section is not visible for performance
+        var liquidSection = document.querySelector('.liquid-section');
+        if (liquidSection && window.IntersectionObserver) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        app.renderer && (app.renderer.setAnimationLoop(app._animate || null));
+                    } else {
+                        app.renderer && app.renderer.setAnimationLoop(null);
+                    }
+                });
+            }, { threshold: 0.05 });
+            observer.observe(liquidSection);
+        }
+    }
     </script>
 </body>
 </html>
