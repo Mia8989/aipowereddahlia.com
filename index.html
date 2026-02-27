@@ -1728,15 +1728,10 @@
         // ===== LENIS SMOOTH SCROLL =====
         if (!prefersReducedMotion) {
             var lenis = new Lenis({
-                duration: 1.4,
+                duration: 0.8,
                 easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
                 smooth: true
             });
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-            requestAnimationFrame(raf);
             lenis.on('scroll', ScrollTrigger.update);
             gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
             gsap.ticker.lagSmoothing(0);

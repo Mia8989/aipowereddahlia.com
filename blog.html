@@ -156,7 +156,7 @@
             border: 1px solid var(--border-default);
             border-radius: 14px;
             padding: 32px 28px;
-            transition: all 0.3s;
+            transition: transform 0.3s, border-color 0.3s;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -261,7 +261,7 @@
             background-image: linear-gradient(var(--bg-surface), var(--bg-surface)), var(--gradient-brand);
             background-origin: border-box;
             background-clip: padding-box, border-box;
-            transition: all 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .newsletter-btn:hover {
             box-shadow: 0 0 20px rgba(92, 225, 230, 0.15), 0 0 40px rgba(140, 82, 255, 0.1);
@@ -517,19 +517,20 @@
         var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (!prefersReducedMotion && typeof Lenis !== 'undefined') {
             var lenis = new Lenis({
-                duration: 1.4,
+                duration: 0.8,
                 easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
                 smooth: true
             });
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-            requestAnimationFrame(raf);
             if (typeof ScrollTrigger !== 'undefined') {
                 lenis.on('scroll', ScrollTrigger.update);
                 gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
                 gsap.ticker.lagSmoothing(0);
+            } else {
+                function raf(time) {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+                requestAnimationFrame(raf);
             }
         }
     })();

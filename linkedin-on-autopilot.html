@@ -343,9 +343,7 @@
     (function() {
         var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         if (!rm && typeof Lenis !== "undefined") {
-            var lenis = new Lenis({ duration: 1.2, smooth: true });
-            function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-            requestAnimationFrame(raf);
+            var lenis = new Lenis({ duration: 0.8, smooth: true });
             if (typeof ScrollTrigger !== "undefined") { lenis.on("scroll", ScrollTrigger.update); gsap.ticker.add(function(time) { lenis.raf(time * 1000); }); gsap.ticker.lagSmoothing(0); }
             var sb = document.getElementById("scrollTop");
             if (sb) { sb.addEventListener("click", function(e) { e.preventDefault(); lenis.scrollTo(0, { duration: 1.6 }); }); }
