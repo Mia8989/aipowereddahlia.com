@@ -884,9 +884,9 @@
         .liquid-section {
             position: relative;
             width: 100%;
-            height: 80vh;
-            min-height: 500px;
-            max-height: 720px;
+            height: 70vh;
+            min-height: 420px;
+            max-height: 640px;
             overflow: hidden;
             background: var(--bg-primary);
         }
@@ -897,36 +897,59 @@
             height: 100%;
             display: block;
         }
-        .liquid-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            padding-bottom: 64px;
-            z-index: 2;
-            pointer-events: none;
-        }
-        .liquid-logo-text {
-            font-family: 'Clash Display', 'Satoshi', sans-serif;
-            font-weight: 600;
-            font-size: clamp(1.4rem, 3.5vw, 2.4rem);
-            letter-spacing: 0.08em;
-            color: #fff;
-            text-transform: uppercase;
-        }
         @media (max-width: 768px) {
             .liquid-section {
-                height: 60vh;
-                min-height: 360px;
+                height: 50vh;
+                min-height: 320px;
             }
-            .liquid-overlay {
-                padding-bottom: 40px;
-            }
-            .liquid-logo-text {
-                font-size: 1.1rem;
-                letter-spacing: 0.06em;
+        }
+
+        /* ===== SCROLL TO TOP ===== */
+        .scroll-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 999;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--border-default);
+            background: rgba(22, 22, 22, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(12px);
+            transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.3s, box-shadow 0.3s;
+        }
+        .scroll-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+        .scroll-top:hover {
+            border-color: rgba(140, 82, 255, 0.4);
+            box-shadow: 0 0 16px rgba(92, 225, 230, 0.1), 0 0 32px rgba(140, 82, 255, 0.08);
+        }
+        .scroll-top svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--text-secondary);
+            transition: stroke 0.3s;
+        }
+        .scroll-top:hover svg {
+            stroke: var(--text-primary);
+        }
+        @media (max-width: 768px) {
+            .scroll-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
             }
         }
 
@@ -1493,9 +1516,6 @@
     <!-- LIQUID EFFECT -->
     <section class="liquid-section" id="liquid">
         <canvas id="liquid-canvas"></canvas>
-        <div class="liquid-overlay">
-            <span class="liquid-logo-text">AI Powered Dahlia</span>
-        </div>
     </section>
 
     <!-- CTA -->
@@ -1549,6 +1569,11 @@
         </div>
     </footer>
 
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
     <!-- CDN LIBRARIES -->
     <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
@@ -1577,6 +1602,25 @@
             gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
             gsap.ticker.lagSmoothing(0);
         }
+
+        // ===== SCROLL TO TOP =====
+        (function() {
+            var btn = document.getElementById('scrollTop');
+            if (!btn) return;
+            var shown = false;
+            window.addEventListener('scroll', function() {
+                var past = window.scrollY > window.innerHeight;
+                if (past && !shown) { btn.classList.add('visible'); shown = true; }
+                else if (!past && shown) { btn.classList.remove('visible'); shown = false; }
+            }, { passive: true });
+            btn.addEventListener('click', function() {
+                if (typeof lenis !== 'undefined' && lenis.scrollTo) {
+                    lenis.scrollTo(0, { duration: 1.6 });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        })();
 
         // ===== TYPING EFFECT =====
         (function() {
@@ -1948,7 +1992,8 @@
     var canvas = document.getElementById('liquid-canvas');
     if (canvas) {
         var app = LiquidBackground(canvas);
-        // Composite white logo onto black background before loading
+
+        // Build texture: white logo + "AI POWERED DAHLIA" text on black bg
         var img = new Image();
         img.crossOrigin = 'anonymous';
         img.onload = function() {
@@ -1956,22 +2001,52 @@
             c.width = 1024;
             c.height = 1024;
             var ctx = c.getContext('2d');
+
             // Black background matching site
             ctx.fillStyle = '#0A0A0A';
             ctx.fillRect(0, 0, c.width, c.height);
-            // Center logo on the canvas
-            var scale = Math.min(c.width * 0.6 / img.width, c.height * 0.6 / img.height);
-            var w = img.width * scale;
-            var h = img.height * scale;
-            ctx.drawImage(img, (c.width - w) / 2, (c.height - h) / 2, w, h);
-            // Feed composited image to liquid effect
+
+            // Draw logo centered, upper portion
+            var logoScale = Math.min(c.width * 0.5 / img.width, c.height * 0.4 / img.height);
+            var lw = img.width * logoScale;
+            var lh = img.height * logoScale;
+            var logoX = (c.width - lw) / 2;
+            var logoY = (c.height - lh) / 2 - 60;
+            ctx.drawImage(img, logoX, logoY, lw, lh);
+
+            // Draw "AI POWERED DAHLIA" text same width as logo, right underneath
+            ctx.fillStyle = '#ffffff';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            // Size the text to match logo width
+            var fontSize = 60;
+            ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
+            var textWidth = ctx.measureText('AI POWERED DAHLIA').width;
+            // Scale font to match logo width
+            fontSize = Math.floor(fontSize * (lw * 0.95) / textWidth);
+            ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
+            var textY = logoY + lh + 20;
+            ctx.fillText('AI POWERED DAHLIA', c.width / 2, textY);
+
             app.loadImage(c.toDataURL('image/png'));
         };
         img.src = 'assets/images/logo-white.png';
-        app.liquidPlane.material.metalness = 0.75;
-        app.liquidPlane.material.roughness = 0.25;
-        app.liquidPlane.uniforms.displacementScale.value = 5;
+
+        // Darker, more subtle liquid - blends with site
+        app.liquidPlane.material.metalness = 0.55;
+        app.liquidPlane.material.roughness = 0.45;
+        app.liquidPlane.uniforms.displacementScale.value = 4;
+        if (app.liquidPlane.material.envMapIntensity !== undefined) {
+            app.liquidPlane.material.envMapIntensity = 0.3;
+        }
         app.setRain(false);
+
+        // Dim lights for darker feel
+        if (app.scene) {
+            app.scene.traverse(function(obj) {
+                if (obj.isLight) obj.intensity = obj.intensity * 0.4;
+            });
+        }
 
         // Pause rendering when section is not visible for performance
         var liquidSection = document.querySelector('.liquid-section');
