@@ -918,6 +918,36 @@
         }
         .about-link:hover { gap: 10px; }
 
+        /* ===== LIQUID POINTER ===== */
+        .liquid-pointer {
+            text-align: center;
+            padding: 48px 24px 0;
+            background: var(--bg-primary);
+        }
+        .liquid-pointer-text {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            max-width: 420px;
+            margin: 0 auto 16px;
+            line-height: 1.6;
+        }
+        .liquid-pointer-text em {
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+        .liquid-pointer-arrow {
+            display: inline-block;
+            animation: pointerBounce 2s ease-in-out infinite;
+            font-size: 1.2rem;
+            color: var(--cyan);
+            opacity: 0.6;
+        }
+        @keyframes pointerBounce {
+            0%, 100% { transform: translateY(0); opacity: 0.6; }
+            50% { transform: translateY(8px); opacity: 1; }
+        }
+
         /* ===== LIQUID EFFECT ===== */
         .liquid-section {
             position: relative;
@@ -1551,6 +1581,12 @@
         </div>
     </section>
 
+    <!-- LIQUID POINTER -->
+    <div class="liquid-pointer gs-reveal">
+        <p class="liquid-pointer-text">Not sure which service you need? <em>That's the best place to start.</em> Press the logo below, take a breath, and remember — even water figures it out eventually.</p>
+        <span class="liquid-pointer-arrow">&#8595;</span>
+    </div>
+
     <!-- LIQUID EFFECT -->
     <section class="liquid-section" id="liquid">
         <canvas id="liquid-canvas"></canvas>
@@ -1920,6 +1956,17 @@
                     scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
                 });
             });
+
+            // --- Liquid pointer reveal ---
+            var lp = document.querySelector('.liquid-pointer');
+            if (lp) {
+                gsap.fromTo(lp, {
+                    opacity: 0, y: 20
+                }, {
+                    opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+                    scrollTrigger: { trigger: lp, start: 'top 90%', toggleActions: 'play none none none' }
+                });
+            }
 
             // --- Stagger cards with scale + fade (OHZI fluid entrance) ---
             ['.problem-grid', '.services-grid', '.results-grid', '.steps'].forEach(function(selector) {
