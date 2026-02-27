@@ -5,7 +5,7 @@
 
 /* RESET & BASE */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html { overflow-x: hidden; }
 body {
     font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--text-primary);
