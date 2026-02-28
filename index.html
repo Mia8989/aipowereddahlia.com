@@ -1017,6 +1017,39 @@
             height: 100%;
             display: block;
         }
+        /* Fallback when WebGL/Three.js fails (mobile) */
+        .liquid-fallback {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(ellipse at 30% 50%, rgba(92,225,230,0.08) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 40%, rgba(140,82,255,0.08) 0%, transparent 60%),
+                        radial-gradient(ellipse at 50% 80%, rgba(251,197,255,0.05) 0%, transparent 60%),
+                        var(--bg-primary);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+        .liquid-fallback.active { opacity: 1; }
+        .liquid-fallback img {
+            width: 280px;
+            max-width: 60vw;
+            opacity: 0.85;
+            filter: drop-shadow(0 0 40px rgba(92,225,230,0.15));
+            margin-bottom: 20px;
+        }
+        .liquid-fallback-text {
+            font-family: 'Clash Display', 'Satoshi', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
         @media (max-width: 768px) {
             .liquid-section {
                 height: 75vh;
@@ -1666,6 +1699,10 @@
             <span class="liquid-pointer-arrow">&#8595;</span>
         </div>
         <canvas id="liquid-canvas"></canvas>
+        <div class="liquid-fallback" id="liquid-fallback">
+            <img src="assets/images/logo-white.png" alt="AI Powered Dahlia">
+            <span class="liquid-fallback-text">AI Powered Dahlia</span>
+        </div>
     </section>
 
     <!-- CTA -->
@@ -2167,80 +2204,99 @@
     })();
     </script>
 
-    <!-- Liquid Effect (ES Module) -->
+    <!-- Liquid Effect (ES Module) with mobile fallback -->
     <script type="module">
-    import LiquidBackground from 'https://cdn.jsdelivr.net/npm/threejs-components@0.0.22/build/backgrounds/liquid1.min.js';
-
     var canvas = document.getElementById('liquid-canvas');
-    if (canvas) {
-        var app = LiquidBackground(canvas);
+    var fallback = document.getElementById('liquid-fallback');
 
-        // Build texture: white logo + "AI POWERED DAHLIA" text on black bg
-        var img = new Image();
-        img.crossOrigin = 'anonymous';
-        img.onload = function() {
+    function showFallback() {
+        if (canvas) canvas.style.display = 'none';
+        if (fallback) fallback.classList.add('active');
+    }
+
+    // Check WebGL support first
+    function hasWebGL() {
+        try {
             var c = document.createElement('canvas');
-            c.width = 1024;
-            c.height = 1024;
-            var ctx = c.getContext('2d');
+            return !!(c.getContext('webgl2') || c.getContext('webgl') || c.getContext('experimental-webgl'));
+        } catch(e) { return false; }
+    }
 
-            // Black background matching site
-            ctx.fillStyle = '#0A0A0A';
-            ctx.fillRect(0, 0, c.width, c.height);
+    if (!canvas || !hasWebGL()) {
+        showFallback();
+    } else {
+        try {
+            var mod = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.22/build/backgrounds/liquid1.min.js');
+            var LiquidBackground = mod.default;
+            var app = LiquidBackground(canvas);
 
-            // Draw logo centered, larger with cropped image
-            var logoScale = Math.min(c.width * 0.7 / img.width, c.height * 0.5 / img.height);
-            var lw = img.width * logoScale;
-            var lh = img.height * logoScale;
-            var logoX = (c.width - lw) / 2;
-            var logoY = (c.height - lh) / 2 - 30;
-            ctx.drawImage(img, logoX, logoY, lw, lh);
+            // Build texture: white logo + "AI POWERED DAHLIA" text on black bg
+            var img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.onload = function() {
+                var c = document.createElement('canvas');
+                c.width = 1024;
+                c.height = 1024;
+                var ctx = c.getContext('2d');
 
-            // Draw "AI POWERED DAHLIA" text same width as logo, right underneath
-            ctx.fillStyle = '#ffffff';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'top';
-            var fontSize = 60;
-            ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
-            var textWidth = ctx.measureText('AI POWERED DAHLIA').width;
-            fontSize = Math.floor(fontSize * (lw * 0.95) / textWidth);
-            ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
-            var textY = logoY + lh + 8;
-            ctx.fillText('AI POWERED DAHLIA', c.width / 2, textY);
+                ctx.fillStyle = '#0A0A0A';
+                ctx.fillRect(0, 0, c.width, c.height);
 
-            app.loadImage(c.toDataURL('image/png'));
-        };
-        img.src = 'assets/images/logo-white.png';
+                var logoScale = Math.min(c.width * 0.7 / img.width, c.height * 0.5 / img.height);
+                var lw = img.width * logoScale;
+                var lh = img.height * logoScale;
+                var logoX = (c.width - lw) / 2;
+                var logoY = (c.height - lh) / 2 - 30;
+                ctx.drawImage(img, logoX, logoY, lw, lh);
 
-        // Darker, more subtle liquid - blends with site
-        app.liquidPlane.material.metalness = 0.55;
-        app.liquidPlane.material.roughness = 0.45;
-        app.liquidPlane.uniforms.displacementScale.value = 4;
-        if (app.liquidPlane.material.envMapIntensity !== undefined) {
-            app.liquidPlane.material.envMapIntensity = 0.3;
-        }
-        app.setRain(false);
+                ctx.fillStyle = '#ffffff';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'top';
+                var fontSize = 60;
+                ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
+                var textWidth = ctx.measureText('AI POWERED DAHLIA').width;
+                fontSize = Math.floor(fontSize * (lw * 0.95) / textWidth);
+                ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
+                var textY = logoY + lh + 8;
+                ctx.fillText('AI POWERED DAHLIA', c.width / 2, textY);
 
-        // Dim lights for darker feel
-        if (app.scene) {
-            app.scene.traverse(function(obj) {
-                if (obj.isLight) obj.intensity = obj.intensity * 0.4;
-            });
-        }
+                app.loadImage(c.toDataURL('image/png'));
+            };
+            img.onerror = showFallback;
+            img.src = 'assets/images/logo-white.png';
 
-        // Pause rendering when section is not visible for performance
-        var liquidSection = document.querySelector('.liquid-section');
-        if (liquidSection && window.IntersectionObserver) {
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        app.renderer && (app.renderer.setAnimationLoop(app._animate || null));
-                    } else {
-                        app.renderer && app.renderer.setAnimationLoop(null);
-                    }
+            // Darker, more subtle liquid
+            app.liquidPlane.material.metalness = 0.55;
+            app.liquidPlane.material.roughness = 0.45;
+            app.liquidPlane.uniforms.displacementScale.value = 4;
+            if (app.liquidPlane.material.envMapIntensity !== undefined) {
+                app.liquidPlane.material.envMapIntensity = 0.3;
+            }
+            app.setRain(false);
+
+            if (app.scene) {
+                app.scene.traverse(function(obj) {
+                    if (obj.isLight) obj.intensity = obj.intensity * 0.4;
                 });
-            }, { threshold: 0.05 });
-            observer.observe(liquidSection);
+            }
+
+            // Pause rendering when not visible
+            var liquidSection = document.querySelector('.liquid-section');
+            if (liquidSection && window.IntersectionObserver) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            app.renderer && (app.renderer.setAnimationLoop(app._animate || null));
+                        } else {
+                            app.renderer && app.renderer.setAnimationLoop(null);
+                        }
+                    });
+                }, { threshold: 0.05 });
+                observer.observe(liquidSection);
+            }
+        } catch(e) {
+            console.warn('Liquid effect failed, showing fallback:', e);
+            showFallback();
         }
     }
     </script>
