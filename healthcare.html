@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI for Healthcare Organizations | AI Powered Dahlia</title>
+    <meta name="description" content="AI-powered marketing and operational systems for healthcare organizations. We help healthcare leaders and healthcare companies grow with AI — strategy, training, workflow automation, and integration.">
+    <meta name="keywords" content="AI for healthcare marketing, healthcare AI automation, AI training for healthcare leaders, healthcare operational efficiency, AI integration healthcare companies, healthcare marketing automation">
+    <meta name="author" content="AI Powered Dahlia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipowereddahlia.com/healthcare">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon-256.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon-256.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI for Healthcare Organizations | AI Powered Dahlia">
+    <meta property="og:description" content="AI-powered marketing and operational systems for healthcare organizations. We help healthcare leaders and healthcare companies grow with AI strategy, training, and automation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aipowereddahlia.com/healthcare">
+    <meta property="og:site_name" content="AI Powered Dahlia">
+    <meta property="og:image" content="https://aipowereddahlia.com/assets/images/og-image.png">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI for Healthcare Organizations | AI Powered Dahlia">
+    <meta name="twitter:description" content="AI-powered marketing and operational systems for healthcare organizations. Strategy, training, automation, and AI integration for healthcare leaders.">
+    <meta name="twitter:image" content="https://aipowereddahlia.com/assets/images/og-image.png">
+
+    <!-- Schema: Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Healthcare AI Services",
+        "description": "AI Powered Dahlia provides AI-powered marketing and operational systems for healthcare organizations. Services include operational efficiency consulting, leadership AI training, marketing and workflow automation, and AI integration for healthcare leaders.",
+        "provider": {
+            "@type": "Organization",
+            "name": "AI Powered Dahlia",
+            "url": "https://aipowereddahlia.com",
+            "logo": "https://aipowereddahlia.com/assets/images/logo-white.png"
+        },
+        "serviceType": "Healthcare AI Consulting",
+        "areaServed": "Worldwide",
+        "url": "https://aipowereddahlia.com/healthcare",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Healthcare AI Services",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI for Healthcare Operational Efficiency" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Training for Clinical Leadership" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workflow Automation for Healthcare Organizations" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Integration for Healthcare Organizations" } }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What kind of healthcare organizations do you work with?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We work with healthcare organizations, healthcare leaders, and healthcare companies of all sizes. Whether you run a private practice, lead a multi-location clinic, or manage a healthcare company, we help you integrate AI into your marketing and operations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will AI disrupt our current workflows?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. We integrate alongside your existing systems, not on top of them. We start with the workflows that cause the most friction and automate those first. Your team continues working the way they are comfortable while AI handles the repetitive tasks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does implementation take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most healthcare organizations see their first automation live within 2-4 weeks. A full operational efficiency engagement typically runs 60-90 days. We prioritize quick wins first so your team feels the impact early."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you specialize in healthcare marketing specifically?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We understand the unique challenges of marketing in healthcare — from building trust with patients to communicating complex services clearly. Our AI systems help healthcare organizations grow their visibility, streamline their marketing operations, and reach more of the people they serve."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the investment for healthcare AI services?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Healthcare engagements typically range from $10K to $50K depending on scope and complexity. We offer operational efficiency audits, training programs, marketing and workflow automation projects, and comprehensive AI integration for healthcare organizations. Book a call to discuss what fits your organization."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Fonts: Clash Display + Satoshi from Fontshare -->
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="assets/css/shared.css">
+
+    <style>
+        /* ===== PAGE-SPECIFIC: Healthcare AI ===== */
+
+        .page-hero { padding: 200px 0 100px; background: var(--bg-primary); }
+        .page-hero .section-label { opacity: 0; transform: translateY(20px); }
+        .page-hero h1 {
+            background: linear-gradient(135deg, #5CE1E6, #8c52ff, #FBC5FF);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+
+        /* Problem Section */
+        .problem-section { background: var(--bg-primary); }
+        .problem-card-icon { font-size: 2.2rem; margin-bottom: 16px; line-height: 1; }
+
+        /* Solution / Entity Section */
+        .solution-section {
+            background: var(--bg-elevated);
+            border-top: 1px solid var(--border-default);
+            border-bottom: 1px solid var(--border-default);
+        }
+        .solution-text {
+            color: var(--text-secondary); font-size: 1.08rem; line-height: 1.8; max-width: 780px;
+        }
+        .solution-text strong { color: var(--text-primary); }
+        .solution-link {
+            color: var(--cyan); border-bottom: 1px solid rgba(92, 225, 230, 0.3); transition: border-color 0.2s;
+        }
+        .solution-link:hover { border-color: var(--cyan); }
+
+        /* Services / Offers */
+        .offers-section {
+            padding: 140px 0;
+            background: var(--bg-primary);
+        }
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .offer-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-default);
+            border-radius: 16px;
+            padding: 36px 28px;
+            transition: all 0.3s;
+            position: relative;
+            border-top: 3px solid transparent;
+        }
+        .offer-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .offer-card--efficiency { border-top-color: var(--cyan); }
+        .offer-card--training { border-top-color: #5CE1E6; }
+        .offer-card--automation { border-top-color: #F59E0B; }
+        .offer-card--founders { border-top-color: #8c52ff; }
+
+        .offer-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+        }
+        .offer-card--efficiency .offer-tag {
+            background: rgba(92, 225, 230, 0.12);
+            color: var(--cyan);
+        }
+        .offer-card--training .offer-tag {
+            background: rgba(92, 225, 230, 0.12);
+            color: var(--cyan);
+        }
+        .offer-card--automation .offer-tag {
+            background: rgba(245, 158, 11, 0.12);
+            color: #F59E0B;
+        }
+        .offer-card--founders .offer-tag {
+            background: rgba(140, 82, 255, 0.12);
+            color: #8c52ff;
+        }
+        .offer-card h3 {
+            margin-bottom: 12px;
+        }
+        .offer-card p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+        .offer-deliverables {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-default);
+        }
+        .offer-deliverables li {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            padding-left: 18px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+        .offer-deliverables li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(92, 225, 230, 0.4);
+        }
+
+        /* Who This Is For */
+        .audience-section {
+            padding: 140px 0;
+            background: var(--bg-elevated);
+            border-top: 1px solid var(--border-default);
+            border-bottom: 1px solid var(--border-default);
+        }
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .audience-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-default);
+            border-radius: 14px;
+            padding: 32px 24px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .audience-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+        .audience-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(92, 225, 230, 0.08);
+            color: var(--cyan);
+        }
+        .audience-icon svg { width: 28px; height: 28px; }
+        .audience-card h3 { margin-bottom: 12px; font-size: 1.05rem; }
+        .audience-card p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.65;
+        }
+
+        /* Trust Principles */
+        .trust-section {
+            padding: 100px 0;
+            background: var(--bg-primary);
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .trust-card {
+            text-align: center;
+            padding: 32px 24px;
+        }
+        .trust-card h3 {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        .trust-card p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        .trust-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            color: var(--cyan);
+        }
+        .trust-icon svg { width: 100%; height: 100%; }
+
+        /* Case Studies */
+        .casestudies-section {
+            padding: 140px 0;
+            background: var(--bg-elevated);
+            border-top: 1px solid var(--border-default);
+            border-bottom: 1px solid var(--border-default);
+        }
+        .casestudies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .case-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-default);
+            border-radius: 16px;
+            padding: 36px 28px;
+            transition: all 0.3s;
+            position: relative;
+            border-left: 3px solid transparent;
+        }
+        .case-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .case-card--pawsic { border-left-color: var(--cyan); }
+        .case-card--cars { border-left-color: #8c52ff; }
+        .case-card--salsal { border-left-color: #F59E0B; }
+        .case-card--inspac { border-left-color: #FBC5FF; }
+        .case-org {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 8px;
+        }
+        .case-card h3 { margin-bottom: 12px; }
+        .case-card > p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            margin-bottom: 16px;
+        }
+        .case-services {
+            padding-top: 16px;
+            border-top: 1px solid var(--border-default);
+        }
+        .case-services-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-tertiary);
+            margin-bottom: 8px;
+        }
+        .case-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .case-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            background: rgba(92, 225, 230, 0.08);
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .offers-grid { grid-template-columns: repeat(2, 1fr); }
+            .audience-grid { grid-template-columns: repeat(2, 1fr); }
+            .trust-grid { grid-template-columns: repeat(3, 1fr); }
+            .casestudies-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .offers-grid { grid-template-columns: 1fr; }
+            .audience-grid { grid-template-columns: 1fr; }
+            .trust-grid { grid-template-columns: 1fr; }
+            .casestudies-grid { grid-template-columns: 1fr; }
+            .offers-section { padding: 96px 0; }
+            .audience-section { padding: 96px 0; }
+            .casestudies-section { padding: 96px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="assets/images/logo-white.png" alt="AI Powered Dahlia">
+                <span class="nav-logo-text">AI Powered Dahlia</span>
+            </a>
+            <ul class="nav-links">
+                <li class="nav-dropdown">
+                    <a href="#">Services</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="ai-agents">AI Agents</a>
+                        <a href="ai-strategy">AI Strategy</a>
+                        <a href="healthcare">Healthcare AI</a>
+                        <a href="social-media-automation">Social Media</a>
+                        <a href="linkedin-on-autopilot">LinkedIn Autopilot</a>
+                        <a href="seo-aeo-geo">SEO, AEO &amp; GEO</a>
+                        <a href="website-design">Website Design</a>
+                        <a href="email-marketing">Email Marketing</a>
+                        <a href="ai-video-production">AI Video</a>
+                        <a href="webinars-training">Training</a>
+                    </div>
+                </li>
+                <li><a href="about">About</a></li>
+                <li><a href="blog">Blog</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="contact" class="btn nav-cta">Book a Call</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="page-hero">
+        <div class="hero-glow"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="section-label">For Healthcare Leaders &amp; Organizations</div>
+            <h1>AI-Powered Growth for Healthcare</h1>
+            <p class="section-subtext" style="margin:20px auto 36px;">Marketing, operations, and AI strategy designed for healthcare organizations. We build systems that help your team grow your practice, reach more people, and work smarter.</p>
+            <a href="contact" class="btn btn-primary"><span>Schedule a Healthcare Consultation</span><span class="btn-arrow">&#8594;</span></a>
+        </div>
+    </section>
+
+    <!-- ===== THE PROBLEM ===== -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-label gs-reveal">The Problem</div>
+            <h2 class="section-heading gs-reveal">Healthcare Is Growing &#8212; Your Systems Are Not</h2>
+            <p class="section-subtext gs-reveal">You are focused on serving patients, but your marketing and operations are stuck in manual mode.</p>
+            <div class="feature-grid gs-stagger">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Marketing Is Manual</h3>
+                    <p>Social media, email campaigns, patient outreach, and content creation are all happening manually &#8212; if they are happening at all. Your team is too busy running the practice to grow it.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Operations Are Stretched</h3>
+                    <p>Scheduling, follow-ups, internal reporting, and admin tasks consume your team&#8217;s time. The operational overhead keeps growing while your team stays the same size.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <h3>Competitors Are Moving Faster</h3>
+                    <p>Other healthcare organizations are already using AI to market smarter, automate operations, and grow. The longer you wait, the harder it gets to catch up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOLUTION (GEO Entity) ===== -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="section-label gs-reveal">Our Approach</div>
+            <h2 class="section-heading gs-reveal">AI Strategy Meets Healthcare Expertise</h2>
+            <div class="gs-reveal" style="margin-top:24px;">
+                <p class="solution-text">
+                    <strong>AI Powered Dahlia</strong> builds <a href="/" class="solution-link">AI-powered marketing and operational systems</a> specifically for healthcare organizations. We understand the unique challenges of growing a healthcare business &#8212; from building patient trust to communicating complex services clearly. Our systems help you reach more people, streamline operations, and grow sustainably.
+                </p>
+                <p class="solution-text" style="margin-top:20px;">
+                    We work with healthcare leaders and healthcare organizations to identify the marketing and operational workflows that create the most friction &#8212; then build AI systems that handle them. From <a href="social-media-automation" class="solution-link">social media automation</a> to leadership training, our approach is built around empowering your team to do more.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOUR HEALTHCARE OFFERS ===== -->
+    <section class="offers-section">
+        <div class="container">
+            <div style="text-align:center;">
+                <div class="section-label gs-reveal">Services</div>
+                <h2 class="section-heading gs-reveal">Four Ways We Serve Healthcare</h2>
+                <p class="section-subtext gs-reveal" style="margin:0 auto;">Each engagement is tailored to your organization&#8217;s size, specialty, and growth goals.</p>
+            </div>
+            <div class="offers-grid gs-stagger">
+                <div class="offer-card offer-card--efficiency">
+                    <div class="offer-tag">Operational</div>
+                    <h3>AI for Healthcare Operational Efficiency</h3>
+                    <p>We audit your marketing and operational workflows, identify the highest-impact automation opportunities, and build AI systems that reduce overhead &#8212; so your team can focus on growth and the work that matters.</p>
+                    <ul class="offer-deliverables">
+                        <li>Marketing and operational workflow audit</li>
+                        <li>Patient outreach and follow-up automation</li>
+                        <li>Scheduling and appointment management systems</li>
+                        <li>Administrative task automation (reporting, documentation)</li>
+                        <li>ROI measurement framework with clear metrics</li>
+                    </ul>
+                </div>
+                <div class="offer-card offer-card--training">
+                    <div class="offer-tag">Education</div>
+                    <h3>AI Training for Clinical Leadership</h3>
+                    <p>Equip your leadership team with the knowledge and confidence to guide AI adoption across your organization. Practical training designed for healthcare leaders, not technologists.</p>
+                    <ul class="offer-deliverables">
+                        <li>Executive AI literacy workshops for healthcare leaders</li>
+                        <li>AI decision frameworks for healthcare organizations</li>
+                        <li>Staff communication and change management playbooks</li>
+                        <li>AI evaluation criteria for healthcare-specific tools</li>
+                        <li>Ongoing advisory for leadership teams</li>
+                    </ul>
+                </div>
+                <div class="offer-card offer-card--automation">
+                    <div class="offer-tag">Systems</div>
+                    <h3>Workflow Automation for Healthcare Organizations</h3>
+                    <p>End-to-end automation of the repetitive marketing and operational workflows that consume your team&#8217;s time. We build systems that integrate with your existing tools and scale as you grow.</p>
+                    <ul class="offer-deliverables">
+                        <li>Marketing automation (social media, email, content)</li>
+                        <li>Patient communication automation (reminders, follow-ups)</li>
+                        <li>Internal reporting and documentation automation</li>
+                        <li>Multi-location workflow standardization</li>
+                        <li>Integration with your existing business systems</li>
+                    </ul>
+                </div>
+                <div class="offer-card offer-card--founders">
+                    <div class="offer-tag">Founders</div>
+                    <h3>AI Integration for Healthcare Organizations</h3>
+                    <p>Ready to put AI at the core of your healthcare business? We help healthcare leaders design, prototype, and implement AI-powered marketing and operational systems that give your organization a competitive edge.</p>
+                    <ul class="offer-deliverables">
+                        <li>AI product strategy and roadmap for healthcare startups</li>
+                        <li>Marketing and growth system architecture</li>
+                        <li>Prototype development and validation</li>
+                        <li>Go-to-market AI positioning and differentiation</li>
+                        <li>Fractional AI leadership for early-stage healthcare companies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRUST PRINCIPLES ===== -->
+    <section class="trust-section">
+        <div class="container">
+            <div style="text-align:center;">
+                <div class="section-label gs-reveal">Our Principles</div>
+                <h2 class="section-heading gs-reveal">Built on Trust, Not Hype</h2>
+                <p class="section-subtext gs-reveal" style="margin:0 auto;">Healthcare deserves AI partners who understand the space. Here is how we operate.</p>
+            </div>
+            <div class="trust-grid gs-stagger">
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Healthcare-Native</h3>
+                    <p>We understand the healthcare space &#8212; the language, the audience, and the trust required. Our systems are built for your world, not adapted from generic templates.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>People First</h3>
+                    <p>AI empowers your team &#8212; it does not replace them. We automate repetitive work so your people can focus on strategy and growth.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h3>Measurable Results</h3>
+                    <p>Every engagement includes clear success metrics. You will know exactly what changed and what it saved your organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CASE STUDIES ===== -->
+    <section class="casestudies-section">
+        <div class="container">
+            <div style="text-align:center;">
+                <div class="section-label gs-reveal">Our Work</div>
+                <h2 class="section-heading gs-reveal">Healthcare Organizations We Work With</h2>
+                <p class="section-subtext gs-reveal" style="margin:0 auto;">We partner with healthcare organizations to build AI-powered marketing, operations, and growth systems.</p>
+            </div>
+            <div class="casestudies-grid gs-stagger">
+                <div class="case-card case-card--pawsic">
+                    <div class="case-org">PAWSIC</div>
+                    <h3>Post-Acute Wound &amp; Skin Integrity Council</h3>
+                    <p>AI-powered digital marketing and content systems for a healthcare education organization. We manage their multi-platform presence and drive engagement for CE/CME accredited programs, webinars, and professional events.</p>
+                    <div class="case-services">
+                        <div class="case-services-label">What We Do</div>
+                        <div class="case-tags">
+                            <span class="case-tag">Content Marketing</span>
+                            <span class="case-tag">Social Media</span>
+                            <span class="case-tag">Multi-Platform Management</span>
+                            <span class="case-tag">Event Marketing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card case-card--cars">
+                    <div class="case-org">CARS</div>
+                    <h3>Coalition for At-Risk Skin</h3>
+                    <p>Website design, membership platform, and digital infrastructure for a coalition advancing skin health through evidence-based research and education for healthcare professionals.</p>
+                    <div class="case-services">
+                        <div class="case-services-label">What We Do</div>
+                        <div class="case-tags">
+                            <span class="case-tag">Website Design</span>
+                            <span class="case-tag">Membership Platform</span>
+                            <span class="case-tag">Digital Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card case-card--salsal">
+                    <div class="case-org">SALSAL</div>
+                    <h3>Save a Leg, Save a Life Foundation</h3>
+                    <p>Brand strategy, multi-platform social media, and AI-powered content systems for a nonprofit dedicated to reducing lower extremity amputations and improving patient outcomes.</p>
+                    <div class="case-services">
+                        <div class="case-services-label">What We Do</div>
+                        <div class="case-tags">
+                            <span class="case-tag">Brand Strategy</span>
+                            <span class="case-tag">Social Media</span>
+                            <span class="case-tag">Content Systems</span>
+                            <span class="case-tag">Nonprofit Marketing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card case-card--inspac">
+                    <div class="case-org">INSPAC</div>
+                    <h3>INSPAC</h3>
+                    <p>AI-powered marketing and operational systems for a healthcare organization focused on advancing standards of care and professional education.</p>
+                    <div class="case-services">
+                        <div class="case-services-label">What We Do</div>
+                        <div class="case-tags">
+                            <span class="case-tag">AI Strategy</span>
+                            <span class="case-tag">Marketing Automation</span>
+                            <span class="case-tag">Operations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHO THIS IS FOR ===== -->
+    <section class="audience-section">
+        <div class="container">
+            <div style="text-align:center;">
+                <div class="section-label gs-reveal">Who This Is For</div>
+                <h2 class="section-heading gs-reveal">Healthcare Leaders Ready for AI</h2>
+                <p class="section-subtext gs-reveal" style="margin:0 auto;">We work with healthcare leaders who want to grow smarter, market better, and run leaner operations with AI.</p>
+            </div>
+            <div class="audience-grid gs-stagger">
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3>Practice Owners</h3>
+                    <p>Reduce overhead and give your staff the tools to focus on what matters most.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852 1 1.51 1H21a2 2 0 0 1 0 4h-.09c-.658 0-1.25.396-1.51 1z"/></svg>
+                    </div>
+                    <h3>Clinic Directors</h3>
+                    <p>Streamline operations across multiple departments and locations with standardized AI workflows.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                    </div>
+                    <h3>Ops Leaders</h3>
+                    <p>Identify and automate the workflows that drain your team&#8217;s energy and your organization&#8217;s budget.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h3>Healthcare Organizations</h3>
+                    <p>Build your healthcare startup with AI-powered marketing and growth systems from the ground up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-label gs-reveal" style="text-align:center;">FAQ</div>
+            <h2 class="section-heading gs-reveal" style="text-align:center;">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">What kind of healthcare organizations do you work with?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">We work with healthcare organizations, healthcare leaders, and healthcare companies of all sizes. Whether you run a private practice, lead a multi-location clinic, or manage a healthcare company, we help you integrate AI into your marketing and operations.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Will AI disrupt our current workflows?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">No. We integrate alongside your existing systems, not on top of them. We start with the workflows that cause the most friction and automate those first. Your team continues working the way they are comfortable while AI handles the repetitive tasks.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How long does implementation take?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Most healthcare organizations see their first automation live within 2&#8211;4 weeks. A full operational efficiency engagement typically runs 60&#8211;90 days. We prioritize quick wins first so your team feels the impact early.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you specialize in healthcare marketing specifically?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Yes. We understand the unique challenges of marketing in healthcare &#8212; from building trust with patients to communicating complex services clearly. Our AI systems help healthcare organizations grow their visibility, streamline their marketing operations, and reach more of the people they serve.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is the investment for healthcare AI services?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Healthcare engagements typically range from $10K to $50K depending on scope and complexity. We offer operational efficiency audits, training programs, marketing and workflow automation projects, and comprehensive AI integration for healthcare organizations. <a href="contact" style="color:var(--cyan);border-bottom:1px solid rgba(92,225,230,0.3);">Book a call</a> to discuss what fits your organization.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="cta-glow"></div>
+        <div class="container">
+            <p class="section-label gs-reveal">Ready to Start?</p>
+            <h2 class="gs-reveal">Grow Your Healthcare Organization with AI</h2>
+            <p class="section-subtext gs-reveal" style="margin:0 auto 40px;">Book a healthcare consultation. We will map your marketing and operational workflows and show you where AI can help your organization grow smarter.</p>
+            <div class="gs-reveal">
+                <a href="contact" class="btn btn-primary"><span>Schedule a Healthcare Consultation</span> <span class="btn-arrow">&#8594;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div style="display:flex;align-items:center;gap:10px;">
+                        <img src="assets/images/logo-white.png" alt="AI Powered Dahlia" style="height:36px;width:auto;">
+                        <span class="nav-logo-text">AI Powered Dahlia</span>
+                    </div>
+                    <p>AI strategy and systems for growth-stage companies. Empowering teams to multiply their output.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="ai-agents">AI Agents</a></li>
+                        <li><a href="ai-strategy">AI Strategy</a></li>
+                        <li><a href="healthcare">Healthcare AI</a></li>
+                        <li><a href="social-media-automation">Social Media</a></li>
+                        <li><a href="linkedin-on-autopilot">LinkedIn Autopilot</a></li>
+                        <li><a href="seo-aeo-geo">SEO/AEO/GEO</a></li>
+                        <li><a href="website-design">Websites</a></li>
+                        <li><a href="email-marketing">Email</a></li>
+                        <li><a href="ai-video-production">AI Video</a></li>
+                        <li><a href="webinars-training">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about">About</a></li>
+                        <li><a href="blog">Blog</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://x.com/dahlia_imanbay" target="_blank" rel="noopener">X</a></li>
+                        <li><a href="https://www.instagram.com/dahlia_imanbay/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://bsky.app/profile/dahlia-imanbay.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+                        <li><a href="https://www.youtube.com/@DahliaImanbay" target="_blank" rel="noopener">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;padding-bottom:20px;font-size:0.82rem;color:var(--text-muted);">Edinburgh &#183; Lisbon &#183; London &#8212; Global team across 5 countries</div>
+            <div class="footer-bottom">
+                <span>&#169; 2026 AI Powered Dahlia. All rights reserved.</span>
+                <span><a href="privacy">Privacy Policy</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- CDN Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- Shared JS -->
+    <script src="assets/js/shared.js"></script>
+
+    <!-- Page Init -->
+    <script>
+    (function() {
+        var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!rm && typeof Lenis !== "undefined") {
+            var lenis = new Lenis({ duration: 0.8, smooth: true });
+            if (typeof ScrollTrigger !== "undefined") { lenis.on("scroll", ScrollTrigger.update); gsap.ticker.add(function(time) { lenis.raf(time * 1000); }); gsap.ticker.lagSmoothing(0); }
+        }
+        if (!rm && typeof gsap !== "undefined") {
+            gsap.registerPlugin(ScrollTrigger);
+            var tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+            tl.fromTo(".page-hero .section-label",{opacity:0,y:20},{opacity:1,y:0,duration:0.6,delay:0.2})
+              .fromTo(".page-hero h1",{opacity:0,y:40},{opacity:1,y:0,duration:0.8},"-=0.3")
+              .fromTo(".page-hero .section-subtext",{opacity:0,y:20},{opacity:1,y:0,duration:0.6},"-=0.4")
+              .fromTo(".page-hero .btn",{opacity:0,y:20},{opacity:1,y:0,duration:0.5},"-=0.3");
+        }
+    })();
+    </script>
+</body>
+</html>
