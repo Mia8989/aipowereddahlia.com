@@ -191,7 +191,7 @@ section { padding: 140px 0; position: relative; }
     border-top: 1px solid transparent;
     border-image: linear-gradient(90deg, transparent, rgba(92, 225, 230, 0.2), rgba(140, 82, 255, 0.2), rgba(251, 197, 255, 0.15), transparent) 1;
 }
-.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
 .footer-brand p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.65; margin-top: 16px; max-width: 300px; }
 .footer-col h4 {
     font-family: 'Satoshi', sans-serif; font-size: 0.8rem; font-weight: 700;
@@ -356,7 +356,7 @@ section { padding: 140px 0; position: relative; }
     .nav-dropdown-menu a { padding: 8px 16px; font-size: 0.85rem; }
     .feature-grid { grid-template-columns: 1fr; }
     .steps-grid { grid-template-columns: 1fr; }
-    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
     .page-hero { padding: 140px 0 60px; }
 }
 @media (max-width: 480px) {
