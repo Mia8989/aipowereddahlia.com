@@ -86,12 +86,18 @@
   </url>
   <url>
     <loc>https://aipowereddahlia.com/blog</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog Posts -->
+  <url>
+    <loc>https://aipowereddahlia.com/blog/geo-tracking-tools-2026</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://aipowereddahlia.com/blog/ai-ready-website-checklist-2026</loc>
     <lastmod>2026-03-11</lastmod>
