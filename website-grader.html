@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVLMJYPEDR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EVLMJYPEDR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Website Grader: Instant AI Site Audit | AI Powered Dahlia</title>
+    <meta name="description" content="Grade your website in 60 seconds. Get a free AI-driven audit of speed, SEO, AEO, GEO, mobile, and design with a recommended conversion-ready site structure.">
+    <meta name="keywords" content="free website audit, website grader, SEO audit, AEO audit, GEO audit, conversion audit, site speed check, AI website audit">
+    <meta name="author" content="AI Powered Dahlia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipowereddahlia.com/website-grader">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon-256.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon-256.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Website Grader: Instant AI Site Audit | AI Powered Dahlia">
+    <meta property="og:description" content="Grade your website in 60 seconds. Free audit of speed, SEO, AEO, GEO, mobile, security, and design with a recommended site structure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aipowereddahlia.com/website-grader">
+    <meta property="og:site_name" content="AI Powered Dahlia">
+    <meta property="og:image" content="https://aipowereddahlia.com/assets/images/og-image.png">
+    <meta property="og:image:alt" content="Free Website Grader by AI Powered Dahlia">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dahlia_imanbay">
+    <meta name="twitter:creator" content="@dahlia_imanbay">
+    <meta name="twitter:title" content="Free Website Grader: Instant AI Site Audit | AI Powered Dahlia">
+    <meta name="twitter:description" content="Grade your website in 60 seconds. Free audit of speed, SEO, AEO, GEO, mobile, security, and design.">
+    <meta name="twitter:image" content="https://aipowereddahlia.com/assets/images/og-image.png">
+
+    <!-- Schema: WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AI Powered Dahlia Website Grader",
+        "url": "https://aipowereddahlia.com/website-grader",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any (Web)",
+        "description": "A free website audit tool that scores a site across speed, SEO, AEO, GEO, mobile, security, and design, and recommends a conversion-ready structure.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "provider": {
+            "@type": "Organization",
+            "name": "AI Powered Dahlia",
+            "url": "https://aipowereddahlia.com"
+        }
+    }
+    </script>
+
+    <!-- Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aipowereddahlia.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Free Website Grader", "item": "https://aipowereddahlia.com/website-grader" }
+        ]
+    }
+    </script>
+
+    <!-- Fonts: Clash Display + Satoshi from Fontshare -->
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="assets/css/shared.css">
+
+    <style>
+        /* ===== PAGE HERO ===== */
+        .page-hero { padding: 180px 0 60px; position: relative; overflow: hidden; }
+        .page-hero .hero-glow {
+            position: absolute; top: -20%; left: 50%;
+            transform: translateX(-50%);
+            width: 900px; height: 900px;
+            background: radial-gradient(circle, rgba(140,82,255,0.18) 0%, rgba(92,225,230,0.08) 40%, transparent 70%);
+            pointer-events: none; z-index: 0;
+        }
+        .page-hero .container { position: relative; z-index: 1; text-align: center; }
+        .page-hero h1 { margin-bottom: 20px; }
+        .page-hero .section-subtext { margin: 0 auto; max-width: 680px; font-size: 1.1rem; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 16px; border-radius: 999px;
+            background: rgba(92, 225, 230, 0.08);
+            border: 1px solid rgba(92, 225, 230, 0.2);
+            color: var(--cyan);
+            font-size: 0.8rem; font-weight: 600;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+        .hero-badge-dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--cyan);
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        /* ===== GRADER FORM ===== */
+        .grader-form-section { padding: 40px 0 100px; }
+        .grader-card {
+            max-width: 720px; margin: 0 auto;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-default);
+            border-radius: 20px;
+            padding: 48px 44px;
+            position: relative;
+        }
+        .grader-card::before {
+            content: ''; position: absolute; inset: -1px;
+            border-radius: inherit;
+            background: var(--gradient-brand);
+            opacity: 0.08; z-index: -1; filter: blur(20px);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block; font-size: 0.85rem; font-weight: 600;
+            color: var(--text-secondary); margin-bottom: 8px;
+            letter-spacing: 0.02em;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%; padding: 14px 18px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-default);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: 'Satoshi', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease; outline: none;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: var(--text-muted); }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: transparent;
+            background-image: linear-gradient(var(--bg-primary), var(--bg-primary)), var(--gradient-brand);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            box-shadow: 0 0 20px rgba(92, 225, 230, 0.08), 0 0 40px rgba(140, 82, 255, 0.06);
+        }
+        .form-group textarea { min-height: 88px; resize: vertical; line-height: 1.6; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-submit { margin-top: 28px; }
+        .form-submit .btn {
+            width: 100%; justify-content: center;
+            padding: 18px 28px; font-size: 1.05rem;
+        }
+        .form-microcopy {
+            margin-top: 14px; text-align: center;
+            color: var(--text-muted); font-size: 0.82rem;
+        }
+
+        /* ===== LOADING ===== */
+        .loading-wrap {
+            max-width: 620px; margin: 0 auto;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-default);
+            border-radius: 20px;
+            padding: 48px 40px;
+            display: none;
+        }
+        .loading-header { text-align: center; margin-bottom: 32px; }
+        .loading-header h3 { margin-bottom: 8px; }
+        .loading-header p { color: var(--text-secondary); font-size: 0.95rem; }
+        .loading-steps { list-style: none; display: grid; gap: 14px; }
+        .loading-step {
+            display: flex; align-items: center; gap: 14px;
+            padding: 14px 18px; border-radius: 12px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-default);
+            font-size: 0.92rem; color: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+        .loading-step.active {
+            color: var(--text-primary);
+            border-color: rgba(140, 82, 255, 0.3);
+            background: rgba(140, 82, 255, 0.04);
+        }
+        .loading-step.done {
+            color: var(--text-secondary);
+            border-color: rgba(92, 225, 230, 0.3);
+        }
+        .step-indicator {
+            width: 22px; height: 22px; border-radius: 50%;
+            border: 2px solid var(--border-hover);
+            flex-shrink: 0;
+            position: relative;
+        }
+        .loading-step.active .step-indicator {
+            border-color: var(--accent);
+            border-top-color: transparent;
+            animation: spin 0.9s linear infinite;
+        }
+        .loading-step.done .step-indicator {
+            border-color: var(--cyan);
+            background: var(--cyan);
+        }
+        .loading-step.done .step-indicator::after {
+            content: ''; position: absolute;
+            left: 5px; top: 2px;
+            width: 6px; height: 10px;
+            border: solid var(--bg-primary);
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ===== RESULTS ===== */
+        .results-wrap { display: none; }
+
+        .results-summary {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 48px;
+            align-items: center;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-default);
+            border-radius: 20px;
+            padding: 48px;
+            margin-bottom: 40px;
+        }
+        .gauge-wrap { position: relative; width: 240px; height: 240px; margin: 0 auto; }
+        .gauge-svg { transform: rotate(-90deg); }
+        .gauge-bg { fill: none; stroke: rgba(255,255,255,0.06); stroke-width: 14; }
+        .gauge-fg {
+            fill: none; stroke: var(--cyan); stroke-width: 14;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.6s ease;
+        }
+        .gauge-label {
+            position: absolute; inset: 0;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+        }
+        .gauge-number {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 4rem; font-weight: 600;
+            line-height: 1;
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gauge-tag {
+            font-size: 0.75rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+        .summary-text h2 { margin-bottom: 14px; }
+        .summary-text p {
+            color: var(--text-secondary);
+            font-size: 1.05rem; line-height: 1.7;
+        }
+
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .score-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-default);
+            border-radius: 14px;
+            padding: 22px 24px;
+        }
+        .score-card-header {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .score-card-title {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 0.95rem; font-weight: 600;
+            color: var(--text-primary);
+        }
+        .score-card-title svg { width: 18px; height: 18px; color: var(--cyan); }
+        .score-card-value {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.3rem; font-weight: 600;
+        }
+        .score-bar {
+            height: 6px; background: rgba(255,255,255,0.06);
+            border-radius: 99px; overflow: hidden;
+        }
+        .score-bar-fill {
+            height: 100%; width: 0;
+            background: var(--gradient-brand);
+            border-radius: 99px;
+            transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Score color helpers */
+        .tone-green { color: #5ce1e6; }
+        .tone-yellow { color: #ffcf70; }
+        .tone-red { color: #ff8a7a; }
+        .bar-green { background: linear-gradient(90deg, #5ce1e6, #8c52ff); }
+        .bar-yellow { background: linear-gradient(90deg, #ffcf70, #ff8a4a); }
+        .bar-red { background: linear-gradient(90deg, #ff8a7a, #ff5c5c); }
+
+        /* ===== PAIN POINTS ===== */
+        .section-title {
+            display: flex; align-items: baseline; gap: 16px;
+            margin-bottom: 24px;
+        }
+        .section-title h2 { margin: 0; }
+        .section-title .section-label { margin: 0; }
+
+        .pain-list { display: grid; gap: 14px; margin-bottom: 60px; }
+        .pain-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 18px;
+            padding: 20px 22px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-default);
+            border-radius: 14px;
+            align-items: start;
+        }
+        .severity-tag {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 6px 12px; border-radius: 99px;
+            font-size: 0.72rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            white-space: nowrap;
+        }
+        .severity-critical {
+            background: rgba(255, 92, 92, 0.08);
+            color: #ff8a7a;
+            border: 1px solid rgba(255, 92, 92, 0.2);
+        }
+        .severity-important {
+            background: rgba(255, 207, 112, 0.08);
+            color: #ffcf70;
+            border: 1px solid rgba(255, 207, 112, 0.2);
+        }
+        .severity-nice {
+            background: rgba(92, 225, 230, 0.08);
+            color: var(--cyan);
+            border: 1px solid rgba(92, 225, 230, 0.2);
+        }
+        .severity-dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background: currentColor;
+        }
+        .pain-body h4 {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 0.98rem; font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .pain-body p {
+            color: var(--text-secondary);
+            font-size: 0.92rem; line-height: 1.6;
+        }
+
+        /* ===== RECOMMENDED STRUCTURE ===== */
+        .structure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 18px;
+            margin-bottom: 60px;
+        }
+        .structure-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-default);
+            border-radius: 16px;
+            padding: 26px 26px;
+        }
+        .structure-card h4 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.05rem; font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .structure-card h4 span.slug {
+            font-family: 'Satoshi', monospace;
+            font-size: 0.72rem; font-weight: 500;
+            color: var(--cyan);
+            background: rgba(92, 225, 230, 0.08);
+            padding: 3px 8px; border-radius: 6px;
+            letter-spacing: 0;
+        }
+        .structure-card ul {
+            list-style: none; display: grid; gap: 8px;
+        }
+        .structure-card li {
+            color: var(--text-secondary);
+            font-size: 0.88rem; line-height: 1.55;
+            padding-left: 18px; position: relative;
+        }
+        .structure-card li::before {
+            content: ''; position: absolute;
+            left: 0; top: 8px;
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--gradient-brand);
+        }
+
+        /* ===== CTA ===== */
+        .grader-cta {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-default);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .grader-cta::before {
+            content: ''; position: absolute;
+            top: -40%; left: 50%; transform: translateX(-50%);
+            width: 800px; height: 500px;
+            background: radial-gradient(circle, rgba(140,82,255,0.16) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .grader-cta > * { position: relative; z-index: 1; }
+        .grader-cta h2 { margin-bottom: 14px; }
+        .grader-cta p {
+            color: var(--text-secondary);
+            font-size: 1.05rem; line-height: 1.7;
+            max-width: 560px; margin: 0 auto 32px;
+        }
+        .cta-btn-large {
+            padding: 18px 36px !important;
+            font-size: 1.05rem !important;
+        }
+
+        /* ===== ERROR STATE ===== */
+        .error-banner {
+            display: none;
+            margin-top: 20px;
+            padding: 16px 18px;
+            background: rgba(255, 138, 122, 0.06);
+            border: 1px solid rgba(255, 138, 122, 0.2);
+            border-radius: 10px;
+            color: #ff8a7a;
+            font-size: 0.88rem;
+            line-height: 1.55;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .page-hero { padding: 140px 0 40px; }
+            .grader-card { padding: 32px 24px; }
+            .grader-cta { padding: 44px 24px; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .results-summary {
+                grid-template-columns: 1fr;
+                padding: 32px 24px;
+                gap: 24px;
+                text-align: center;
+            }
+            .summary-text h2 { font-size: 1.5rem; }
+            .gauge-wrap { width: 200px; height: 200px; }
+            .gauge-number { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="assets/images/logo-white.png" alt="AI Powered Dahlia" width="140" height="40">
+                <span class="nav-logo-text">AI Powered Dahlia</span>
+            </a>
+            <ul class="nav-links">
+                <li class="nav-dropdown">
+                    <a href="#">Services</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="ai-agents">AI Agents</a>
+                        <a href="ai-strategy">AI Strategy</a>
+                        <a href="healthcare">Healthcare AI</a>
+                        <a href="social-media-automation">Social Media</a>
+                        <a href="linkedin-on-autopilot">LinkedIn Autopilot</a>
+                        <a href="seo-aeo-geo">SEO, AEO &amp; GEO</a>
+                        <a href="website-design">Website Design</a>
+                        <a href="email-marketing">Email Marketing</a>
+                        <a href="ai-video-production">AI Video</a>
+                        <a href="webinars-training">Training</a>
+                    </div>
+                </li>
+                <li><a href="about">About</a></li>
+                <li><a href="blog">Blog</a></li>
+                <li><a href="website-grader">Free Grader</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="contact" class="btn nav-cta">Book a Call</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="page-hero">
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Free &middot; 60 seconds &middot; No signup walls
+            </div>
+            <h1>How Well Is Your Website<br>Working For You?</h1>
+            <p class="section-subtext">Get a free, AI-driven audit of your site's speed, SEO, AEO, GEO, mobile, security, and design, plus a recommended structure built for conversions.</p>
+        </div>
+    </section>
+
+    <!-- ==================== GRADER FORM / LOADING / RESULTS ==================== -->
+    <section class="grader-form-section">
+        <div class="container">
+
+            <!-- FORM -->
+            <div class="grader-card" id="graderCard">
+                <form id="graderForm" novalidate>
+                    <div class="form-group">
+                        <label for="url">Website URL</label>
+                        <input type="url" id="url" name="url" placeholder="https://yourwebsite.com" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="goals">What are you looking for? <span style="color: var(--text-muted); font-weight: 400;">(optional)</span></label>
+                        <textarea id="goals" name="goals" placeholder="More qualified leads, better SEO rankings, faster site, etc."></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">
+                            <span>Analyze My Website</span>
+                            <span class="btn-arrow">&rarr;</span>
+                        </button>
+                    </div>
+                    <p class="form-microcopy">We'll email you a copy of your results. Zero spam, ever.</p>
+                    <div class="error-banner" id="errorBanner"></div>
+                </form>
+            </div>
+
+            <!-- LOADING -->
+            <div class="loading-wrap" id="loadingWrap">
+                <div class="loading-header">
+                    <h3>Analyzing Your Website</h3>
+                    <p>This takes about 45 to 60 seconds. Stay with us.</p>
+                </div>
+                <ul class="loading-steps" id="loadingSteps">
+                    <li class="loading-step" data-step="speed"><span class="step-indicator"></span> Checking page speed and Core Web Vitals</li>
+                    <li class="loading-step" data-step="seo"><span class="step-indicator"></span> Analyzing SEO structure and metadata</li>
+                    <li class="loading-step" data-step="geo"><span class="step-indicator"></span> Scanning for local SEO and GEO signals</li>
+                    <li class="loading-step" data-step="aeo"><span class="step-indicator"></span> Auditing AI engine optimization markers</li>
+                    <li class="loading-step" data-step="mobile"><span class="step-indicator"></span> Testing mobile friendliness</li>
+                    <li class="loading-step" data-step="security"><span class="step-indicator"></span> Verifying security and SSL</li>
+                    <li class="loading-step" data-step="design"><span class="step-indicator"></span> Reviewing conversion design best practices</li>
+                    <li class="loading-step" data-step="compile"><span class="step-indicator"></span> Compiling your report</li>
+                </ul>
+            </div>
+
+            <!-- RESULTS -->
+            <div class="results-wrap" id="resultsWrap">
+
+                <!-- Summary -->
+                <div class="results-summary">
+                    <div class="gauge-wrap">
+                        <svg class="gauge-svg" width="240" height="240" viewBox="0 0 240 240">
+                            <circle class="gauge-bg" cx="120" cy="120" r="104"/>
+                            <circle class="gauge-fg" id="gaugeFg" cx="120" cy="120" r="104"
+                                    stroke-dasharray="653" stroke-dashoffset="653"/>
+                        </svg>
+                        <div class="gauge-label">
+                            <div class="gauge-number" id="gaugeNumber">0</div>
+                            <div class="gauge-tag" id="gaugeTag">Overall Score</div>
+                        </div>
+                    </div>
+                    <div class="summary-text">
+                        <p class="section-label">Your Report</p>
+                        <h2 id="summaryHeadline">Here's what we found</h2>
+                        <p id="summaryBody">Loading your personalized breakdown...</p>
+                    </div>
+                </div>
+
+                <!-- Score breakdown -->
+                <div class="score-grid" id="scoreGrid"></div>
+
+                <!-- Pain points -->
+                <div class="section-title">
+                    <p class="section-label">Opportunities</p>
+                    <h2>What's holding your site back</h2>
+                </div>
+                <div class="pain-list" id="painList"></div>
+
+                <!-- Recommended structure -->
+                <div class="section-title">
+                    <p class="section-label">Build For Conversions</p>
+                    <h2>Your recommended site structure</h2>
+                </div>
+                <p class="section-subtext" style="margin-bottom: 32px;">A proven structure used by the sites that actually turn visitors into customers. Each page has a job.</p>
+                <div class="structure-grid" id="structureGrid"></div>
+
+                <!-- CTA -->
+                <div class="grader-cta">
+                    <p class="section-label">Next Step</p>
+                    <h2>Want a Website That Actually<br>Gets You Clients?</h2>
+                    <p>Book a free strategy call and we'll walk through your results together. We'll show you exactly where AI and a stronger structure can drive the biggest jumps.</p>
+                    <a href="contact" class="btn btn-primary cta-btn-large" id="bookCallBtn">
+                        <span>Book a Free Strategy Call</span>
+                        <span class="btn-arrow">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div style="display:flex;align-items:center;gap:10px;">
+                        <img src="assets/images/logo-white.png" alt="AI Powered Dahlia" width="126" height="36" loading="lazy" style="height:36px;width:auto;">
+                        <span class="nav-logo-text">AI Powered Dahlia</span>
+                    </div>
+                    <p>AI strategy and systems for growth-stage companies. Empowering teams to multiply their output.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="ai-agents">AI Agents</a></li>
+                        <li><a href="ai-strategy">AI Strategy</a></li>
+                        <li><a href="healthcare">Healthcare AI</a></li>
+                        <li><a href="social-media-automation">Social Media</a></li>
+                        <li><a href="linkedin-on-autopilot">LinkedIn Autopilot</a></li>
+                        <li><a href="seo-aeo-geo">SEO/AEO/GEO</a></li>
+                        <li><a href="website-design">Websites</a></li>
+                        <li><a href="email-marketing">Email</a></li>
+                        <li><a href="ai-video-production">AI Video</a></li>
+                        <li><a href="webinars-training">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about">About</a></li>
+                        <li><a href="blog">Blog</a></li>
+                        <li><a href="website-grader">Free Grader</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://x.com/dahlia_imanbay" target="_blank" rel="noopener">X</a></li>
+                        <li><a href="https://www.instagram.com/dahlia_imanbay/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://bsky.app/profile/dahlia-imanbay.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+                        <li><a href="https://www.youtube.com/@DahliaImanbay" target="_blank" rel="noopener">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;padding-bottom:20px;font-size:0.82rem;color:var(--text-muted);">Edinburgh &middot; Lisbon &middot; London &middot; Chicago &middot; Manila, Global team across 5 cities</div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 AI Powered Dahlia. All rights reserved.</span>
+                <span><a href="privacy">Privacy Policy</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <!-- CDN Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Shared JS -->
+    <script src="assets/js/shared.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script>
+    (function() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var lenis = new Lenis({ duration: 0.8, easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });
+        gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
+        gsap.ticker.lagSmoothing(0);
+    })();
+    </script>
+
+    <!-- ==================== GRADER LOGIC ==================== -->
+    <script>
+    /* ============================================================
+       CONFIGURATION
+       Update these values as needed. Everything else is automatic.
+       ============================================================ */
+    const GRADER_WEBHOOK_URL = ""; // Make.com webhook URL for lead capture (leave empty to disable)
+    const BOOKING_URL = "contact"; // Where the "Book a call" button sends people
+    /* ============================================================ */
+
+    // Wire up booking CTA
+    document.getElementById('bookCallBtn').setAttribute('href', BOOKING_URL);
+
+    const form = document.getElementById('graderForm');
+    const graderCard = document.getElementById('graderCard');
+    const loadingWrap = document.getElementById('loadingWrap');
+    const resultsWrap = document.getElementById('resultsWrap');
+    const errorBanner = document.getElementById('errorBanner');
+    const loadingSteps = document.querySelectorAll('#loadingSteps .loading-step');
+
+    // ===== Form submit =====
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        errorBanner.style.display = 'none';
+
+        let url = document.getElementById('url').value.trim();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const goals = document.getElementById('goals').value.trim();
+
+        if (!url || !name || !email) {
+            showError("Please fill in your website URL, name, and email so we can send you the report.");
+            return;
+        }
+
+        // Auto-add protocol if missing
+        if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+
+        // Basic URL sanity check
+        try { new URL(url); } catch (_) {
+            showError("That URL doesn't look right. Example: https://yourwebsite.com");
+            return;
+        }
+
+        // Show loading
+        graderCard.style.display = 'none';
+        loadingWrap.style.display = 'block';
+        loadingWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Capture the lead early, so we still have them if analysis partially fails
+        sendLead({ url, name, email, goals, stage: 'analysis_started' });
+
+        try {
+            const report = await analyzeWebsite(url);
+            renderResults(report, url);
+            // Send enriched lead with scores
+            sendLead({ url, name, email, goals, stage: 'analysis_complete', scores: report.scores, overall: report.overall });
+        } catch (err) {
+            console.error(err);
+            // Soft fail: still show a graceful result so the visitor feels taken care of
+            renderFallbackResults(url);
+            sendLead({ url, name, email, goals, stage: 'analysis_failed', error: String(err && err.message || err) });
+        }
+    });
+
+    function showError(msg) {
+        errorBanner.textContent = msg;
+        errorBanner.style.display = 'block';
+    }
+
+    function sendLead(payload) {
+        if (!GRADER_WEBHOOK_URL) return;
+        try {
+            fetch(GRADER_WEBHOOK_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(Object.assign({ source: 'website-grader', ts: new Date().toISOString() }, payload))
+            });
+        } catch (_) { /* silent */ }
+    }
+
+    // ===== Animate loading steps =====
+    async function advanceStep(key) {
+        for (const el of loadingSteps) {
+            if (el.dataset.step === key) {
+                el.classList.add('active');
+                break;
+            }
+        }
+        // Small visual delay so users feel the step
+        await new Promise(r => setTimeout(r, 400));
+    }
+    function completeStep(key) {
+        for (const el of loadingSteps) {
+            if (el.dataset.step === key) {
+                el.classList.remove('active');
+                el.classList.add('done');
+                break;
+            }
+        }
+    }
+
+    /* ============================================================
+       ANALYSIS
+       ============================================================ */
+    async function analyzeWebsite(url) {
+        const origin = new URL(url).origin;
+
+        // Kick off PageSpeed + HTML fetch in parallel
+        await advanceStep('speed');
+        const psPromise = fetchPageSpeed(url);
+        const htmlPromise = fetchHTML(url);
+        const robotsPromise = fetchText(origin + '/robots.txt');
+        const sitemapPromise = fetchText(origin + '/sitemap.xml');
+
+        const psResult = await psPromise.catch(() => null);
+        completeStep('speed');
+
+        await advanceStep('seo');
+        const html = await htmlPromise.catch(() => '');
+        const robots = await robotsPromise.catch(() => '');
+        const sitemap = await sitemapPromise.catch(() => '');
+        const seo = auditSEO(html, robots, sitemap);
+        completeStep('seo');
+
+        await advanceStep('geo');
+        const geo = auditGEO(html);
+        completeStep('geo');
+
+        await advanceStep('aeo');
+        const aeo = auditAEO(html);
+        completeStep('aeo');
+
+        await advanceStep('mobile');
+        const mobile = auditMobile(html, psResult);
+        completeStep('mobile');
+
+        await advanceStep('security');
+        const security = auditSecurity(url);
+        completeStep('security');
+
+        await advanceStep('design');
+        const design = auditDesign(html);
+        completeStep('design');
+
+        await advanceStep('compile');
+        const speed = auditSpeed(psResult);
+        completeStep('compile');
+
+        const scores = {
+            speed: speed.score,
+            seo: seo.score,
+            geo: geo.score,
+            aeo: aeo.score,
+            mobile: mobile.score,
+            security: security.score,
+            design: design.score
+        };
+
+        // Weighted overall: Speed 15, SEO 20, GEO 10, AEO 10, Mobile 15, Security 10, Design 20
+        const overall = Math.round(
+            scores.speed * 0.15 +
+            scores.seo * 0.20 +
+            scores.geo * 0.10 +
+            scores.aeo * 0.10 +
+            scores.mobile * 0.15 +
+            scores.security * 0.10 +
+            scores.design * 0.20
+        );
+
+        const painPoints = [
+            ...speed.issues,
+            ...seo.issues,
+            ...geo.issues,
+            ...aeo.issues,
+            ...mobile.issues,
+            ...security.issues,
+            ...design.issues
+        ];
+
+        return { scores, overall, painPoints };
+    }
+
+    /* ============================================================
+       DATA FETCHERS
+       ============================================================ */
+    async function fetchPageSpeed(url) {
+        const endpoint = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&strategy=mobile`;
+        const res = await fetch(endpoint);
+        if (!res.ok) throw new Error("PageSpeed API unavailable");
+        return res.json();
+    }
+    async function fetchHTML(url) {
+        const proxy = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
+        const res = await fetch(proxy);
+        if (!res.ok) throw new Error("Could not fetch HTML");
+        const data = await res.json();
+        return data.contents || '';
+    }
+    async function fetchText(url) {
+        const proxy = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
+        const res = await fetch(proxy);
+        if (!res.ok) return '';
+        const data = await res.json();
+        return data.contents || '';
+    }
+
+    /* ============================================================
+       AUDITS (each returns { score: 0..100, issues: [...] })
+       ============================================================ */
+    function auditSpeed(ps) {
+        if (!ps || !ps.lighthouseResult) {
+            return { score: 50, issues: [{
+                severity: 'important', category: 'Speed',
+                title: 'Could not measure speed',
+                body: "Google's PageSpeed API was unavailable for this check. We recommend running a full speed test with real-user data for the most accurate picture."
+            }] };
+        }
+        const lr = ps.lighthouseResult;
+        const perf = Math.round((lr.categories.performance && lr.categories.performance.score || 0) * 100);
+        const audits = lr.audits || {};
+        const lcp = audits['largest-contentful-paint'];
+        const cls = audits['cumulative-layout-shift'];
+        const tbt = audits['total-blocking-time'];
+
+        const issues = [];
+        if (perf < 50) {
+            issues.push({
+                severity: 'critical', category: 'Speed',
+                title: `Mobile performance score is ${perf}/100`,
+                body: "Over half of mobile visitors leave a site that takes more than 3 seconds to load. A faster site keeps more of the traffic you're already paying for."
+            });
+        } else if (perf < 80) {
+            issues.push({
+                severity: 'important', category: 'Speed',
+                title: `Mobile performance score is ${perf}/100`,
+                body: "Modern best practices aim for 90+ on mobile. Compression, modern image formats, and lazy loading can typically push you into the green zone."
+            });
+        }
+        if (lcp && lcp.numericValue > 4000) {
+            issues.push({
+                severity: 'critical', category: 'Speed',
+                title: `Slow largest content paint (${(lcp.numericValue/1000).toFixed(1)}s)`,
+                body: "This is the time it takes for your main hero image or headline to appear. Anything over 2.5 seconds hurts both SEO rankings and conversions."
+            });
+        } else if (lcp && lcp.numericValue > 2500) {
+            issues.push({
+                severity: 'important', category: 'Speed',
+                title: `Largest content paint is ${(lcp.numericValue/1000).toFixed(1)}s`,
+                body: "Google's target is under 2.5 seconds. Compressing hero images and deferring non-critical scripts will move the needle here."
+            });
+        }
+        if (cls && cls.numericValue > 0.25) {
+            issues.push({
+                severity: 'important', category: 'Speed',
+                title: 'Layout shifts during page load',
+                body: "Your content jumps around as the page loads, which feels unpolished and causes misclicks. Setting explicit dimensions on images and ads usually fixes this."
+            });
+        }
+        if (tbt && tbt.numericValue > 600) {
+            issues.push({
+                severity: 'important', category: 'Speed',
+                title: 'Page is slow to respond to clicks',
+                body: "Heavy JavaScript is blocking the main thread, making buttons and menus feel laggy. Trimming third-party scripts is the usual culprit to investigate."
+            });
+        }
+        return { score: perf, issues };
+    }
+
+    function auditSEO(html, robots, sitemap) {
+        if (!html) {
+            return { score: 50, issues: [{
+                severity: 'important', category: 'SEO',
+                title: "Couldn't read your page HTML",
+                body: "Our fetcher was blocked. This usually means the site is protected by a strict firewall or bot protection, which can also block search engine crawlers. Worth checking."
+            }] };
+        }
+        const doc = parseHTML(html);
+        const issues = [];
+        let points = 100;
+
+        const title = doc.querySelector('title');
+        const titleText = title ? title.textContent.trim() : '';
+        if (!titleText) {
+            issues.push({ severity: 'critical', category: 'SEO',
+                title: 'Missing page title',
+                body: "Your page title is what shows up as the clickable headline in Google results. Without it, search engines don't know what your page is about."
+            });
+            points -= 25;
+        } else if (titleText.length < 30 || titleText.length > 65) {
+            issues.push({ severity: 'nice', category: 'SEO',
+                title: `Page title is ${titleText.length} characters`,
+                body: "Modern best practices suggest 30 to 65 characters so titles display fully in search results without getting cut off."
+            });
+            points -= 5;
+        }
+
+        const metaDesc = doc.querySelector('meta[name="description"]');
+        const descContent = metaDesc ? (metaDesc.getAttribute('content') || '').trim() : '';
+        if (!descContent) {
+            issues.push({ severity: 'important', category: 'SEO',
+                title: 'Missing meta description',
+                body: "Search engines use this as your elevator pitch in search results. Without one, Google writes its own, and it's rarely as compelling as what you would write."
+            });
+            points -= 15;
+        } else if (descContent.length < 80 || descContent.length > 170) {
+            issues.push({ severity: 'nice', category: 'SEO',
+                title: `Meta description is ${descContent.length} characters`,
+                body: "A sweet spot of 120 to 160 characters fills the full search result snippet and boosts click-through rates."
+            });
+            points -= 4;
+        }
+
+        const h1s = doc.querySelectorAll('h1');
+        if (h1s.length === 0) {
+            issues.push({ severity: 'critical', category: 'SEO',
+                title: 'No H1 heading found',
+                body: "Every page needs one clear H1 that tells visitors and Google what the page is about. It's the single most important tag for on-page SEO."
+            });
+            points -= 15;
+        } else if (h1s.length > 1) {
+            issues.push({ severity: 'important', category: 'SEO',
+                title: `Multiple H1s (${h1s.length}) on one page`,
+                body: "Use exactly one H1 per page. Multiple H1s dilute the signal to search engines about the page's primary topic."
+            });
+            points -= 8;
+        }
+
+        const h2s = doc.querySelectorAll('h2').length;
+        const h3s = doc.querySelectorAll('h3').length;
+        if (h2s === 0 && h3s === 0) {
+            issues.push({ severity: 'important', category: 'SEO',
+                title: 'No subheadings on the page',
+                body: "H2 and H3 subheadings break up content, help scannability, and give AI search engines structured signals for when to quote you."
+            });
+            points -= 10;
+        }
+
+        const images = doc.querySelectorAll('img');
+        const imagesNoAlt = Array.from(images).filter(img => !img.hasAttribute('alt') || !img.getAttribute('alt').trim());
+        if (images.length > 0 && imagesNoAlt.length / images.length > 0.3) {
+            issues.push({ severity: 'important', category: 'SEO',
+                title: `${imagesNoAlt.length} of ${images.length} images missing alt text`,
+                body: "Alt text helps accessibility tools, image search, and AI crawlers understand your visuals. Every content image should have a short, descriptive alt."
+            });
+            points -= 8;
+        }
+
+        const canonical = doc.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+            issues.push({ severity: 'nice', category: 'SEO',
+                title: 'No canonical tag',
+                body: "Canonical tags prevent duplicate-content issues when the same page is accessible through multiple URLs. Add one to each page pointing to its preferred URL."
+            });
+            points -= 4;
+        }
+
+        if (!sitemap || sitemap.length < 80) {
+            issues.push({ severity: 'important', category: 'SEO',
+                title: 'No sitemap.xml detected',
+                body: "A sitemap helps search engines discover and index every page efficiently. Most CMS platforms generate one automatically, but it should live at /sitemap.xml."
+            });
+            points -= 10;
+        }
+
+        if (!robots || robots.length < 3) {
+            issues.push({ severity: 'nice', category: 'SEO',
+                title: 'No robots.txt file',
+                body: "Robots.txt tells search engines which pages to crawl. Not critical, but modern best practices include one at /robots.txt."
+            });
+            points -= 3;
+        }
+
+        return { score: clamp(points), issues };
+    }
+
+    function auditGEO(html) {
+        if (!html) return { score: 50, issues: [] };
+        const doc = parseHTML(html);
+        const issues = [];
+        let points = 60; // Start lower, award points for what IS found
+
+        const schemas = extractJSONLD(html);
+        const hasLocalBiz = schemas.some(s => s['@type'] && /localbusiness|restaurant|store|medical|professional/i.test(JSON.stringify(s['@type'])));
+        if (hasLocalBiz) {
+            points += 25;
+        } else {
+            issues.push({ severity: 'nice', category: 'GEO',
+                title: 'No LocalBusiness schema found',
+                body: "If you serve a specific geography, adding LocalBusiness schema gives search engines everything they need (address, hours, service area) to surface you in local and map results."
+            });
+        }
+
+        const bodyText = doc.body ? doc.body.textContent : '';
+        const hasPhone = /(\+?\d[\d\s().-]{7,}\d)/.test(bodyText);
+        const hasAddress = /\b(\d{1,5}\s+\w+.*\b(Street|St|Avenue|Ave|Road|Rd|Boulevard|Blvd|Lane|Ln|Drive|Dr)\.?)\b/i.test(bodyText);
+        if (hasPhone) points += 8;
+        if (hasAddress) points += 10;
+
+        const hasMaps = /google\.com\/maps|maps\.googleapis|goo\.gl\/maps/i.test(html);
+        if (hasMaps) {
+            points += 8;
+        } else if (hasLocalBiz || hasAddress) {
+            issues.push({ severity: 'nice', category: 'GEO',
+                title: 'No Google Maps embed on the page',
+                body: "If physical location matters to your business, an embedded map builds trust instantly and is a strong local-search signal."
+            });
+        }
+
+        if (!hasLocalBiz && !hasAddress && !hasPhone) {
+            issues.push({ severity: 'nice', category: 'GEO',
+                title: 'Limited local signals detected',
+                body: "If your business doesn't serve a specific geography, this is fine. If it does, adding your address, phone number, and LocalBusiness schema would unlock local search traffic."
+            });
+        }
+
+        return { score: clamp(points), issues };
+    }
+
+    function auditAEO(html) {
+        if (!html) return { score: 50, issues: [] };
+        const doc = parseHTML(html);
+        const issues = [];
+        let points = 55;
+
+        const schemas = extractJSONLD(html);
+        const hasAnySchema = schemas.length > 0;
+        const hasFAQ = schemas.some(s => /FAQPage|Question/i.test(JSON.stringify(s['@type'] || '')));
+        const hasSpeakable = schemas.some(s => s.speakable || /Speakable/i.test(JSON.stringify(s['@type'] || '')));
+        const hasHowTo = schemas.some(s => /HowTo/i.test(JSON.stringify(s['@type'] || '')));
+
+        if (hasAnySchema) points += 15;
+        else {
+            issues.push({ severity: 'important', category: 'AEO',
+                title: 'No structured data detected',
+                body: "AI search engines like Perplexity, ChatGPT, and Google's SGE rely on schema markup to understand and quote your content. No schema means you're invisible to them."
+            });
+            points -= 10;
+        }
+
+        if (hasFAQ) {
+            points += 12;
+        } else {
+            issues.push({ severity: 'nice', category: 'AEO',
+                title: 'No FAQ schema on the page',
+                body: "FAQ schema is how AI assistants pull direct answers from your site. A single well-structured FAQ block can get you quoted in dozens of AI responses."
+            });
+        }
+
+        if (hasHowTo) points += 5;
+        if (hasSpeakable) points += 5;
+
+        // Question-style headings indicate AEO-friendly content
+        const headings = Array.from(doc.querySelectorAll('h2, h3')).map(h => h.textContent.trim());
+        const questionHeadings = headings.filter(h => /^(how|what|why|when|where|who|can|does|is|are|should)\b/i.test(h)).length;
+        if (questionHeadings >= 3) {
+            points += 10;
+        } else if (headings.length > 2 && questionHeadings < 2) {
+            issues.push({ severity: 'nice', category: 'AEO',
+                title: 'Few conversational headings',
+                body: "AI engines favor content structured around how real people ask questions. Reframing a few H2s as questions (\"How does X work?\" instead of \"About X\") typically increases AI citations."
+            });
+        }
+
+        return { score: clamp(points), issues };
+    }
+
+    function auditMobile(html, ps) {
+        const issues = [];
+        let score = 70;
+        if (ps && ps.lighthouseResult && ps.lighthouseResult.categories && ps.lighthouseResult.categories.performance) {
+            score = Math.round(ps.lighthouseResult.categories.performance.score * 100);
+        }
+        if (html) {
+            const doc = parseHTML(html);
+            const viewport = doc.querySelector('meta[name="viewport"]');
+            if (!viewport) {
+                issues.push({ severity: 'critical', category: 'Mobile',
+                    title: 'Missing viewport meta tag',
+                    body: "Without this tag, your site will render at desktop size on phones, forcing visitors to pinch and zoom. It's a single line of code and makes an enormous difference."
+                });
+                score = Math.min(score, 40);
+            }
+        }
+        if (score < 60) {
+            issues.push({ severity: 'important', category: 'Mobile',
+                title: `Mobile experience scores ${score}/100`,
+                body: "Over 60% of web traffic is mobile. A site that feels clunky on phones leaks leads all day long."
+            });
+        }
+        return { score, issues };
+    }
+
+    function auditSecurity(url) {
+        const issues = [];
+        let points = 70;
+        const isHTTPS = url.startsWith('https://');
+        if (isHTTPS) {
+            points += 25;
+        } else {
+            issues.push({ severity: 'critical', category: 'Security',
+                title: 'Site is not served over HTTPS',
+                body: "Browsers now flag non-HTTPS sites as \"Not Secure\" in the address bar. It destroys trust instantly and search engines actively demote non-HTTPS sites."
+            });
+            points = 35;
+        }
+        // We can't read external response headers reliably from the browser, so we flag it as an area worth checking
+        issues.push({ severity: 'nice', category: 'Security',
+            title: 'Security headers worth verifying',
+            body: "Modern sites should set HSTS, X-Frame-Options, and a Content-Security-Policy. We can't read those headers from here, but they take 10 minutes to add and lock down common attack vectors."
+        });
+        return { score: clamp(points), issues };
+    }
+
+    function auditDesign(html) {
+        if (!html) return { score: 60, issues: [] };
+        const doc = parseHTML(html);
+        const issues = [];
+        let points = 60;
+
+        // CTAs
+        const ctaSelectors = 'a.btn, a.button, button, [class*="cta"], [class*="btn-primary"]';
+        const ctas = doc.querySelectorAll(ctaSelectors);
+        if (ctas.length === 0) {
+            issues.push({ severity: 'critical', category: 'Design',
+                title: 'No clear call-to-action buttons detected',
+                body: "Visitors who can't instantly spot what to do next simply leave. Every page needs at least one prominent CTA above the fold."
+            });
+            points -= 20;
+        } else if (ctas.length < 3) {
+            issues.push({ severity: 'nice', category: 'Design',
+                title: `Only ${ctas.length} call-to-action element${ctas.length === 1 ? '' : 's'} detected`,
+                body: "Modern best practices suggest repeating your main CTA at least three times: hero, mid-page, and footer. People convert at different scroll depths."
+            });
+            points -= 6;
+        } else {
+            points += 10;
+        }
+
+        // Favicon
+        if (!doc.querySelector('link[rel*="icon"]')) {
+            issues.push({ severity: 'nice', category: 'Design',
+                title: 'No favicon detected',
+                body: "A favicon is a small but meaningful trust signal. Without one, browser tabs look unfinished and users lose the visual anchor when they have multiple tabs open."
+            });
+            points -= 3;
+        }
+
+        // OG tags for shareability
+        const ogTitle = doc.querySelector('meta[property="og:title"]');
+        const ogImage = doc.querySelector('meta[property="og:image"]');
+        if (!ogTitle || !ogImage) {
+            issues.push({ severity: 'nice', category: 'Design',
+                title: 'Incomplete Open Graph tags',
+                body: "When someone shares your page on LinkedIn, Slack, or iMessage, these tags control the preview image and title. Without them, the preview looks broken and nobody clicks."
+            });
+            points -= 5;
+        } else {
+            points += 5;
+        }
+
+        // Hero content (heading + CTA in first portion)
+        const firstSection = doc.body ? doc.body.innerHTML.slice(0, 4000) : '';
+        const hasHeroHeading = new RegExp('<h' + '1[^>]*>[\\s\\S]{10,}?<\\/h1>', 'i').test(firstSection);
+        const hasHeroCTA = /<a[^>]*class="[^"]*(btn|cta|button)/i.test(firstSection) || /<button[^>]*>/i.test(firstSection);
+        if (!hasHeroHeading) {
+            issues.push({ severity: 'important', category: 'Design',
+                title: 'No clear heading above the fold',
+                body: "Visitors should understand what you offer in under 3 seconds. A bold, benefit-driven H1 at the top of the page is non-negotiable for conversion."
+            });
+            points -= 10;
+        }
+        if (!hasHeroCTA && hasHeroHeading) {
+            issues.push({ severity: 'important', category: 'Design',
+                title: 'No call-to-action above the fold',
+                body: "Modern best practices pair every hero headline with a CTA so the reader can act the instant they connect with the message."
+            });
+            points -= 8;
+        }
+
+        // Font loading
+        const hasFontLink = !!doc.querySelector('link[href*="fonts."]') || !!doc.querySelector('link[href*="fontshare"]') || /font-family/i.test(html);
+        if (!hasFontLink) {
+            issues.push({ severity: 'nice', category: 'Design',
+                title: 'No custom web fonts detected',
+                body: "Default system fonts work, but a considered font pairing signals premium and is a quick lift for perceived quality."
+            });
+            points -= 3;
+        }
+
+        return { score: clamp(points), issues };
+    }
+
+    /* ============================================================
+       PARSING HELPERS
+       ============================================================ */
+    function parseHTML(html) {
+        const parser = new DOMParser();
+        return parser.parseFromString(html, 'text/html');
+    }
+    function extractJSONLD(html) {
+        const results = [];
+        const regex = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+        let m;
+        while ((m = regex.exec(html)) !== null) {
+            try {
+                const obj = JSON.parse(m[1].trim());
+                if (Array.isArray(obj)) results.push(...obj);
+                else results.push(obj);
+            } catch (_) { /* skip */ }
+        }
+        return results;
+    }
+    function clamp(n, min = 0, max = 100) { return Math.max(min, Math.min(max, Math.round(n))); }
+
+    /* ============================================================
+       RENDER RESULTS
+       ============================================================ */
+    function renderResults(report, url) {
+        loadingWrap.style.display = 'none';
+        resultsWrap.style.display = 'block';
+
+        renderGauge(report.overall);
+        renderSummaryText(report.overall, url);
+        renderScoreBars(report.scores);
+        renderPainPoints(report.painPoints);
+        renderStructure();
+
+        resultsWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function renderFallbackResults(url) {
+        loadingWrap.style.display = 'none';
+        resultsWrap.style.display = 'block';
+        renderGauge(55);
+        const host = safeHost(url);
+        document.getElementById('summaryHeadline').textContent = "We collected a partial report";
+        document.getElementById('summaryBody').textContent = `We had trouble fetching some data from ${host}, which often means the site has strong firewall rules or is rate-limiting automated checks. A manual audit will give you a more complete picture, and we'd be happy to run one with you.`;
+        renderScoreBars({ speed: 60, seo: 55, geo: 50, aeo: 50, mobile: 60, security: 70, design: 55 });
+        renderPainPoints([{
+            severity: 'important', category: 'Audit',
+            title: 'Parts of the automated check were blocked',
+            body: "This is often a sign that your site is well-protected, which is good. It also means a human audit is the best next step for a full picture. Let's talk."
+        }]);
+        renderStructure();
+        resultsWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function safeHost(url) {
+        try { return new URL(url).hostname.replace(/^www\./, ''); } catch (_) { return 'your site'; }
+    }
+
+    function renderGauge(score) {
+        const fg = document.getElementById('gaugeFg');
+        const circumference = 2 * Math.PI * 104;
+        fg.setAttribute('stroke-dasharray', circumference.toFixed(2));
+        const offset = circumference - (circumference * score / 100);
+
+        // Color
+        let stroke = '#5ce1e6'; // cyan, green zone
+        if (score < 40) stroke = '#ff5c5c';
+        else if (score < 70) stroke = '#ffcf70';
+
+        // Delay to allow layout
+        setTimeout(() => {
+            fg.style.stroke = stroke;
+            fg.setAttribute('stroke-dashoffset', offset.toFixed(2));
+        }, 80);
+
+        // Count up
+        const gaugeNumber = document.getElementById('gaugeNumber');
+        const gaugeTag = document.getElementById('gaugeTag');
+        gaugeTag.textContent = 'Overall Score';
+        animateNumber(gaugeNumber, 0, score, 1600);
+    }
+
+    function renderSummaryText(score, url) {
+        const host = safeHost(url);
+        let headline, body;
+        if (score >= 80) {
+            headline = `${host} is in great shape`;
+            body = `${host} scored ${score}/100. You've built a strong foundation. Below are a handful of smaller opportunities to squeeze out the last 10-15 points and maximize conversions.`;
+        } else if (score >= 60) {
+            headline = `${host} has a solid base with room to grow`;
+            body = `${host} scored ${score}/100. The fundamentals are in place. Fixing the items flagged below would typically move you into the 80+ range and improve both SEO visibility and lead flow.`;
+        } else if (score >= 40) {
+            headline = `${host} is leaving leads on the table`;
+            body = `${host} scored ${score}/100. A few high-impact fixes, mostly speed, SEO structure, and clearer CTAs, would turn more of your existing traffic into conversations.`;
+        } else {
+            headline = `${host} has real opportunities to fix`;
+            body = `${host} scored ${score}/100. The good news: the biggest levers are almost always the easiest ones, and moving from this range to 70+ typically takes a focused 2 to 4 weeks of work.`;
+        }
+        document.getElementById('summaryHeadline').textContent = headline;
+        document.getElementById('summaryBody').textContent = body;
+    }
+
+    function scoreTone(score) {
+        if (score >= 70) return 'green';
+        if (score >= 40) return 'yellow';
+        return 'red';
+    }
+
+    const CATEGORY_META = {
+        speed: { label: 'Page Speed', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' },
+        seo: { label: 'SEO', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>' },
+        geo: { label: 'Local / GEO', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>' },
+        aeo: { label: 'AI Engine (AEO)', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>' },
+        mobile: { label: 'Mobile Friendly', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>' },
+        security: { label: 'Security', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>' },
+        design: { label: 'Design Best Practices', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>' }
+    };
+
+    function renderScoreBars(scores) {
+        const grid = document.getElementById('scoreGrid');
+        grid.innerHTML = '';
+        Object.keys(CATEGORY_META).forEach(key => {
+            const meta = CATEGORY_META[key];
+            const score = scores[key];
+            const tone = scoreTone(score);
+            const card = document.createElement('div');
+            card.className = 'score-card';
+            card.innerHTML = `
+                <div class="score-card-header">
+                    <div class="score-card-title">${meta.icon}${meta.label}</div>
+                    <div class="score-card-value tone-${tone}" data-target="${score}">0</div>
+                </div>
+                <div class="score-bar"><div class="score-bar-fill bar-${tone}"></div></div>
+            `;
+            grid.appendChild(card);
+            const valEl = card.querySelector('.score-card-value');
+            animateNumber(valEl, 0, score, 1400);
+            requestAnimationFrame(() => {
+                card.querySelector('.score-bar-fill').style.width = score + '%';
+            });
+        });
+    }
+
+    function renderPainPoints(painPoints) {
+        const list = document.getElementById('painList');
+        list.innerHTML = '';
+        if (!painPoints || painPoints.length === 0) {
+            const el = document.createElement('div');
+            el.className = 'pain-item';
+            el.innerHTML = `
+                <span class="severity-tag severity-nice"><span class="severity-dot"></span>Solid</span>
+                <div class="pain-body">
+                    <h4>Nothing major to flag</h4>
+                    <p>We didn't detect significant issues in our automated scan. A human audit would still uncover strategic opportunities specific to your positioning and audience, which this automated tool can't see.</p>
+                </div>
+            `;
+            list.appendChild(el);
+            return;
+        }
+        // Sort: critical, important, nice
+        const order = { critical: 0, important: 1, nice: 2 };
+        painPoints.sort((a, b) => (order[a.severity] ?? 3) - (order[b.severity] ?? 3));
+
+        painPoints.forEach(p => {
+            const el = document.createElement('div');
+            el.className = 'pain-item';
+            const sevLabel = { critical: 'Critical', important: 'Important', nice: 'Opportunity' }[p.severity] || 'Note';
+            el.innerHTML = `
+                <span class="severity-tag severity-${p.severity === 'nice' ? 'nice' : p.severity}"><span class="severity-dot"></span>${sevLabel}</span>
+                <div class="pain-body">
+                    <h4>${escapeHTML(p.title)}</h4>
+                    <p>${escapeHTML(p.body)}</p>
+                </div>
+            `;
+            list.appendChild(el);
+        });
+    }
+
+    function renderStructure() {
+        const grid = document.getElementById('structureGrid');
+        const pages = [
+            {
+                slug: '/',
+                title: 'Homepage',
+                items: [
+                    'Hero with benefit-driven headline, subhead, and primary CTA above the fold',
+                    'Social proof bar (client logos, press mentions, or key metric)',
+                    'Services overview, problem-agitate-solution, and a secondary CTA'
+                ]
+            },
+            {
+                slug: '/about',
+                title: 'About',
+                items: [
+                    'Origin story and mission told through the lens of the customer outcome',
+                    'Team photos with real names and roles for trust',
+                    'Awards, certifications, and values that back up the claims'
+                ]
+            },
+            {
+                slug: '/services',
+                title: 'Services',
+                items: [
+                    'Individual landing page per service with clear benefits and outcomes',
+                    'Process breakdown (3 to 5 steps) that removes hesitation',
+                    'Pricing signal (starting from, tiers, or "get a quote") plus a CTA'
+                ]
+            },
+            {
+                slug: '/results',
+                title: 'Case Studies / Results',
+                items: [
+                    'Before and after metrics with real numbers',
+                    'Short client testimonial quotes with photo and title',
+                    'Industry mix that matches your ideal customer'
+                ]
+            },
+            {
+                slug: '/contact',
+                title: 'Contact',
+                items: [
+                    'Simple form (5 fields max) plus direct email and phone',
+                    'Embedded booking calendar for qualified prospects',
+                    'Map, location, and response time expectation'
+                ]
+            },
+            {
+                slug: '/blog',
+                title: 'Blog (optional)',
+                items: [
+                    'SEO-focused posts answering the questions your ideal customers ask',
+                    'Each post ends with a soft CTA back to your core service',
+                    'Schema markup and FAQ blocks to get cited by AI engines'
+                ]
+            }
+        ];
+        grid.innerHTML = '';
+        pages.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'structure-card';
+            card.innerHTML = `
+                <h4>${p.title} <span class="slug">${p.slug}</span></h4>
+                <ul>${p.items.map(i => `<li>${escapeHTML(i)}</li>`).join('')}</ul>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    function animateNumber(el, from, to, duration) {
+        const start = performance.now();
+        function tick(now) {
+            const t = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - t, 3);
+            const val = Math.round(from + (to - from) * eased);
+            el.textContent = val;
+            if (t < 1) requestAnimationFrame(tick);
+            else el.textContent = to;
+        }
+        requestAnimationFrame(tick);
+    }
+
+    function escapeHTML(str) {
+        return String(str).replace(/[&<>"']/g, s => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        })[s]);
+    }
+    </script>
+
+</body>
+</html>
