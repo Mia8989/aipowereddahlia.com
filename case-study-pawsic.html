@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVLMJYPEDR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EVLMJYPEDR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWSIC Case Study: Digital Infrastructure | AI Powered Dahlia</title>
+    <meta name="description" content="How AI Powered Dahlia built PAWSIC's full digital infrastructure: website, membership platform, content strategy, and analytics for 590 members.">
+    <meta name="author" content="AI Powered Dahlia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipowereddahlia.com/case-study-pawsic">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon-256.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon-256.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="PAWSIC Case Study: Full Digital Infrastructure for a Healthcare Association">
+    <meta property="og:description" content="590 members across 37 states and 17 countries. Website, membership platform, content strategy, and analytics built from scratch.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aipowereddahlia.com/case-study-pawsic">
+    <meta property="og:site_name" content="AI Powered Dahlia">
+    <meta property="og:image" content="https://aipowereddahlia.com/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dahlia_imanbay">
+    <meta name="twitter:title" content="PAWSIC Case Study: Full Digital Infrastructure for a Healthcare Association">
+    <meta name="twitter:description" content="590 members across 37 states and 17 countries. Website, membership, content, and analytics built from scratch.">
+    <meta name="twitter:image" content="https://aipowereddahlia.com/assets/images/og-image.png">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "PAWSIC Case Study: Building a Full Digital Infrastructure for a Growing Healthcare Association",
+        "description": "How AI Powered Dahlia built PAWSIC's complete digital infrastructure including website, MemberPress membership platform, content strategy, and analytics.",
+        "author": { "@type": "Person", "name": "Dahlia Imanbay", "url": "https://dahliaimanbay.com" },
+        "publisher": { "@type": "Organization", "name": "AI Powered Dahlia", "url": "https://aipowereddahlia.com" },
+        "datePublished": "2026-05-12",
+        "url": "https://aipowereddahlia.com/case-study-pawsic"
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/shared.css">
+
+    <style>
+        .page-hero { padding: 200px 0 80px; background: var(--bg-primary); }
+        .page-hero .section-label { opacity: 0; transform: translateY(20px); }
+        .page-hero h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
+
+        .cs-meta { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--border-default); }
+        .cs-meta-item { display: flex; flex-direction: column; gap: 4px; }
+        .cs-meta-label { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+        .cs-meta-value { font-size: 1rem; color: var(--text-primary); font-weight: 500; }
+
+        .cs-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 80px 0; border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); margin: 64px 0 0; }
+        .cs-stat { text-align: center; }
+        .cs-stat-number { font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 600; letter-spacing: -0.03em; background: linear-gradient(135deg, #5ce1e6, #8c52ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+        .cs-stat-label { font-size: 0.88rem; color: var(--text-muted); margin-top: 8px; }
+
+        .cs-body { max-width: 780px; margin: 0 auto; padding: 80px 0; }
+        .cs-body h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); margin: 56px 0 20px; color: var(--text-primary); }
+        .cs-body h2:first-child { margin-top: 0; }
+        .cs-body p { font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 20px; }
+        .cs-body p strong { color: var(--text-primary); }
+        .cs-body ul { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-direction: column; gap: 12px; }
+        .cs-body ul li { display: flex; align-items: flex-start; gap: 12px; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; }
+        .cs-body ul li::before { content: ""; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); margin-top: 10px; }
+
+        .cs-result-card { background: var(--bg-elevated); border: 1px solid var(--border-default); border-radius: 16px; padding: 32px; margin: 32px 0; }
+        .cs-result-card-label { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 12px; }
+        .cs-result-card p { margin: 0; }
+
+        .cs-services-used { display: flex; flex-wrap: wrap; gap: 10px; margin: 32px 0; }
+        .cs-service-tag { background: rgba(92, 225, 230, 0.08); border: 1px solid rgba(92, 225, 230, 0.2); border-radius: 100px; padding: 6px 16px; font-size: 0.85rem; color: var(--cyan); }
+
+        @media (max-width: 768px) {
+            .cs-stats { grid-template-columns: repeat(2, 1fr); }
+            .cs-body { padding: 48px 0; }
+        }
+        @media (max-width: 480px) {
+            .cs-stats { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="/" class="nav-logo">
+                    <img src="assets/images/logo-white.png" alt="AI Powered Dahlia" width="140" height="40">
+                    <span class="nav-logo-text">AI Powered Dahlia</span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li class="nav-dropdown">
+                        <a href="#">Services</a>
+                        <div class="nav-dropdown-menu">
+                            <a href="ai-agents">AI Agents</a>
+                            <a href="ai-strategy">AI Strategy</a>
+                            <a href="healthcare">Healthcare AI</a>
+                            <a href="social-media-automation">Social Media</a>
+                            <a href="linkedin-on-autopilot">LinkedIn Autopilot</a>
+                            <a href="seo-aeo-geo">SEO, AEO &amp; GEO</a>
+                            <a href="website-design">Website Design</a>
+                            <a href="email-marketing">Email Marketing</a>
+                            <a href="ai-video-production">AI Video</a>
+                            <a href="youtube-growth">YouTube Growth</a>
+                            <a href="webinars-training">Training</a>
+                            <a href="membership-sites">Membership Sites</a>
+                        </div>
+                    </li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="blog">Blog</a></li>
+                    <li><a href="website-grader">Free Grader</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="contact" class="btn btn-primary nav-cta">Book a Call <span class="btn-arrow">&#8594;</span></a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="hero-glow"></div>
+        <div class="container">
+            <p class="section-label gs-reveal">Case Study</p>
+            <h1 class="gs-reveal">Building a Complete Digital Infrastructure for a Growing Healthcare Association</h1>
+            <p class="section-subtext gs-reveal" style="margin:20px 0 0;max-width:720px;">How AI Powered Dahlia became the embedded digital backbone of PAWSIC, building every layer of their online presence from the ground up while the organization scaled from a startup to a national force in wound care and skin health education.</p>
+            <div class="cs-meta gs-reveal">
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Client</span>
+                    <span class="cs-meta-value">PAWSIC</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Industry</span>
+                    <span class="cs-meta-value">Healthcare Association / Nonprofit</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Engagement type</span>
+                    <span class="cs-meta-value">Embedded fractional digital director</span>
+                </div>
+                <div class="cs-meta-item">
+                    <span class="cs-meta-label">Duration</span>
+                    <span class="cs-meta-value">Ongoing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section style="background:var(--bg-elevated);border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);padding:0;">
+        <div class="container">
+            <div class="cs-stats">
+                <div class="cs-stat gs-reveal">
+                    <div class="cs-stat-number">590+</div>
+                    <div class="cs-stat-label">Active members across 37 states</div>
+                </div>
+                <div class="cs-stat gs-reveal">
+                    <div class="cs-stat-number">17</div>
+                    <div class="cs-stat-label">Countries represented</div>
+                </div>
+                <div class="cs-stat gs-reveal">
+                    <div class="cs-stat-number">23</div>
+                    <div class="cs-stat-label">New members at SAWC 2026 vs. 13 prior year</div>
+                </div>
+                <div class="cs-stat gs-reveal">
+                    <div class="cs-stat-number">6</div>
+                    <div class="cs-stat-label">Platforms managed end to end</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BODY -->
+    <div class="container">
+        <div class="cs-body">
+
+            <h2>The Challenge</h2>
+            <p>PAWSIC is the Post-Acute Wound and Skin Integrity Council, a nonprofit healthcare association built to advance wound care and skin health education across post-acute care settings. When they started working with AI Powered Dahlia, they had a mission, a growing community of clinicians, and almost no digital infrastructure to support either.</p>
+            <p>The organization was run entirely by volunteers, many of them senior clinicians with full-time jobs. The digital work that needed to happen, including the website, membership platform, content strategy, conference materials, analytics, and email communications, was falling through the cracks or being done manually by people who didn't have time for it.</p>
+            <p>They didn't need a social media agency. They needed a digital director who understood both the strategic and technical sides, could work directly with leadership, and would show up consistently without the overhead of a full-time hire.</p>
+
+            <div class="cs-services-used">
+                <span class="cs-service-tag">Website Design &amp; Development</span>
+                <span class="cs-service-tag">Membership Sites (MemberPress)</span>
+                <span class="cs-service-tag">Social Media Management</span>
+                <span class="cs-service-tag">Email Marketing</span>
+                <span class="cs-service-tag">SEO</span>
+                <span class="cs-service-tag">AI Strategy</span>
+                <span class="cs-service-tag">Analytics</span>
+            </div>
+
+            <h2>What We Built</h2>
+
+            <p><strong>Website from scratch.</strong> The old PAWSIC website wasn't converting. We rebuilt PAWSIC.org entirely: modern design, clear membership calls to action, a proper blog for SEO, a sponsorship page that reflected the organization's credibility, and a performance-optimized static architecture on GitHub Pages. The new site launched April 1, 2026 and immediately drove measurable membership growth at their next major conference.</p>
+
+            <p><strong>Membership platform.</strong> The membership site at memberships.pawsic.org runs on WordPress and MemberPress. We configured the full system: membership tiers (Free, Premium Monthly, Premium Annual), Stripe payment integration, access rules, member onboarding email sequences, and Mailchimp list sync. When data inconsistencies accumulated over time, we ran a full audit and cleanup that recovered 32 paid members who had fallen through the cracks, bringing active membership count to an accurate 590.</p>
+
+            <p><strong>Content strategy and analytics.</strong> Every month we deliver platform-by-platform analytics across YouTube, LinkedIn, Instagram, Facebook, TikTok, and email. Beyond the numbers, we tell PAWSIC's leadership what the data means and what to do next. Content strategy spans the 12-month content calendar, health awareness day posts, SEO-optimized blog articles, and a digital package for conferences that drives booth traffic and membership sign-ups.</p>
+
+            <p><strong>Conference digital packages.</strong> For each major conference (SAWC, LeadingAge, NADONA), we create digital flyers, QR codes, rack cards, and booth materials that match the site's modern brand and funnel attendees into the membership system. SAWC Spring 2026 produced 23 new members, nearly double the 13 from the prior year, directly attributable to the new website and conference materials.</p>
+
+            <p><strong>Sponsorship infrastructure.</strong> We built a sponsors page and a private Platinum Sponsor Portal, designed updated sponsorship decks to reflect quarterly deliverables and new tiers, and connected sponsor commitments to the newsletter and content calendar so sponsors actually see their promised exposure.</p>
+
+            <div class="cs-result-card gs-reveal">
+                <p class="cs-result-card-label">Key Result</p>
+                <p>PAWSIC now operates with a full digital infrastructure that a volunteer-run association could not have maintained manually. Every layer, from the public-facing website to the membership backend to the conference collateral to the monthly analytics, runs consistently without the board having to chase it down.</p>
+            </div>
+
+            <h2>How the Engagement Works</h2>
+            <p>This isn't a vendor relationship. We attend PAWSIC Executive Committee and board meetings as part of the digital team. We're in the room when strategic decisions are made about partnerships, conferences, membership pricing, and new initiatives, which means the digital work is always aligned with what the organization is actually doing, not just responding to it after the fact.</p>
+            <p>When PAWSIC explored a potential merger with the Alliance of Wound Care Stakeholders, we understood the implications for the website, the membership platform, the branding, and the digital communications immediately because we had been in every meeting leading up to that decision.</p>
+            <p>That depth of context is what makes this model different from hiring an agency to execute a brief.</p>
+
+            <h2>What This Model Looks Like</h2>
+            <ul>
+                <li>Monthly analytics reporting across all platforms with strategy recommendations</li>
+                <li>Ongoing website updates, SEO, and content production</li>
+                <li>Membership platform management, data audits, and retention strategy</li>
+                <li>Conference and event digital packages</li>
+                <li>Sponsorship deck updates and sponsor communication support</li>
+                <li>Attendance at strategic leadership meetings as the digital voice</li>
+                <li>AI automation for content workflows and member communications</li>
+            </ul>
+
+            <div class="cs-result-card gs-reveal">
+                <p class="cs-result-card-label">Bottom Line</p>
+                <p>For nonprofits and healthcare associations that are growing faster than their volunteer capacity, the fractional digital director model gives you senior-level digital strategy and execution without the cost or complexity of a full-time hire. PAWSIC went from patching things together to having a complete digital operation that runs every month without a second thought.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-glow"></div>
+        <div class="container">
+            <p class="section-label gs-reveal">Work With Us</p>
+            <h2 class="gs-reveal">Your Organization Deserves This Too</h2>
+            <p class="section-subtext gs-reveal" style="margin:0 auto 40px;">If you're running a nonprofit or healthcare association and your digital infrastructure is held together with manual effort, let's talk about what a proper system looks like for your organization.</p>
+            <div class="gs-reveal">
+                <a href="contact" class="btn btn-primary"><span>Book a Discovery Call</span> <span class="btn-arrow">&rarr;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div style="display:flex;align-items:center;gap:10px;">
+                        <img src="assets/images/logo-white.png" alt="AI Powered Dahlia" width="126" height="36" loading="lazy" style="height:36px;width:auto;">
+                        <span class="nav-logo-text">AI Powered Dahlia</span>
+                    </div>
+                    <p>AI strategy and systems for nonprofits, healthcare associations, and mission-driven founders.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="ai-agents">AI Agents</a></li>
+                        <li><a href="ai-strategy">AI Strategy</a></li>
+                        <li><a href="healthcare">Healthcare AI</a></li>
+                        <li><a href="social-media-automation">Social Media</a></li>
+                        <li><a href="linkedin-on-autopilot">LinkedIn Autopilot</a></li>
+                        <li><a href="seo-aeo-geo">SEO/AEO/GEO</a></li>
+                        <li><a href="website-design">Websites</a></li>
+                        <li><a href="email-marketing">Email</a></li>
+                        <li><a href="membership-sites">Membership Sites</a></li>
+                        <li><a href="webinars-training">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about">About</a></li>
+                        <li><a href="blog">Blog</a></li>
+                        <li><a href="website-grader">Free Grader</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://x.com/dahlia_imanbay" target="_blank" rel="noopener">X</a></li>
+                        <li><a href="https://www.instagram.com/dahlia_imanbay/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://bsky.app/profile/dahlia-imanbay.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+                        <li><a href="https://www.youtube.com/@DahliaImanbay" target="_blank" rel="noopener">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;padding-bottom:20px;font-size:0.82rem;color:var(--text-muted);">Edinburgh &#183; Lisbon &#183; London &#183; Chicago &#183; Manila</div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 AI Powered Dahlia. All rights reserved.</span>
+                <span><a href="privacy">Privacy Policy</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="assets/js/shared.js"></script>
+    <script>
+    (function() {
+        var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!rm && typeof Lenis !== "undefined") {
+            var lenis = new Lenis({ duration: 0.8, smooth: true });
+            if (typeof ScrollTrigger !== "undefined") { lenis.on("scroll", ScrollTrigger.update); gsap.ticker.add(function(time) { lenis.raf(time * 1000); }); gsap.ticker.lagSmoothing(0); }
+        }
+        if (!rm && typeof gsap !== "undefined") {
+            gsap.registerPlugin(ScrollTrigger);
+            var tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+            tl.fromTo(".page-hero .section-label",{opacity:0,y:20},{opacity:1,y:0,duration:0.6,delay:0.2})
+              .fromTo(".page-hero h1",{opacity:0,y:40},{opacity:1,y:0,duration:0.8},"-=0.3")
+              .fromTo(".page-hero .section-subtext",{opacity:0,y:20},{opacity:1,y:0,duration:0.6},"-=0.4")
+              .fromTo(".cs-meta",{opacity:0,y:20},{opacity:1,y:0,duration:0.5},"-=0.3");
+        }
+    })();
+    </script>
+</body>
+</html>

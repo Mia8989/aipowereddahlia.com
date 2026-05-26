@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVLMJYPEDR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EVLMJYPEDR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemberPress &amp; Membership Site Setup | AI Powered Dahlia</title>
+    <meta name="description" content="Expert MemberPress setup, configuration, and automation for nonprofits and healthcare associations. We know membership platforms inside out.">
+    <meta name="keywords" content="MemberPress setup, membership site, nonprofit membership, WordPress membership, healthcare association membership, membership automation, MemberPress expert">
+    <meta name="author" content="AI Powered Dahlia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipowereddahlia.com/membership-sites">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon-256.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon-256.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MemberPress &amp; Membership Site Setup | AI Powered Dahlia">
+    <meta property="og:description" content="Expert MemberPress setup and membership site automation for nonprofits and healthcare associations. 590+ members managed. We know this platform inside out.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aipowereddahlia.com/membership-sites">
+    <meta property="og:site_name" content="AI Powered Dahlia">
+    <meta property="og:image" content="https://aipowereddahlia.com/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dahlia_imanbay">
+    <meta name="twitter:creator" content="@dahlia_imanbay">
+    <meta name="twitter:title" content="MemberPress &amp; Membership Site Setup | AI Powered Dahlia">
+    <meta name="twitter:description" content="Expert MemberPress setup and membership site automation for nonprofits and healthcare associations.">
+    <meta name="twitter:image" content="https://aipowereddahlia.com/assets/images/og-image.png">
+
+    <!-- Schema: Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Membership Site Setup and MemberPress Configuration",
+        "description": "AI Powered Dahlia configures, customizes, and automates MemberPress and WordPress membership platforms for nonprofits, healthcare associations, and mission-driven organizations.",
+        "provider": {
+            "@type": "Organization",
+            "name": "AI Powered Dahlia",
+            "url": "https://aipowereddahlia.com",
+            "logo": "https://aipowereddahlia.com/assets/images/logo-white.png"
+        },
+        "serviceType": "Membership Site Implementation",
+        "areaServed": "Worldwide",
+        "url": "https://aipowereddahlia.com/membership-sites",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Membership Site Services",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "MemberPress Setup and Configuration" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Membership Tier Architecture" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stripe and Payment Integration" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Email Automation and Onboarding Sequences" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Member Data Cleanup and Analytics" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retention Strategy and Churn Reduction" } }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do you only work with MemberPress?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MemberPress is our deepest area of expertise, but we also work with other WordPress membership plugins and can advise on the right platform for your organization's needs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can you fix a broken or messy existing membership site?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Data cleanup and system audits are a core part of what we do. We have experience untangling duplicate accounts, bad subscription data, and broken payment integrations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you integrate with Stripe and Mailchimp?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We configure MemberPress integrations with Stripe for payments, Mailchimp for email lists, and other tools like Zapier and Make.com for custom automation workflows."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "We are a nonprofit with limited budget. Can you help us?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Nonprofits and healthcare associations are our primary clients for this service. We understand the constraints and build systems that your volunteer team can actually maintain."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can you help us grow membership, not just set it up?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Beyond technical setup, we build retention strategies, onboarding sequences, and analytics dashboards so you know exactly where members are dropping off and what to do about it."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aipowereddahlia.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://aipowereddahlia.com/#services" },
+            { "@type": "ListItem", "position": 3, "name": "Membership Sites", "item": "https://aipowereddahlia.com/membership-sites" }
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="assets/css/shared.css">
+
+    <style>
+        .page-hero { padding: 200px 0 100px; background: var(--bg-primary); }
+        .page-hero .section-label { opacity: 0; transform: translateY(20px); }
+        .page-hero h1 {
+            background: linear-gradient(135deg, #5ce1e6, #8c52ff, #5ce1e6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .problem-section { background: var(--bg-primary); }
+        .problem-card-icon { font-size: 2.2rem; margin-bottom: 16px; line-height: 1; }
+        .solution-section {
+            background: var(--bg-elevated);
+            border-top: 1px solid var(--border-default);
+            border-bottom: 1px solid var(--border-default);
+        }
+        .solution-text { color: var(--text-secondary); font-size: 1.08rem; line-height: 1.8; max-width: 780px; }
+        .solution-text strong { color: var(--text-primary); }
+        .differentiators-section { padding: 140px 0; }
+        .differentiators-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 48px; }
+        .differentiators-heading { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; letter-spacing: -0.02em; }
+        .differentiators-heading span { background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .differentiators-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+        .differentiators-list li { display: flex; align-items: flex-start; gap: 14px; color: var(--text-secondary); font-size: 1rem; line-height: 1.65; }
+        .diff-check { flex-shrink: 0; width: 24px; height: 24px; margin-top: 2px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(92, 225, 230, 0.1); }
+        .diff-check svg { width: 14px; height: 14px; color: var(--cyan); }
+        .stat-highlight {
+            display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+            background: var(--bg-elevated); border: 1px solid var(--border-default);
+            border-radius: 16px; padding: 32px 40px; text-align: center;
+        }
+        .stat-highlight-number { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; letter-spacing: -0.03em; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+        .stat-highlight-label { font-size: 0.88rem; color: var(--text-muted); margin-top: 8px; }
+        .stats-row { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 48px; }
+        .build-section { background: var(--bg-primary); }
+        .process-section { background: var(--bg-elevated); border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); }
+        .faq-section { background: var(--bg-primary); padding: 140px 0; }
+
+        @media (max-width: 768px) {
+            .differentiators-grid { grid-template-columns: 1fr; gap: 40px; }
+            .stats-row { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="/" class="nav-logo">
+                    <img src="assets/images/logo-white.png" alt="AI Powered Dahlia" width="140" height="40">
+                    <span class="nav-logo-text">AI Powered Dahlia</span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li class="nav-dropdown">
+                        <a href="#">Services</a>
+                        <div class="nav-dropdown-menu">
+                            <a href="ai-agents">AI Agents</a>
+                            <a href="ai-strategy">AI Strategy</a>
+                            <a href="healthcare">Healthcare AI</a>
+                            <a href="social-media-automation">Social Media</a>
+                            <a href="linkedin-on-autopilot">LinkedIn Autopilot</a>
+                            <a href="seo-aeo-geo">SEO, AEO &amp; GEO</a>
+                            <a href="website-design">Website Design</a>
+                            <a href="email-marketing">Email Marketing</a>
+                            <a href="ai-video-production">AI Video</a>
+                            <a href="youtube-growth">YouTube Growth</a>
+                            <a href="webinars-training">Training</a>
+                            <a href="membership-sites">Membership Sites</a>
+                        </div>
+                    </li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="blog">Blog</a></li>
+                    <li><a href="website-grader">Free Grader</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="contact" class="btn btn-primary nav-cta">Book a Call <span class="btn-arrow">&#8594;</span></a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="section-label gs-reveal">Membership Sites</div>
+            <h1>MemberPress Setup Done Right.<br>The First Time.</h1>
+            <p class="section-subtext" style="margin:20px auto 36px;">Most membership sites are held together with manual workarounds and broken automations. We configure, clean up, and automate your platform so it runs without you holding it together.</p>
+            <a href="contact" class="btn btn-primary gs-reveal">Book a Discovery Call <span class="btn-arrow">&#8594;</span></a>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="problem-section">
+        <div class="container">
+            <p class="section-label gs-reveal">The Reality</p>
+            <h2 class="section-heading gs-reveal">Most Membership Sites Are a Mess Under the Hood</h2>
+            <p class="section-subtext gs-reveal">You launched the platform. Members signed up. Then the data got inconsistent, the welcome emails stopped firing, renewals broke, and nobody could figure out why. Sound familiar?</p>
+            <div class="problem-grid gs-stagger">
+                <div class="problem-card">
+                    <div class="problem-card-icon">&#9888;</div>
+                    <h3>Duplicate and ghost accounts</h3>
+                    <p>Members appear active but aren't paying. Or paying members can't log in. The data doesn't match reality.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-card-icon">&#128547;</div>
+                    <h3>Broken automations</h3>
+                    <p>Welcome emails not sending. Stripe webhooks failing silently. Membership access not updating after payment.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-card-icon">&#128202;</div>
+                    <h3>No visibility into what's working</h3>
+                    <p>You don't know why members leave, which tiers convert, or where the churn actually happens.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-card-icon">&#128119;</div>
+                    <h3>Manual everything</h3>
+                    <p>Your team is manually approving accounts, fixing payment errors, and updating member records one by one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="solution-section">
+        <div class="container">
+            <p class="section-label gs-reveal">Why It's Different Here</p>
+            <h2 class="section-heading gs-reveal">We Know This Platform Inside Out</h2>
+            <p class="solution-text gs-reveal">We don't just install MemberPress and hand you a tutorial. We've managed membership platforms for organizations with <strong>500+ active members across 37 states</strong>, cleaned up messy data migrations, built custom onboarding sequences, and connected the whole system to Stripe, Mailchimp, Make.com, and WPCode. We know where things break because we've fixed them.</p>
+            <p class="solution-text gs-reveal" style="margin-top:20px;">This is especially valuable for <strong>nonprofits and healthcare associations</strong> where the team is small, the stakes are high, and you can't afford to have membership access go down before a big event or board meeting.</p>
+            <div class="stats-row gs-reveal">
+                <div class="stat-highlight">
+                    <span class="stat-highlight-number">590+</span>
+                    <span class="stat-highlight-label">Members managed across 37 states</span>
+                </div>
+                <div class="stat-highlight">
+                    <span class="stat-highlight-number">17</span>
+                    <span class="stat-highlight-label">Countries on one membership platform</span>
+                </div>
+                <div class="stat-highlight">
+                    <span class="stat-highlight-number">32</span>
+                    <span class="stat-highlight-label">Inactive paid members recovered in one cleanup</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFFERENTIATORS -->
+    <section class="differentiators-section">
+        <div class="container">
+            <div class="differentiators-grid">
+                <div class="gs-reveal">
+                    <h2 class="differentiators-heading">Setup is the<br><span>Easy Part.</span></h2>
+                </div>
+                <div class="gs-reveal">
+                    <ul class="differentiators-list">
+                        <li>
+                            <span class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Full MemberPress configuration: tiers, rules, access levels, and login flows</span>
+                        </li>
+                        <li>
+                            <span class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Stripe payment integration with proper webhook configuration</span>
+                        </li>
+                        <li>
+                            <span class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Automated welcome sequences and member onboarding emails</span>
+                        </li>
+                        <li>
+                            <span class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Data audit and cleanup: duplicates, ghost accounts, mismatched records</span>
+                        </li>
+                        <li>
+                            <span class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Mailchimp sync and segmentation by membership tier</span>
+                        </li>
+                        <li>
+                            <span class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Retention analytics: where members drop off and what to do about it</span>
+                        </li>
+                        <li>
+                            <span class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                            <span>Make.com and WPCode automation for member management workflows</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT WE BUILD -->
+    <section class="build-section">
+        <div class="container">
+            <p class="section-label gs-reveal">What We Handle</p>
+            <h2 class="section-heading gs-reveal">Every Layer of Your Membership System</h2>
+            <p class="section-subtext gs-reveal">From the technical foundation to the member experience to the data that tells you what's working.</p>
+            <div class="feature-grid gs-stagger">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h3>MemberPress Configuration</h3>
+                    <p>Full plugin setup including membership levels, access rules, pricing pages, coupon codes, and member dashboard customization.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    </div>
+                    <h3>Payment &amp; Billing Setup</h3>
+                    <p>Stripe and PayPal integration, subscription management, failed payment recovery, and proration rules that make sense for your pricing model.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h3>Onboarding Automation</h3>
+                    <p>Welcome email sequences, account setup guides, and drip content that activates new members and reduces early churn.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <h3>Analytics &amp; Reporting</h3>
+                    <p>Dashboards that show active vs. inactive members, tier conversion rates, renewal risk, and growth trends over time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h3>Data Cleanup &amp; Migration</h3>
+                    <p>Audit and repair existing member databases. Resolve duplicate accounts, ghost subscriptions, and broken access rules without losing member history.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Retention Strategy</h3>
+                    <p>Scholarship programs, renewal campaigns, tier upgrade paths, and win-back sequences designed for nonprofit and association membership models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section">
+        <div class="container">
+            <div style="text-align:center;">
+                <p class="section-label gs-reveal">Our Process</p>
+                <h2 class="section-heading gs-reveal">Audit. Fix. Automate. Grow.</h2>
+                <p class="section-subtext gs-reveal" style="margin:0 auto;">A four-step process that takes you from messy to running on autopilot.</p>
+            </div>
+            <div class="steps-grid four-col gs-stagger">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Audit</h3>
+                    <p>Review your current setup: member data, access rules, payment integrations, and email flows. Find every break before we touch anything.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Fix &amp; Configure</h3>
+                    <p>Resolve data issues, configure tiers correctly, and get payments and access rules working the way they should.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Automate</h3>
+                    <p>Build onboarding sequences, Mailchimp sync, and Make.com workflows so your team stops doing manually what the system can do for them.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Optimize</h3>
+                    <p>Monitor retention metrics, run renewal campaigns, and refine the member experience based on real data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div style="text-align:center;">
+                <p class="section-label gs-reveal">FAQ</p>
+                <h2 class="section-heading gs-reveal">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">Do you only work with MemberPress?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">MemberPress is our deepest area of expertise, but we also work with other WordPress membership plugins and can advise on the right platform for your organization's needs and budget.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can you fix a broken or messy existing membership site?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Yes, and this is often where we do our best work. Data cleanup and system audits are a core part of what we offer. We have experience untangling duplicate accounts, bad subscription data, and broken payment integrations.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you integrate with Stripe and Mailchimp?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Yes. We configure MemberPress integrations with Stripe for payments, Mailchimp for email list management, and tools like Make.com and WPCode for custom automation workflows tailored to your organization.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">We are a nonprofit with a small team. Will this work for us?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Nonprofits and healthcare associations are our primary clients for this service. We build systems your volunteer or part-time staff can actually maintain, with documentation and training included.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can you help us grow membership, not just set it up?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Yes. Beyond technical setup, we build retention strategies, onboarding sequences, and analytics dashboards so you know exactly where members drop off and what to do about it. We have managed membership growth from under 100 to 590+ members on a single platform.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer ongoing support after setup?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Yes. Monthly retainer packages are available for organizations that want ongoing technical support, analytics reviews, and membership strategy. <a href="contact" style="color:var(--cyan);border-bottom:1px solid rgba(92,225,230,0.3);">Book a call</a> to discuss your needs.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-glow"></div>
+        <div class="container">
+            <p class="section-label gs-reveal">Ready to Fix It?</p>
+            <h2 class="gs-reveal">Your Membership Platform Should Work for You</h2>
+            <p class="section-subtext gs-reveal" style="margin:0 auto 40px;">Whether you're starting fresh or cleaning up years of technical debt, we'll get your membership system running properly, connected to your tools, and growing your community.</p>
+            <div class="gs-reveal">
+                <a href="contact" class="btn btn-primary"><span>Book a Discovery Call</span> <span class="btn-arrow">&rarr;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div style="display:flex;align-items:center;gap:10px;">
+                        <img src="assets/images/logo-white.png" alt="AI Powered Dahlia" width="126" height="36" loading="lazy" style="height:36px;width:auto;">
+                        <span class="nav-logo-text">AI Powered Dahlia</span>
+                    </div>
+                    <p>AI strategy and systems for nonprofits, healthcare associations, and mission-driven founders.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="ai-agents">AI Agents</a></li>
+                        <li><a href="ai-strategy">AI Strategy</a></li>
+                        <li><a href="healthcare">Healthcare AI</a></li>
+                        <li><a href="social-media-automation">Social Media</a></li>
+                        <li><a href="linkedin-on-autopilot">LinkedIn Autopilot</a></li>
+                        <li><a href="seo-aeo-geo">SEO/AEO/GEO</a></li>
+                        <li><a href="website-design">Websites</a></li>
+                        <li><a href="email-marketing">Email</a></li>
+                        <li><a href="ai-video-production">AI Video</a></li>
+                        <li><a href="webinars-training">Training</a></li>
+                        <li><a href="membership-sites">Membership Sites</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about">About</a></li>
+                        <li><a href="blog">Blog</a></li>
+                        <li><a href="website-grader">Free Grader</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://x.com/dahlia_imanbay" target="_blank" rel="noopener">X</a></li>
+                        <li><a href="https://www.instagram.com/dahlia_imanbay/" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://bsky.app/profile/dahlia-imanbay.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+                        <li><a href="https://www.youtube.com/@DahliaImanbay" target="_blank" rel="noopener">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;padding-bottom:20px;font-size:0.82rem;color:var(--text-muted);">Edinburgh &#183; Lisbon &#183; London &#183; Chicago &#183; Manila</div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 AI Powered Dahlia. All rights reserved.</span>
+                <span><a href="privacy">Privacy Policy</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="assets/js/shared.js"></script>
+    <script>
+    (function() {
+        var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!rm && typeof Lenis !== "undefined") {
+            var lenis = new Lenis({ duration: 0.8, smooth: true });
+            if (typeof ScrollTrigger !== "undefined") { lenis.on("scroll", ScrollTrigger.update); gsap.ticker.add(function(time) { lenis.raf(time * 1000); }); gsap.ticker.lagSmoothing(0); }
+        }
+        if (!rm && typeof gsap !== "undefined") {
+            gsap.registerPlugin(ScrollTrigger);
+            var tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+            tl.fromTo(".page-hero .section-label",{opacity:0,y:20},{opacity:1,y:0,duration:0.6,delay:0.2})
+              .fromTo(".page-hero h1",{opacity:0,y:40},{opacity:1,y:0,duration:0.8},"-=0.3")
+              .fromTo(".page-hero .section-subtext",{opacity:0,y:20},{opacity:1,y:0,duration:0.6},"-=0.4")
+              .fromTo(".page-hero .btn",{opacity:0,y:20},{opacity:1,y:0,duration:0.5},"-=0.3");
+        }
+    })();
+    </script>
+</body>
+</html>
