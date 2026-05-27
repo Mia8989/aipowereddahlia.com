@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SALSAL Learning Center — Concept Mockup</title>
+<style>
+  /* SALSAL palette
+     Dark Blue #0E2845 · Red #DD2036 · Medium Blue #30698D
+     Light Blue #00A1D9 · Sandy Stone #EFE2D6 · White #FFFFFF */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: #0E2845;
+    background: #FFFFFF;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: #30698D; text-decoration: none; }
+  a:hover { color: #00A1D9; }
+  img { max-width: 100%; display: block; }
+
+  /* ------------------------------------------------------- *
+   * MOCKUP RIBBON                                           *
+   * ------------------------------------------------------- */
+  .mockup-ribbon {
+    background: linear-gradient(90deg, #DD2036, #0E2845);
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  .mockup-ribbon strong { letter-spacing: 1.5px; text-transform: uppercase; }
+
+  /* ------------------------------------------------------- *
+   * SITE HEADER (faux — matches thesalsal.org pattern)      *
+   * ------------------------------------------------------- */
+  .site-header {
+    background: #0E2845;
+    color: #fff;
+    padding: 18px 0;
+    border-bottom: 3px solid #DD2036;
+  }
+  .header-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .brand-icon {
+    width: 44px; height: 44px;
+    background: #DD2036;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+  .brand-text { line-height: 1.15; }
+  .brand-text .name { font-weight: 800; font-size: 16px; letter-spacing: 0.5px; }
+  .brand-text .tag { font-size: 11px; color: #00A1D9; text-transform: uppercase; letter-spacing: 1px; }
+  .nav { display: flex; gap: 26px; font-size: 14px; font-weight: 500; }
+  .nav a { color: #EFE2D6; }
+  .nav a.active { color: #00A1D9; border-bottom: 2px solid #00A1D9; padding-bottom: 4px; }
+  .donate-btn {
+    background: #DD2036;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ------------------------------------------------------- *
+   * BREADCRUMB                                              *
+   * ------------------------------------------------------- */
+  .breadcrumb {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    font-size: 13px;
+    color: #30698D;
+  }
+  .breadcrumb a { color: #30698D; }
+  .breadcrumb .current { color: #0E2845; font-weight: 600; }
+
+  /* ------------------------------------------------------- *
+   * HERO                                                    *
+   * ------------------------------------------------------- */
+  .hero {
+    background: linear-gradient(135deg, #0E2845 0%, #1A4067 100%);
+    color: #fff;
+    padding: 64px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(0,161,217,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -120px; left: -80px;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(221,32,54,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .eyebrow {
+    display: inline-block;
+    background: rgba(0,161,217,0.18);
+    color: #00A1D9;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.05;
+    margin-bottom: 22px;
+    max-width: 800px;
+  }
+  .hero h1 .accent { color: #00A1D9; }
+  .hero p.lead {
+    font-size: 19px;
+    color: #EFE2D6;
+    max-width: 720px;
+    line-height: 1.6;
+    margin-bottom: 38px;
+  }
+
+  /* Search bar */
+  .search-bar {
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(14,40,69,0.25);
+  }
+  .search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 14px 18px;
+    font-size: 15px;
+    color: #0E2845;
+    background: transparent;
+    font-family: inherit;
+  }
+  .search-btn {
+    background: #DD2036;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .quick-tags {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .quick-tags .label { font-size: 13px; color: #EFE2D6; opacity: 0.85; }
+  .quick-tags a {
+    color: #fff;
+    font-size: 13px;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.18);
+  }
+  .quick-tags a:hover { background: #00A1D9; border-color: #00A1D9; }
+
+  /* ------------------------------------------------------- *
+   * FILTER BAR                                              *
+   * ------------------------------------------------------- */
+  .filter-section {
+    background: #fff;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 32px 0;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+  .filter-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    align-items: center;
+  }
+  .filter-group { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .filter-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #30698D;
+    font-weight: 700;
+  }
+  .chip {
+    border: 1px solid #D5DDE5;
+    background: #fff;
+    color: #0E2845;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .chip.active {
+    background: #0E2845;
+    color: #fff;
+    border-color: #0E2845;
+  }
+  .chip.accent.active {
+    background: #00A1D9;
+    border-color: #00A1D9;
+  }
+  .filter-divider {
+    width: 1px;
+    height: 28px;
+    background: #D5DDE5;
+  }
+  .results-count {
+    margin-left: auto;
+    font-size: 13px;
+    color: #30698D;
+  }
+  .results-count strong { color: #0E2845; }
+
+  /* ------------------------------------------------------- *
+   * CONTENT GRID                                            *
+   * ------------------------------------------------------- */
+  .content-section {
+    background: #FAFBFC;
+    padding: 56px 0 80px;
+  }
+  .content-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .section-head {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .section-head h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #0E2845;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .section-head h2 .accent-bar {
+    display: inline-block;
+    width: 5px;
+    height: 30px;
+    background: #DD2036;
+    margin-right: 16px;
+    vertical-align: -6px;
+  }
+  .section-head .view-all {
+    font-size: 14px;
+    font-weight: 600;
+    color: #30698D;
+  }
+  .section-head .view-all:hover { color: #DD2036; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
+  .card {
+    background: #fff;
+    border: 1px solid #E5E8EC;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(14,40,69,0.10);
+    border-color: #00A1D9;
+  }
+  .card-image {
+    height: 180px;
+    background: linear-gradient(135deg, #0E2845, #30698D);
+    position: relative;
+    overflow: hidden;
+  }
+  .card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(0,161,217,0.4) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(221,32,54,0.25) 0%, transparent 50%);
+  }
+  .card-image.alt-1 { background: linear-gradient(135deg, #30698D, #00A1D9); }
+  .card-image.alt-2 { background: linear-gradient(135deg, #0E2845, #DD2036); }
+  .card-image.alt-3 { background: linear-gradient(135deg, #1A4067, #30698D); }
+  .card-image.alt-4 { background: linear-gradient(135deg, #DD2036, #8B1521); }
+
+  .badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(255,255,255,0.95);
+    color: #0E2845;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 2;
+  }
+  .badge.webinar { color: #00A1D9; }
+  .badge.pdf { color: #DD2036; }
+  .badge.event { color: #30698D; }
+
+  .duration-pill {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background: rgba(14,40,69,0.85);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    z-index: 2;
+  }
+
+  .card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+  .topic-tag {
+    display: inline-block;
+    font-size: 11px;
+    color: #30698D;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0E2845;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .card-desc {
+    font-size: 14px;
+    color: #4A5765;
+    line-height: 1.55;
+    margin-bottom: 18px;
+    flex: 1;
+  }
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid #EEF1F4;
+    font-size: 12px;
+    color: #6B7785;
+  }
+  .card-cta {
+    color: #DD2036;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  /* ------------------------------------------------------- *
+   * AUDIENCE TILES                                          *
+   * ------------------------------------------------------- */
+  .audience-section {
+    background: #EFE2D6;
+    padding: 64px 0;
+  }
+  .audience-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .audience-section h2 {
+    font-size: 30px;
+    color: #0E2845;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  .audience-section .subtitle {
+    font-size: 15px;
+    color: #30698D;
+    margin-bottom: 36px;
+  }
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  @media (max-width: 900px) { .audience-grid { grid-template-columns: 1fr; } }
+  .audience-card {
+    background: #fff;
+    padding: 32px 28px;
+    border-radius: 10px;
+    border-top: 4px solid #DD2036;
+  }
+  .audience-card:nth-child(2) { border-top-color: #00A1D9; }
+  .audience-card:nth-child(3) { border-top-color: #30698D; }
+  .audience-card h3 {
+    font-size: 20px;
+    color: #0E2845;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .audience-card p {
+    font-size: 14px;
+    color: #4A5765;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .audience-card .audience-count {
+    font-size: 12px;
+    color: #30698D;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .audience-card .explore {
+    font-size: 13px;
+    font-weight: 700;
+    color: #DD2036;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  /* ------------------------------------------------------- *
+   * FEATURED SERIES                                         *
+   * ------------------------------------------------------- */
+  .featured-series {
+    background: #0E2845;
+    color: #fff;
+    padding: 64px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .featured-series::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 50%; height: 100%;
+    background:
+      radial-gradient(circle at 80% 50%, rgba(221,32,54,0.18) 0%, transparent 60%),
+      radial-gradient(circle at 60% 30%, rgba(0,161,217,0.18) 0%, transparent 60%);
+  }
+  .featured-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: 900px) { .featured-inner { grid-template-columns: 1fr; } }
+  .featured-series .eyebrow {
+    background: rgba(221,32,54,0.18);
+    color: #DD2036;
+  }
+  .featured-series h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin: 18px 0 18px;
+  }
+  .featured-series p {
+    font-size: 17px;
+    color: #EFE2D6;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+  .featured-stats {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+  .featured-stats .stat .num {
+    font-size: 32px;
+    font-weight: 800;
+    color: #00A1D9;
+    line-height: 1;
+  }
+  .featured-stats .stat .lbl {
+    font-size: 12px;
+    color: #EFE2D6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 6px;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: #DD2036;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .series-modules {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .series-modules .head {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #00A1D9;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .module-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 14px;
+  }
+  .module-row:last-child { border-bottom: none; }
+  .module-num {
+    background: #DD2036;
+    color: #fff;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .module-title { color: #fff; font-weight: 500; flex: 1; }
+  .module-len { color: #EFE2D6; font-size: 12px; opacity: 0.7; }
+
+  /* ------------------------------------------------------- *
+   * NEWSLETTER CTA                                          *
+   * ------------------------------------------------------- */
+  .newsletter {
+    background: #fff;
+    padding: 64px 0;
+    text-align: center;
+  }
+  .newsletter-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .newsletter h2 {
+    font-size: 28px;
+    color: #0E2845;
+    margin-bottom: 12px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  .newsletter p {
+    font-size: 15px;
+    color: #4A5765;
+    margin-bottom: 28px;
+  }
+  .newsletter-form {
+    display: flex;
+    gap: 8px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .newsletter-form input {
+    flex: 1;
+    padding: 13px 18px;
+    border: 1px solid #D5DDE5;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #0E2845;
+  }
+
+  /* ------------------------------------------------------- *
+   * FOOTER                                                  *
+   * ------------------------------------------------------- */
+  .site-footer {
+    background: #0E2845;
+    color: #EFE2D6;
+    padding: 48px 0 28px;
+  }
+  .footer-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .disclaimer {
+    background: rgba(255,255,255,0.04);
+    border-left: 3px solid #00A1D9;
+    padding: 16px 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #EFE2D6;
+    opacity: 0.9;
+    margin-bottom: 32px;
+  }
+  .footer-cols {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-cols .copy {
+    font-size: 13px;
+    color: #EFE2D6;
+    opacity: 0.85;
+  }
+  .footer-bottom {
+    margin-top: 18px;
+    font-size: 11px;
+    color: #EFE2D6;
+    opacity: 0.7;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  /* MOCKUP CALLOUTS — marginalia explaining the design */
+  .annot {
+    background: rgba(221,32,54,0.06);
+    border-left: 3px solid #DD2036;
+    padding: 14px 18px;
+    margin: 0 32px;
+    max-width: 1240px;
+    margin-left: auto; margin-right: auto;
+    font-size: 13px;
+    color: #0E2845;
+    border-radius: 4px;
+  }
+  .annot strong { color: #DD2036; text-transform: uppercase; letter-spacing: 1px; font-size: 11px; display: block; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<!-- Mockup banner -->
+<div class="mockup-ribbon">
+  <strong>Concept Mockup · For Illustration Only</strong> &nbsp;·&nbsp; SALSAL Learning Center proposal preview · May 2026
+</div>
+
+<!-- Faux site header -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand-mark">
+      <div class="brand-icon">SAL</div>
+      <div class="brand-text">
+        <div class="name">SAVE A LEG, SAVE A LIFE</div>
+        <div class="tag">Foundation</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#">About</a>
+      <a href="#">Programs</a>
+      <a href="#" class="active">Learning Center</a>
+      <a href="#">Community</a>
+      <a href="#">News</a>
+      <a href="#" class="donate-btn">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="#">Home</a> &nbsp;/&nbsp; <span class="current">Learning Center</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Education · Resources · Advocacy</span>
+    <h1>The SALSAL <span class="accent">Learning Center.</span></h1>
+    <p class="lead">
+      Evidence-based webinars, downloadable resources, and educational tools for clinicians,
+      patients, and caregivers committed to limb preservation.
+    </p>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search webinars, guides, screening tools...">
+      <button class="search-btn">Search</button>
+    </div>
+    <div class="quick-tags">
+      <span class="label">Popular:</span>
+      <a href="#">Wound care</a>
+      <a href="#">PAD screening</a>
+      <a href="#">Caregiver guides</a>
+      <a href="#">Limb preservation</a>
+    </div>
+  </div>
+</section>
+
+<div class="annot">
+  <strong>Mockup Note</strong>
+  Sticky filter bar follows the user as they scroll. Mirrors APMA and AHA Learning Center patterns.
+</div>
+
+<!-- FILTER BAR -->
+<section class="filter-section">
+  <div class="filter-inner">
+    <div class="filter-group">
+      <span class="filter-label">Audience</span>
+      <button class="chip active">All</button>
+      <button class="chip">Clinicians</button>
+      <button class="chip">Patients & Caregivers</button>
+      <button class="chip">Public</button>
+    </div>
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-label">Type</span>
+      <button class="chip accent active">All</button>
+      <button class="chip">Webinars</button>
+      <button class="chip">Downloads</button>
+      <button class="chip">Screening Events</button>
+    </div>
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-label">Topic</span>
+      <button class="chip">Wound Care</button>
+      <button class="chip">PAD</button>
+      <button class="chip">Diabetes</button>
+      <button class="chip">Policy</button>
+    </div>
+    <div class="results-count"><strong>14</strong> resources</div>
+  </div>
+</section>
+
+<!-- CONTENT GRID -->
+<section class="content-section">
+  <div class="content-inner">
+    <div class="section-head">
+      <h2><span class="accent-bar"></span>Featured This Month</h2>
+      <a href="#" class="view-all">View All Resources →</a>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 — Webinar -->
+      <div class="card">
+        <div class="card-image">
+          <span class="badge webinar">Webinar</span>
+          <span class="duration-pill">▶ 58 min</span>
+        </div>
+        <div class="card-body">
+          <span class="topic-tag">Limb Preservation</span>
+          <h3 class="card-title">Preventing Amputation in PAD Patients: 2026 Clinical Guidelines</h3>
+          <p class="card-desc">Updated evidence-based protocols for early intervention and the multidisciplinary care model.</p>
+          <div class="card-meta">
+            <span>For Clinicians</span>
+            <span class="card-cta">Watch →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 — Patient PDF -->
+      <div class="card">
+        <div class="card-image alt-2">
+          <span class="badge pdf">Download · PDF</span>
+        </div>
+        <div class="card-body">
+          <span class="topic-tag">Patient Advocacy</span>
+          <h3 class="card-title">Questions to Ask Before Amputation: A Patient Guide</h3>
+          <p class="card-desc">Empowering questions to bring to your care team. Available in English and Spanish.</p>
+          <div class="card-meta">
+            <span>For Patients</span>
+            <span class="card-cta">Download →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 — Webinar -->
+      <div class="card">
+        <div class="card-image alt-1">
+          <span class="badge webinar">Webinar</span>
+          <span class="duration-pill">▶ 45 min</span>
+        </div>
+        <div class="card-body">
+          <span class="topic-tag">Wound Care</span>
+          <h3 class="card-title">Wound Care Fundamentals for Primary Care Practitioners</h3>
+          <p class="card-desc">Early-stage wound identification and when to refer to specialists.</p>
+          <div class="card-meta">
+            <span>For Clinicians</span>
+            <span class="card-cta">Watch →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 — Screening checklist -->
+      <div class="card">
+        <div class="card-image alt-3">
+          <span class="badge pdf">Download · PDF</span>
+        </div>
+        <div class="card-body">
+          <span class="topic-tag">Diabetes Care</span>
+          <h3 class="card-title">Diabetic Foot Screening Checklist for Clinicians</h3>
+          <p class="card-desc">One-page screening tool for primary care and podiatry settings.</p>
+          <div class="card-meta">
+            <span>For Clinicians</span>
+            <span class="card-cta">Download →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 — Caregiver toolkit -->
+      <div class="card">
+        <div class="card-image alt-4">
+          <span class="badge pdf">Toolkit</span>
+        </div>
+        <div class="card-body">
+          <span class="topic-tag">Caregiver Support</span>
+          <h3 class="card-title">Family Caregiver Toolkit: Supporting a Loved One with PAD</h3>
+          <p class="card-desc">Practical guidance, daily checklists, and self-care resources for caregivers.</p>
+          <div class="card-meta">
+            <span>For Caregivers</span>
+            <span class="card-cta">Download →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 — Webinar -->
+      <div class="card">
+        <div class="card-image">
+          <span class="badge webinar">Webinar</span>
+          <span class="duration-pill">▶ 1h 12min</span>
+        </div>
+        <div class="card-body">
+          <span class="topic-tag">Multidisciplinary Care</span>
+          <h3 class="card-title">Building the Multidisciplinary Limb Salvage Team</h3>
+          <p class="card-desc">How hospital systems are restructuring referral pathways to reduce preventable amputations.</p>
+          <div class="card-meta">
+            <span>For Clinicians</span>
+            <span class="card-cta">Watch →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="annot">
+  <strong>Mockup Note</strong>
+  Audience tiles below let visitors self-select their path. Patterned after AHA's audience-first navigation.
+</div>
+
+<!-- AUDIENCE TILES -->
+<section class="audience-section">
+  <div class="audience-inner">
+    <h2>Find what's most relevant to you.</h2>
+    <p class="subtitle">Tailored entry points for the three audiences SALSAL serves.</p>
+
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-count">38 Resources</div>
+        <h3>For Clinicians</h3>
+        <p>Evidence-based clinical guidelines, screening tools, and continuing education on limb preservation, wound care, and PAD management.</p>
+        <a href="#" class="explore">Explore Clinician Library →</a>
+      </div>
+      <div class="audience-card">
+        <div class="audience-count">22 Resources</div>
+        <h3>For Patients</h3>
+        <p>Plain-language guides, second-opinion checklists, and self-advocacy tools to navigate care decisions with confidence.</p>
+        <a href="#" class="explore">Explore Patient Library →</a>
+      </div>
+      <div class="audience-card">
+        <div class="audience-count">14 Resources</div>
+        <h3>For Caregivers & Public</h3>
+        <p>Family caregiver toolkits, awareness materials, and community screening event information.</p>
+        <a href="#" class="explore">Explore Community Library →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED SERIES -->
+<section class="featured-series">
+  <div class="featured-inner">
+    <div>
+      <span class="eyebrow">Featured Series</span>
+      <h2>Save A Limb, Save A Life: The Complete Educational Series.</h2>
+      <p>An 8-part webinar series covering everything from early PAD screening to advanced limb salvage. Designed for clinicians and shareable with patients.</p>
+      <div class="featured-stats">
+        <div class="stat"><div class="num">8</div><div class="lbl">Modules</div></div>
+        <div class="stat"><div class="num">6h</div><div class="lbl">Total length</div></div>
+        <div class="stat"><div class="num">Free</div><div class="lbl">For all</div></div>
+      </div>
+      <a href="#" class="btn-primary">Start the Series</a>
+    </div>
+    <div class="series-modules">
+      <div class="head">What's Inside</div>
+      <div class="module-row">
+        <div class="module-num">1</div>
+        <div class="module-title">Understanding Peripheral Arterial Disease</div>
+        <div class="module-len">42 min</div>
+      </div>
+      <div class="module-row">
+        <div class="module-num">2</div>
+        <div class="module-title">Early Screening in Primary Care</div>
+        <div class="module-len">38 min</div>
+      </div>
+      <div class="module-row">
+        <div class="module-num">3</div>
+        <div class="module-title">Wound Care Best Practices</div>
+        <div class="module-len">51 min</div>
+      </div>
+      <div class="module-row">
+        <div class="module-num">4</div>
+        <div class="module-title">The Multidisciplinary Care Model</div>
+        <div class="module-len">47 min</div>
+      </div>
+      <div class="module-row">
+        <div class="module-num">5</div>
+        <div class="module-title">When and How to Refer for Limb Salvage</div>
+        <div class="module-len">44 min</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <h2>Get new resources delivered.</h2>
+    <p>Monthly updates with new webinars, downloadable resources, and screening event news.</p>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" placeholder="your@email.com">
+      <button class="search-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="disclaimer">
+      <strong>Medical Disclaimer:</strong> Information in the SALSAL Learning Center is for educational purposes only and is not intended to replace professional medical advice. Always consult your healthcare provider regarding any medical condition.
+    </div>
+    <div class="footer-cols">
+      <div class="copy">© 2026 The Save A Leg, Save A Life Foundation · A 501(c)(3) nonprofit organization</div>
+      <div class="copy">4403 5th Ave NE, Bradenton, FL 34208</div>
+    </div>
+    <div class="footer-bottom">
+      MOCKUP CREATED BY AI POWERED DAHLIA · DAHLIA IMANBAY GLOBAL LLC · MAY 2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
