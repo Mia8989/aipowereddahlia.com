@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVLMJYPEDR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EVLMJYPEDR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Gmail or Outlook to AI With Read-Only Access</title>
+    <meta name="description" content="A step-by-step guide to connecting Gmail or Outlook to an AI tool with read-only access only, so it can summarize newsletters and trends but never send, delete, or modify anything.">
+    <meta name="keywords" content="read-only email access AI, gmail.readonly scope, Microsoft Graph Mail.Read, MCP email connector, connect email to AI safely, newsletter digest AI, AEO GEO industry trend tracking">
+    <meta name="author" content="Dahlia Imanbay">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aipowereddahlia.com/blog/read-only-email-connection-ai-industry-trends">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="256x256" href="../assets/images/favicon-256.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+    <link rel="apple-touch-icon" href="../assets/images/favicon-256.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Connect Gmail or Outlook to AI With Read-Only Access | AI Powered Dahlia">
+    <meta property="og:description" content="The exact scopes, consent screens, and setup steps for a read-only email connection: gmail.readonly on Google, Mail.Read on Microsoft Graph. Built to track industry trends, never to send or delete.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aipowereddahlia.com/blog/read-only-email-connection-ai-industry-trends">
+    <meta property="og:site_name" content="AI Powered Dahlia">
+    <meta property="og:image" content="https://aipowereddahlia.com/assets/images/og-read-only-email-mcp.png">
+    <meta property="og:image:alt" content="Connect Gmail or Outlook to AI with read-only access, AI Powered Dahlia">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2026-08-11T09:00:00-05:00">
+    <meta property="article:modified_time" content="2026-08-11T09:00:00-05:00">
+    <meta property="article:author" content="https://www.linkedin.com/in/dahlia-imanbay/">
+    <meta property="article:section" content="AI Systems &amp; Automation">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dahlia_imanbay">
+    <meta name="twitter:creator" content="@dahlia_imanbay">
+    <meta name="twitter:title" content="Connect Gmail or Outlook to AI With Read-Only Access">
+    <meta name="twitter:description" content="The exact scopes and setup steps for a read-only email connection that summarizes newsletters and industry trends, and structurally cannot send, delete, or modify anything.">
+    <meta name="twitter:image" content="https://aipowereddahlia.com/assets/images/og-read-only-email-mcp.png">
+
+    <!-- Schema: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Connect Gmail or Outlook to AI With Read-Only Access",
+        "description": "A step-by-step guide to connecting Gmail or Outlook to an AI tool with read-only access only, using the gmail.readonly and Mail.Read scopes, so the tool can summarize newsletter subscriptions and industry trends but structurally cannot send, delete, or modify anything.",
+        "datePublished": "2026-08-11T09:00:00-05:00",
+        "dateModified": "2026-08-11T09:00:00-05:00",
+        "author": {
+            "@type": "Person",
+            "name": "Dahlia Imanbay",
+            "url": "https://www.linkedin.com/in/dahlia-imanbay/",
+            "jobTitle": "Founder & AI Strategy Consultant",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "AI Powered Dahlia",
+                "url": "https://aipowereddahlia.com"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/dahlia-imanbay/",
+                "https://x.com/dahlia_imanbay",
+                "https://github.com/Mia8989",
+                "https://www.youtube.com/@DahliaImanbay",
+                "https://dahliaimanbay.com"
+            ]
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI Powered Dahlia",
+            "url": "https://aipowereddahlia.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://aipowereddahlia.com/assets/images/logo-white.png"
+            }
+        },
+        "mainEntityOfPage": "https://aipowereddahlia.com/blog/read-only-email-connection-ai-industry-trends",
+        "image": "https://aipowereddahlia.com/assets/images/og-read-only-email-mcp.png",
+        "articleSection": "AI Systems & Automation",
+        "keywords": ["read-only email access", "gmail.readonly", "Microsoft Graph Mail.Read", "MCP", "newsletter digest automation"],
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".blog-article h1", ".answer-box p"]
+        }
+    }
+    </script>
+
+    <!-- Schema: VideoObject -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Hack 31: Connect Your Inbox to AI With Read-Only Access",
+        "description": "Dahlia Imanbay explains how she connects her inbox to an AI tool with read-only access to summarize newsletter subscriptions and track industry trends automatically.",
+        "thumbnailUrl": "https://aipowereddahlia.com/assets/images/og-read-only-email-mcp.png",
+        "uploadDate": "2026-08-11T09:00:00-05:00",
+        "contentUrl": "https://www.youtube.com/watch?v=YHPWU9KJu1c",
+        "embedUrl": "https://www.youtube.com/embed/YHPWU9KJu1c",
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI Powered Dahlia",
+            "url": "https://aipowereddahlia.com"
+        }
+    }
+    </script>
+
+    <!-- Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aipowereddahlia.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aipowereddahlia.com/blog" },
+            { "@type": "ListItem", "position": 3, "name": "Connect Gmail or Outlook to AI With Read-Only Access", "item": "https://aipowereddahlia.com/blog/read-only-email-connection-ai-industry-trends" }
+        ]
+    }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the read-only scope for Gmail called?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is called gmail.readonly. It is one of several distinct OAuth scopes the Gmail API offers, and it only grants permission to view and read mail. It does not include the separate scopes required to send, delete, or modify messages and labels."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the equivalent read-only scope for Outlook or Microsoft 365?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is called Mail.Read in the Microsoft Graph permission model. Microsoft deliberately separates Mail.Read from Mail.ReadWrite and Mail.Send. An application authorized only for Mail.Read cannot send or modify messages, regardless of what it attempts."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why would a business connect AI to an inbox with read-only access instead of skipping it?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Read-only access lets a team automate the work of monitoring newsletters, subscriptions, and inbound trend signals, without introducing the risk of an automated system sending or deleting something on the team's behalf. It is the narrowest permission that still accomplishes the summarization task, which is the right default for any unattended AI connection to a business inbox."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often do read-only OAuth tokens need to be re-authorized?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This varies by provider and app configuration, but both Google and Microsoft expire access tokens and require periodic refresh or re-consent. Build re-authorization into your maintenance routine rather than assuming a one-time setup lasts indefinitely."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../assets/css/shared.css">
+
+    <style>
+        .blog-article { max-width: 780px; margin: 0 auto; padding: 80px 24px 100px; }
+        .blog-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+        .blog-meta-tag { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .blog-meta-date { font-size: 0.85rem; color: var(--text-muted); }
+        .blog-meta-read { font-size: 0.85rem; color: var(--text-muted); }
+        .blog-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-muted); }
+        .blog-updated { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 32px; padding: 8px 14px; background: var(--bg-elevated); border: 1px solid var(--border-default); border-radius: 999px; display: inline-block; }
+        .blog-article h1 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; margin-bottom: 24px; }
+        .blog-article h2 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); margin-top: 56px; margin-bottom: 20px; line-height: 1.25; }
+        .blog-article h3 { font-size: clamp(1.1rem, 2vw, 1.3rem); margin-top: 40px; margin-bottom: 16px; }
+        .blog-article p { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px; }
+        .blog-article ul, .blog-article ol { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px; padding-left: 24px; }
+        .blog-article li { margin-bottom: 8px; }
+        .blog-article strong { color: var(--text-primary); }
+        .blog-article code { background: var(--bg-elevated); border: 1px solid var(--border-default); border-radius: 6px; padding: 2px 8px; font-size: 0.92em; color: var(--cyan); }
+        .blog-article a { color: var(--cyan); border-bottom: 1px solid rgba(92,225,230,0.3); text-decoration: none; transition: border-color 0.3s; }
+        .blog-article a:hover { border-color: var(--cyan); }
+        .blog-article blockquote { border-left: 3px solid var(--cyan); padding: 16px 24px; margin: 32px 0; background: var(--bg-elevated); border-radius: 0 12px 12px 0; }
+        .blog-article blockquote p { margin-bottom: 0; font-style: italic; }
+        .answer-box { background: linear-gradient(135deg, rgba(92,225,230,0.08), rgba(140,82,255,0.06)); border: 1px solid rgba(92,225,230,0.25); border-radius: 14px; padding: 24px 28px; margin: 0 0 32px; }
+        .answer-box .answer-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--cyan); display: block; margin-bottom: 10px; }
+        .answer-box p { margin-bottom: 0; color: var(--text-primary); font-size: 1.05rem; line-height: 1.75; }
+        .stat-callout { background: var(--bg-elevated); border: 1px solid var(--border-default); border-radius: 14px; padding: 28px 32px; margin: 32px 0; text-align: center; }
+        .stat-callout .stat-number { font-family: 'Clash Display', sans-serif; font-size: 2.4rem; font-weight: 600; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 8px; }
+        .stat-callout .stat-label { font-size: 0.95rem; color: var(--text-secondary); }
+        .step-block { background: var(--bg-elevated); border: 1px solid var(--border-default); border-radius: 14px; padding: 28px 32px; margin: 24px 0; }
+        .step-block .step-label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--cyan); display: block; margin-bottom: 8px; }
+        .step-block h3 { margin-top: 0; margin-bottom: 12px; font-size: 1.15rem; }
+        .step-block p { margin-bottom: 0; font-size: 0.98rem; }
+        .blog-sources { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--border-default); }
+        .blog-sources h3 { font-size: 1.1rem; margin-bottom: 16px; }
+        .blog-sources ol { font-size: 0.9rem; color: var(--text-muted); }
+        .blog-sources li { margin-bottom: 6px; }
+        .blog-author-box { display: flex; gap: 20px; align-items: flex-start; background: var(--bg-elevated); border: 1px solid var(--border-default); border-radius: 14px; padding: 28px; margin-top: 56px; }
+        .blog-author-info h4 { margin-bottom: 6px; font-size: 1rem; }
+        .blog-author-info p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0; line-height: 1.6; }
+        .blog-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-default); }
+        .blog-nav a { font-size: 0.9rem; color: var(--cyan); border-bottom: 1px solid rgba(92,225,230,0.3); text-decoration: none; }
+        .blog-nav a:hover { border-color: var(--cyan); }
+        .faq-section { margin-top: 64px; }
+        .faq-item { background: var(--bg-elevated); border: 1px solid var(--border-default); border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; }
+        .faq-item h3 { font-size: 1rem; margin-bottom: 12px; color: var(--text-primary); margin-top: 0; }
+        .faq-item p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0; line-height: 1.7; }
+        .checklist { list-style: none; padding-left: 0; }
+        .checklist li { padding-left: 28px; position: relative; margin-bottom: 10px; }
+        .checklist li::before { content: '\2713'; position: absolute; left: 0; color: var(--cyan); font-weight: 700; }
+        .video-embed { max-width: 360px; margin: 8px auto 12px; aspect-ratio: 9 / 16; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-default); background: #000; box-shadow: 0 16px 50px rgba(0,0,0,0.45); }
+        .video-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .video-caption { text-align: center; font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.04em; margin-bottom: 36px; }
+        @media (max-width: 600px) {
+            .blog-author-box { flex-direction: column; }
+            .video-embed { max-width: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+        <div class="container nav-inner">
+            <a href="../" class="nav-logo">AI Powered Dahlia</a>
+            <div class="nav-links">
+                <a href="../ai-strategy">Strategy</a>
+                <a href="../ai-agents">Agents</a>
+                <a href="../seo-aeo-geo">SEO/AEO/GEO</a>
+                <a href="../healthcare">Healthcare</a>
+                <a href="../blog" class="active">Blog</a>
+            </div>
+            <a href="../contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.88rem;">
+                <span>Get Started</span>
+                <span class="btn-arrow">&#8599;</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" style="padding: 100px 24px 0; max-width: 780px; margin: 0 auto;">
+        <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;align-items:center;font-size:0.82rem;color:var(--text-muted);">
+            <li><a href="../" style="color:var(--text-muted);text-decoration:none;border-bottom:none;">Home</a></li>
+            <li style="opacity:0.4;">/</li>
+            <li><a href="../blog" style="color:var(--text-muted);text-decoration:none;border-bottom:none;">Blog</a></li>
+            <li style="opacity:0.4;">/</li>
+            <li style="color:var(--text-secondary);">Connect Gmail or Outlook to AI With Read-Only Access</li>
+        </ol>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-article">
+
+        <div class="blog-meta">
+            <span class="blog-meta-author" style="font-size:0.85rem;color:var(--text-secondary);font-weight:600;">By Dahlia Imanbay</span>
+            <span class="blog-meta-divider"></span>
+            <span class="blog-meta-tag">AI Systems &amp; Automation</span>
+            <span class="blog-meta-divider"></span>
+            <span class="blog-meta-date">August 11, 2026</span>
+            <span class="blog-meta-divider"></span>
+            <span class="blog-meta-read">8 min read</span>
+        </div>
+
+        <h1>Connect Gmail or Outlook to AI With Read-Only Access</h1>
+
+        <span class="blog-updated">Last updated: August 11, 2026</span>
+
+        <div class="answer-box">
+            <span class="answer-label">Direct Answer</span>
+            <p>A read-only email connection lets an AI tool view and summarize your inbox without ever being able to send, delete, or modify anything. On Gmail this is the <code>gmail.readonly</code> OAuth scope; on Microsoft 365 it is the <code>Mail.Read</code> Graph API permission. We use this exact setup to scan a small set of newsletter subscriptions and summarize industry trends automatically, and it is the pattern we recommend for any unattended AI connection to a business inbox.</p>
+        </div>
+
+        <p>We built this for our own use first: a handful of newsletters that reliably break industry news before anyone else, connected to an AI tool that reads only those subscriptions and tells us what changed. No dashboard to check, no inbox to open. The part that makes teams comfortable running this unattended isn't a policy or a promise, it's the permission scope itself.</p>
+
+        <p>Dahlia walks through it in a short video below. Then this guide covers the exact scopes, consent screens, and setup steps for both Google and Microsoft.</p>
+
+        <!-- VIDEO -->
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/YHPWU9KJu1c" title="Connect your inbox to AI with read-only access, by Dahlia Imanbay" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">Watch: the read-only email connection, hack 31 of 30</p>
+
+        <div class="stat-callout">
+            <span class="stat-number">gmail.readonly / Mail.Read</span>
+            <span class="stat-label">the two scopes that make an AI email connection structurally unable to send, delete, or modify anything</span>
+        </div>
+
+        <h2>Why read-only, not full inbox access</h2>
+
+        <p>Connecting any AI tool to a live inbox raises an obvious question: what stops it from sending something it shouldn't? The answer we build toward for clients is not "we trust the prompt," it's "the permission itself doesn't allow it." Google and Microsoft both offer scoped, named permissions below full account access, and read-only is the narrowest one that still lets a tool do the summarization work. A connector authorized only for <code>gmail.readonly</code> or <code>Mail.Read</code> cannot send, delete, or forward a message, regardless of what instruction it receives. That's not a behavioral guarantee, it's a structural one, and it's the difference we build every unattended email integration around.</p>
+
+        <h2>Step-by-step: connect Gmail with read-only access</h2>
+
+        <div class="step-block">
+            <span class="step-label">Step 1</span>
+            <h3>Create a project and OAuth credentials in Google Cloud Console</h3>
+            <p>In the <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">Google Cloud Console</a>, create (or select) a project, enable the Gmail API, and create OAuth 2.0 credentials. Google requires this step for any application that will request access to a Gmail account, including MCP connectors and other AI tooling.</p>
+        </div>
+
+        <div class="step-block">
+            <span class="step-label">Step 2</span>
+            <h3>Restrict the scope to gmail.readonly</h3>
+            <p>When configuring the OAuth consent screen and the scopes your application requests, select <code>https://www.googleapis.com/auth/gmail.readonly</code> specifically. Do not add <code>gmail.send</code>, <code>gmail.modify</code>, or the broader <code>mail.google.com</code> scope unless the tool genuinely needs to send or manage mail. Requesting only what the task requires is the entire safety model here.</p>
+        </div>
+
+        <div class="step-block">
+            <span class="step-label">Step 3</span>
+            <h3>Authorize through your MCP email connector</h3>
+            <p>Most Gmail MCP connectors walk you through this OAuth flow directly: you'll see Google's consent screen naming the exact permission being granted, something like "View your email messages and settings," before you approve it. If the screen mentions sending or deleting, stop and check which scope was actually requested.</p>
+        </div>
+
+        <div class="step-block">
+            <span class="step-label">Step 4</span>
+            <h3>Expect to re-authorize periodically</h3>
+            <p>OAuth access tokens expire. Build periodic re-consent into how you maintain the connection rather than treating setup as one-and-done. This is a feature: it means read-only access isn't standing forever without anyone checking it.</p>
+        </div>
+
+        <h2>Step-by-step: connect Outlook or Microsoft 365 with read-only access</h2>
+
+        <div class="step-block">
+            <span class="step-label">Step 1</span>
+            <h3>Register an application in Microsoft Entra ID</h3>
+            <p>In the <a href="https://entra.microsoft.com/" target="_blank" rel="noopener">Microsoft Entra admin center</a> (formerly Azure AD), register a new application to get a client ID and set up the permissions it can request against Microsoft Graph.</p>
+        </div>
+
+        <div class="step-block">
+            <span class="step-label">Step 2</span>
+            <h3>Grant only the Mail.Read permission</h3>
+            <p>Under API permissions, add <code>Mail.Read</code> from Microsoft Graph and explicitly avoid <code>Mail.ReadWrite</code> and <code>Mail.Send</code>. Microsoft's permission model keeps these separate on purpose so an application can be scoped to read-only by design, not by convention.</p>
+        </div>
+
+        <div class="step-block">
+            <span class="step-label">Step 3</span>
+            <h3>Authorize via consent and connect your MCP tool</h3>
+            <p>Complete admin or user consent for the app registration, then connect it through your MCP email connector the same way as Gmail. The consent screen will name the permission plainly, so verify it says "Read your mail" and not "Send mail as you" before approving.</p>
+        </div>
+
+        <blockquote>
+            <p>The comfort here doesn't come from trusting the tool to behave. It comes from the permission itself being incapable of the risky action.</p>
+        </blockquote>
+
+        <h2>What this actually gives a small team</h2>
+
+        <p>For us, the practical output is a plain-language digest: what changed this week in the newsletters we've chosen to track, surfaced without opening a single one by hand. Scaled to client work, the same pattern applies to monitoring several inboxes for what actually needs attention versus what can be skipped, always scoped to exactly the access the task requires. We recommend starting with three to five sources you already trust, not your entire subscription list; a summarizer drowning in low-signal newsletters is just a different kind of noise.</p>
+
+        <ul class="checklist">
+            <li>Choose a small, high-signal set of newsletters before connecting anything.</li>
+            <li>Confirm the exact OAuth scope on the consent screen: gmail.readonly or Mail.Read, nothing broader.</li>
+            <li>Never grant send, modify, or delete permissions to a summarization tool.</li>
+            <li>Build periodic token re-authorization into your maintenance routine.</li>
+            <li>Treat read-only as the default for any unattended AI email connection, then expand only if the task genuinely requires it.</li>
+        </ul>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>What is the read-only scope for Gmail called?</h3>
+                <p>It is called gmail.readonly. It is one of several distinct OAuth scopes the Gmail API offers, and it only grants permission to view and read mail. It does not include the separate scopes required to send, delete, or modify messages and labels.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is the equivalent read-only scope for Outlook or Microsoft 365?</h3>
+                <p>It is called Mail.Read in the Microsoft Graph permission model. Microsoft deliberately separates Mail.Read from Mail.ReadWrite and Mail.Send. An application authorized only for Mail.Read cannot send or modify messages, regardless of what it attempts.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why would a business connect AI to an inbox with read-only access instead of skipping it?</h3>
+                <p>Read-only access lets a team automate the work of monitoring newsletters, subscriptions, and inbound trend signals, without introducing the risk of an automated system sending or deleting something on the team's behalf. It is the narrowest permission that still accomplishes the summarization task, which is the right default for any unattended AI connection to a business inbox.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How often do read-only OAuth tokens need to be re-authorized?</h3>
+                <p>This varies by provider and app configuration, but both Google and Microsoft expire access tokens and require periodic refresh or re-consent. Build re-authorization into your maintenance routine rather than assuming a one-time setup lasts indefinitely.</p>
+            </div>
+        </div>
+
+        <!-- Sources -->
+        <div class="blog-sources">
+            <h3>Sources</h3>
+            <ol>
+                <li>Google for Developers. <em>Gmail API OAuth 2.0 Scopes.</em> developers.google.com/workspace/gmail/api/auth/scopes</li>
+                <li>Microsoft Learn. <em>Microsoft Graph permissions reference.</em> learn.microsoft.com/graph/permissions-reference</li>
+                <li>Model Context Protocol. <em>Official documentation.</em> modelcontextprotocol.io</li>
+            </ol>
+        </div>
+
+        <!-- Author Box -->
+        <div class="blog-author-box">
+            <div class="blog-author-info">
+                <h4>Written by Dahlia Imanbay</h4>
+                <p>Dahlia Imanbay is the founder of AI Powered Dahlia, an AI strategy and marketing automation agency that builds intelligent systems for ambitious brands. She has 16+ years of experience in healthcare marketing, precision medicine, and full-stack AI automation, and scopes every unattended AI integration to the narrowest permission the task requires. Connect on <a href="https://www.linkedin.com/in/dahlia-imanbay/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+            </div>
+        </div>
+
+        <!-- Blog Navigation -->
+        <div class="blog-nav">
+            <a href="https://dahliaimanbay.com/blog/the-tool-that-reads-my-newsletters-for-me" style="color:var(--text-muted);border-bottom:none;" target="_blank" rel="noopener">&larr; Dahlia's personal take on this hack</a>
+            <a href="../blog">All Posts &rarr;</a>
+        </div>
+
+    </article>
+
+    <!-- CTA Section -->
+    <section style="background: var(--bg-elevated); border-top: 1px solid var(--border-default); padding: 80px 24px; text-align: center;">
+        <div style="max-width: 560px; margin: 0 auto;">
+            <p style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 16px;">Want this built for your team?</p>
+            <h2 style="font-family: 'Clash Display', sans-serif; font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 20px; letter-spacing: -0.02em;">We scope every AI email integration to the narrowest permission that gets the job done</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 32px; line-height: 1.7;">AI Powered Dahlia builds inbox monitoring, newsletter digests, and trend-tracking systems for small teams and nonprofits, always starting from read-only.</p>
+            <a href="../contact" class="btn btn-primary">
+                <span>Book a Strategy Call</span>
+                <span class="btn-arrow">&#8599;</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--bg-primary); border-top: 1px solid var(--border-default); padding: 48px 24px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p style="color: var(--text-muted); font-size: 0.85rem;">&copy; 2026 AI Powered Dahlia. All rights reserved.</p>
+            <div style="display: flex; gap: 24px; justify-content: center; margin-top: 16px; flex-wrap: wrap;">
+                <a href="../" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Home</a>
+                <a href="../blog" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Blog</a>
+                <a href="../seo-aeo-geo" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">SEO/AEO/GEO</a>
+                <a href="../contact" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Contact</a>
+                <a href="../privacy" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+        const toggle = document.getElementById('navToggle');
+        if (toggle) {
+            toggle.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.toggle('open');
+            });
+        }
+    </script>
+
+</body>
+</html>
