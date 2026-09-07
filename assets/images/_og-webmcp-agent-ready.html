@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:2400px; height:1260px; font-family:'Satoshi',sans-serif; background:#0A0A0A; position:relative; overflow:hidden; }
+  .glow { position:absolute; top:-300px; right:-200px; width:1100px; height:1100px; border-radius:50%; background: radial-gradient(circle, rgba(140,82,255,0.22), transparent 70%); }
+  .glow2 { position:absolute; bottom:-360px; left:-160px; width:900px; height:900px; border-radius:50%; background: radial-gradient(circle, rgba(92,225,230,0.14), transparent 70%); }
+  .wrap { position:relative; display:flex; align-items:center; height:100%; padding:0 144px; gap:100px; }
+  .stat { font-family:'Clash Display',sans-serif; font-weight:700; font-size:340px; line-height:0.92; letter-spacing:-0.03em; background: linear-gradient(135deg, #5ce1e6, #8c52ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; flex-shrink:0; }
+  .stat small { display:block; font-family:'Satoshi',sans-serif; font-weight:700; font-size:44px; letter-spacing:0.02em; -webkit-text-fill-color:#5ce1e6; color:#5ce1e6; margin-top:14px; }
+  .side { display:flex; flex-direction:column; gap:32px; max-width:1040px; }
+  .rule { width:100px; height:6px; background:#5ce1e6; border-radius:3px; }
+  .label { font-family:'Satoshi',sans-serif; font-size:32px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#5ce1e6; line-height:1.4; }
+  .head { font-family:'Clash Display',sans-serif; font-weight:600; font-size:76px; color:#F5F5F5; line-height:1.14; letter-spacing:-0.02em; }
+  .sub { font-family:'Satoshi',sans-serif; font-size:34px; font-weight:500; color:rgba(245,245,245,0.74); line-height:1.5; margin-top:4px; }
+  .brand { position:absolute; bottom:80px; left:144px; font-family:'Satoshi',sans-serif; font-size:28px; font-weight:600; letter-spacing:0.1em; color:rgba(245,245,245,0.4); }
+  .badge { position:absolute; top:80px; right:144px; font-family:'Satoshi',sans-serif; font-size:26px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#8c52ff; border:2px solid rgba(140,82,255,0.4); border-radius:999px; padding:12px 28px; background:rgba(140,82,255,0.08); }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="glow2"></div>
+  <div class="badge">Origin Trial &middot; Chrome 149</div>
+  <div class="wrap">
+    <div class="stat">1&ndash;2s<small>per agent action</small></div>
+    <div class="side">
+      <div class="rule"></div>
+      <div class="label">WebMCP vs. screenshot-and-click</div>
+      <div class="head">Make your website agent-ready</div>
+      <div class="sub">What WebMCP is, and how to prepare while it's still early</div>
+    </div>
+  </div>
+  <div class="brand">AI POWERED DAHLIA</div>
+</body>
+</html>
