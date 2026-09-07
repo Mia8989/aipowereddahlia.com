@@ -139,6 +139,9 @@
         .blog-article blockquote p { margin-bottom: 0; font-style: italic; }
         .tldr-box { background: var(--bg-elevated); border: 1px solid var(--border-default); border-left: 3px solid var(--cyan); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 0 0 32px; }
         .tldr-box p { margin: 0; font-size: 1rem; color: var(--text-primary); line-height: 1.7; }
+        .post-figure { margin: 36px 0; }
+        .post-figure img { max-width: 100%; height: auto; border-radius: 16px; display: block; }
+        .post-figure figcaption { text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 12px; line-height: 1.55; }
         .myth-box { background: linear-gradient(135deg, rgba(140,82,255,0.10), rgba(92,225,230,0.06)); border: 1px solid rgba(140,82,255,0.30); border-radius: 16px; padding: 28px 30px; margin: 40px 0; }
         .myth-box .myth-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--cyan); display: block; margin-bottom: 12px; }
         .myth-box h3 { font-family: 'Clash Display', sans-serif; font-size: 1.35rem; margin: 0 0 12px; line-height: 1.25; }
@@ -215,6 +218,11 @@
 
         <p>We work on content systems, not vanity metrics, so before we set up any spend we go to the primary source and read exactly what qualifies. Here is what we found, what happened when we ran a real campaign for a client, and how we now split organic from paid so a channel actually reaches monetization.</p>
 
+        <figure class="post-figure">
+            <img src="/assets/images/yt-hero.png" alt="YouTube ads buy discovery and views, but only organic watch time counts toward the 4,000-hour monetization threshold" width="3200" height="1680" loading="lazy">
+            <figcaption>Ads buy discovery, not monetization hours.</figcaption>
+        </figure>
+
         <h2>The rule almost everyone gets wrong</h2>
 
         <p>To join the YouTube Partner Program on the long-form route, a channel needs 1,000 subscribers plus 4,000 valid public watch hours in the past 12 months (or 1,000 subscribers plus 10 million valid public Shorts views in the past 90 days). The word doing the heavy lifting is <strong>valid</strong>. YouTube's own eligibility guidance and the Google Ads Help community are consistent on this point: watch time that comes from ads or other paid promotion does not count toward the 4,000 hours. Neither does watch time from content that is set to private, unlisted, or deleted.</p>
@@ -227,6 +235,11 @@
             <p>Paid promotion grows your view count and your audience. It does not add to the 4,000 valid public watch hours the Partner Program requires. Only organic watch time qualifies. Treat ads as a way to be discovered, never as a shortcut to the threshold.</p>
         </div>
 
+        <figure class="post-figure">
+            <img src="/assets/images/yt-organic-vs-paid.png" alt="Comparison showing organic watch time counts toward the 4,000-hour bar while paid ad watch time counts zero" width="3200" height="1800" loading="lazy">
+            <figcaption>Organic watch time counts toward the 4,000-hour bar. Paid ad watch time counts zero.</figcaption>
+        </figure>
+
         <h2>What actually happened when we ran the campaign</h2>
 
         <p>In our client work we set up a YouTube campaign to grow a channel's reach, and the campaign type taught the lesson better than any policy page could. When the objective is built around clicks and conversions, which is how a Demand Gen campaign is structured, the system optimizes for the action, not for sustained viewing. It found people likely to click. It spent the budget. And it produced almost no watch hours, because watch time was never what it was told to maximize.</p>
@@ -234,6 +247,11 @@
         <p>That is the trap in one sentence: the pattern we see is creators and clients assuming ad spend builds monetization hours, when the campaign objective they picked was never optimizing for watch time in the first place. If your goal is watch time, a Demand Gen campaign is the wrong tool, and even the right tool still will not credit those hours toward the 4,000. Paid is for discovery. Organic is for the threshold. <em>(Results may vary; campaign behavior depends on objective, audience, and creative.)</em></p>
 
         <p>There is a budget trap sitting right next to the campaign trap. Google Ads does not cap your monthly spend at daily budget times 30. It multiplies your average daily budget by 30.4, the average number of days in a month. So a "$5 per day" budget can bill up to about $152 per month, not $150 and definitely not $100. Daily spend runs over on busy days and under on slow ones, but the monthly ceiling follows the multiplied number. If you want to hold spend near $100 per month, set the daily budget to roughly $3.28.</p>
+
+        <figure class="post-figure">
+            <img src="/assets/images/yt-budget-math.png" alt="Budget math showing a $5 daily Google Ads budget bills about $152 a month, and a true $100 monthly cap needs $3.28 a day" width="3200" height="1800" loading="lazy">
+            <figcaption>A $5 daily budget bills about $152 a month. For a real $100 cap, set $3.28 a day.</figcaption>
+        </figure>
 
         <h2>Section 1: Organic tactics that build monetizable watch hours</h2>
 
@@ -282,6 +300,11 @@
                 <li><strong>The honest conclusion.</strong> The campaign hurt the video more than it helped, because views without interest do not build a channel. It is the clearest case we know for judging ads on retention and genuinely interested viewers, not the raw view counter.</li>
             </ol>
         </div>
+
+        <figure class="post-figure">
+            <img src="/assets/images/yt-retention-chart.png" alt="Line chart of a documented experiment where audience retention fell from 54 percent to 35 percent over four days after paid ads switched on, even as views climbed" width="3200" height="1800" loading="lazy">
+            <figcaption>A documented experiment: retention fell from 54% to 35% over four days once ads switched on, even as views climbed.</figcaption>
+        </figure>
 
         <p>Credit where it is due: much of this paid structure tracks with what creators like Promogod, Ric Zog Digital, and DCYPHER Studios teach about running YouTube ads for channel growth. We tested it against a real objective and it holds up, as long as you remember the boundary: these campaigns buy discovery, not the 4,000 hours.</p>
 
