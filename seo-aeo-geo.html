@@ -203,9 +203,9 @@
     }
     </script>
 
-    <!-- Fonts: Clash Display + Satoshi from Fontshare -->
-    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+    <!-- Fonts: Montserrat + Montserrat from Fontshare -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Shared Styles -->
     <link rel="stylesheet" href="assets/css/shared.css">
@@ -216,7 +216,7 @@
         .page-hero { padding: 200px 0 100px; background: var(--bg-primary); }
         .page-hero .section-label { opacity: 0; transform: translateY(20px); }
         .page-hero h1 {
-            background: linear-gradient(135deg, #4285F4, #5ce1e6, #8c52ff);
+            background: linear-gradient(135deg, #4285F4, #3A9DAD, #B8A9D4);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
 
@@ -259,11 +259,11 @@
             transform: translateY(-4px);
         }
         .pillar-card--seo::before { background: #4285F4; }
-        .pillar-card--aeo::before { background: #5ce1e6; }
-        .pillar-card--geo::before { background: #8c52ff; }
+        .pillar-card--aeo::before { background: #3A9DAD; }
+        .pillar-card--geo::before { background: #B8A9D4; }
 
         .pillar-acronym {
-            font-family: 'Clash Display', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: clamp(2rem, 3.5vw, 2.8rem);
             letter-spacing: -0.02em;
@@ -275,15 +275,15 @@
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
         .pillar-card--aeo .pillar-acronym {
-            background: linear-gradient(135deg, #5ce1e6, #8aeef2);
+            background: linear-gradient(135deg, #3A9DAD, #8aeef2);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
         .pillar-card--geo .pillar-acronym {
-            background: linear-gradient(135deg, #8c52ff, #b388ff);
+            background: linear-gradient(135deg, #B8A9D4, #b388ff);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
         .pillar-fullname {
-            font-family: 'Clash Display', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 1.05rem;
             color: var(--text-primary);
@@ -318,8 +318,8 @@
             border-radius: 50%;
         }
         .pillar-card--seo .pillar-list li::before { background: #4285F4; }
-        .pillar-card--aeo .pillar-list li::before { background: #5ce1e6; }
-        .pillar-card--geo .pillar-list li::before { background: #8c52ff; }
+        .pillar-card--aeo .pillar-list li::before { background: #3A9DAD; }
+        .pillar-card--geo .pillar-list li::before { background: #B8A9D4; }
 
         /* Process Section */
         .process-section { padding: 140px 0; background: var(--bg-primary); }
@@ -337,7 +337,7 @@
         }
         .stats-glow {
             position: absolute; width: 800px; height: 800px; border-radius: 50%;
-            background: radial-gradient(ellipse at center, rgba(66,133,244,0.06) 0%, rgba(92,225,230,0.04) 35%, rgba(140,82,255,0.03) 55%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(66,133,244,0.06) 0%, rgba(58, 157, 173,0.04) 35%, rgba(184, 169, 212,0.03) 55%, transparent 70%);
             top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;
         }
         .stats-row {
@@ -360,10 +360,10 @@
             transform: translateY(-2px);
         }
         .stat-number {
-            font-family: 'Clash Display', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 600;
-            background: linear-gradient(135deg, #4285F4, #5ce1e6, #8c52ff);
+            background: linear-gradient(135deg, #4285F4, #3A9DAD, #B8A9D4);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
             line-height: 1.2;
             margin-bottom: 8px;
@@ -401,7 +401,7 @@
         .entity-statement strong { color: var(--text-primary); }
         .solution-link {
             color: var(--cyan);
-            border-bottom: 1px solid rgba(92, 225, 230, 0.3);
+            border-bottom: 1px solid rgba(58, 157, 173, 0.3);
             transition: border-color 0.2s;
         }
         .solution-link:hover { border-color: var(--cyan); }
@@ -708,6 +708,7 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
+                        <li><a href="https://dahliaimanbay.com" target="_blank" rel="noopener">Dahlia Imanbay</a></li>
                         <li><a href="about">About</a></li>
                         <li><a href="blog">Blog</a></li>
                         <li><a href="website-grader">Free Grader</a></li>

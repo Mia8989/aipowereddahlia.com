@@ -146,8 +146,8 @@
     </script>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Shared Styles -->
     <link rel="stylesheet" href="../assets/css/shared.css">
@@ -167,12 +167,12 @@
         .blog-article ul, .blog-article ol { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px; padding-left: 24px; }
         .blog-article li { margin-bottom: 8px; }
         .blog-article strong { color: var(--text-primary); }
-        .blog-article a { color: var(--cyan); border-bottom: 1px solid rgba(92,225,230,0.3); text-decoration: none; transition: border-color 0.3s; }
+        .blog-article a { color: var(--cyan); border-bottom: 1px solid rgba(58, 157, 173,0.3); text-decoration: none; transition: border-color 0.3s; }
         .blog-article a:hover { border-color: var(--cyan); }
         .blog-article blockquote { border-left: 3px solid var(--cyan); padding: 16px 24px; margin: 32px 0; background: var(--bg-elevated); border-radius: 0 12px 12px 0; }
         .blog-article blockquote p { margin-bottom: 0; font-style: italic; }
         .stat-callout { background: var(--bg-elevated); border: 1px solid var(--border-default); border-radius: 14px; padding: 28px 32px; margin: 32px 0; text-align: center; }
-        .stat-callout .stat-number { font-family: 'Clash Display', sans-serif; font-size: 2.4rem; font-weight: 600; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 8px; }
+        .stat-callout .stat-number { font-family: 'Montserrat', sans-serif; font-size: 2.4rem; font-weight: 600; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 8px; }
         .stat-callout .stat-label { font-size: 0.95rem; color: var(--text-secondary); }
         .blog-sources { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--border-default); }
         .blog-sources h3 { font-size: 1.1rem; margin-bottom: 16px; }
@@ -191,8 +191,8 @@
         .chart-label { font-size: 0.82rem; color: var(--text-secondary); min-width: 140px; text-align: right; }
         .chart-bar-track { flex: 1; height: 28px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; position: relative; }
         .chart-bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; font-size: 0.78rem; font-weight: 700; color: #fff; transition: width 1s cubic-bezier(0.22,1,0.36,1); }
-        .chart-bar-fill.cyan { background: linear-gradient(90deg, rgba(92,225,230,0.3), rgba(92,225,230,0.8)); }
-        .chart-bar-fill.purple { background: linear-gradient(90deg, rgba(140,82,255,0.3), rgba(140,82,255,0.8)); }
+        .chart-bar-fill.cyan { background: linear-gradient(90deg, rgba(58, 157, 173,0.3), rgba(58, 157, 173,0.8)); }
+        .chart-bar-fill.purple { background: linear-gradient(90deg, rgba(184, 169, 212,0.3), rgba(184, 169, 212,0.8)); }
         .chart-bar-fill.red { background: linear-gradient(90deg, rgba(255,107,107,0.3), rgba(255,107,107,0.8)); }
         .chart-bar-fill.green { background: linear-gradient(90deg, rgba(72,199,142,0.3), rgba(72,199,142,0.8)); }
 
@@ -215,7 +215,7 @@
         /* Cost Tiers */
         .cost-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
         .cost-tier { background: var(--bg-elevated); border: 1px solid var(--border-default); border-radius: 12px; padding: 20px; text-align: center; }
-        .cost-tier .tier-price { font-family: 'Clash Display', sans-serif; font-size: 1.5rem; font-weight: 600; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 4px; }
+        .cost-tier .tier-price { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 600; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 4px; }
         .cost-tier .tier-name { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 8px; display: block; }
         .cost-tier p { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0; line-height: 1.5; }
 
@@ -526,6 +526,7 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
+                        <li><a href="https://dahliaimanbay.com" target="_blank" rel="noopener">Dahlia Imanbay</a></li>
                         <li><a href="../about">About</a></li>
                         <li><a href="../blog">Blog</a></li>
                         <li><a href="../contact">Contact</a></li>

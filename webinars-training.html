@@ -179,9 +179,9 @@
     }
     </script>
 
-    <!-- Fonts: Clash Display + Satoshi from Fontshare -->
-    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+    <!-- Fonts: Montserrat + Montserrat from Fontshare -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Shared Styles -->
     <link rel="stylesheet" href="assets/css/shared.css">
@@ -195,12 +195,12 @@
             background: var(--bg-primary);
         }
         .page-hero .hero-glow {
-            background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.08) 0%, rgba(52, 211, 153, 0.05) 30%, rgba(92, 225, 230, 0.04) 60%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.08) 0%, rgba(52, 211, 153, 0.05) 30%, rgba(58, 157, 173, 0.04) 60%, transparent 70%);
             width: 800px;
             height: 800px;
         }
         .page-hero h1 {
-            background: linear-gradient(135deg, #10B981, #34D399, #5ce1e6);
+            background: linear-gradient(135deg, #10B981, #34D399, #3A9DAD);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -226,7 +226,7 @@
         .solution-text strong { color: var(--text-primary); }
         .solution-link {
             color: var(--cyan);
-            border-bottom: 1px solid rgba(92, 225, 230, 0.3);
+            border-bottom: 1px solid rgba(58, 157, 173, 0.3);
             transition: border-color 0.2s;
         }
         .solution-link:hover { border-color: var(--cyan); }
@@ -257,8 +257,8 @@
             width: 100%;
         }
         .format-card-bar.green { background: linear-gradient(90deg, #10B981, #34D399); }
-        .format-card-bar.cyan { background: linear-gradient(90deg, #5ce1e6, #34D399); }
-        .format-card-bar.purple { background: linear-gradient(90deg, #8c52ff, #a78bfa); }
+        .format-card-bar.cyan { background: linear-gradient(90deg, #3A9DAD, #34D399); }
+        .format-card-bar.purple { background: linear-gradient(90deg, #B8A9D4, #a78bfa); }
         .format-card-body {
             padding: 32px 28px;
             flex: 1;
@@ -279,11 +279,11 @@
             color: #34D399;
         }
         .format-card-icon.cyan {
-            background: rgba(92, 225, 230, 0.1);
+            background: rgba(58, 157, 173, 0.1);
             color: var(--cyan);
         }
         .format-card-icon.purple {
-            background: rgba(140, 82, 255, 0.1);
+            background: rgba(184, 169, 212, 0.1);
             color: #a78bfa;
         }
         .format-card-icon svg { width: 28px; height: 28px; }
@@ -350,9 +350,9 @@
             white-space: nowrap;
         }
         .topic-pill:hover {
-            border-color: rgba(92, 225, 230, 0.4);
+            border-color: rgba(58, 157, 173, 0.4);
             color: var(--text-primary);
-            background: rgba(92, 225, 230, 0.05);
+            background: rgba(58, 157, 173, 0.05);
             transform: translateY(-2px);
         }
 
@@ -684,7 +684,7 @@
                 <div class="faq-item">
                     <button class="faq-question">What does training cost?</button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">Pricing depends on format, duration, and customization level. Webinars start at one price point, full-day workshops at another, and multi-week programs are custom quoted. <a href="contact" style="color:var(--cyan);border-bottom:1px solid rgba(92,225,230,0.3);">Book a call</a> to discuss your needs.</div>
+                        <div class="faq-answer-inner">Pricing depends on format, duration, and customization level. Webinars start at one price point, full-day workshops at another, and multi-week programs are custom quoted. <a href="contact" style="color:var(--cyan);border-bottom:1px solid rgba(58, 157, 173,0.3);">Book a call</a> to discuss your needs.</div>
                     </div>
                 </div>
             </div>
@@ -733,6 +733,7 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
+                        <li><a href="https://dahliaimanbay.com" target="_blank" rel="noopener">Dahlia Imanbay</a></li>
                         <li><a href="about">About</a></li>
                         <li><a href="blog">Blog</a></li>
                         <li><a href="website-grader">Free Grader</a></li>

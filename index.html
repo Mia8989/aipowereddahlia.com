@@ -169,16 +169,16 @@
     }
     </script>
 
-    <!-- Fonts: Clash Display + Satoshi from Fontshare -->
-    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+    <!-- Fonts: Montserrat + Montserrat from Fontshare -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         /* ===== RESET & BASE ===== */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; overflow-x: hidden; }
         body {
-            font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text-primary);
             line-height: 1.6;
             background: var(--bg-primary);
@@ -197,24 +197,24 @@
             --text-primary: #F5F5F5;
             --text-secondary: rgba(245, 245, 245, 0.6);
             --text-muted: rgba(245, 245, 245, 0.4);
-            --accent: #8c52ff;
-            --accent-glow: rgba(140, 82, 255, 0.15);
-            --cyan: #5ce1e6;
-            --cyan-glow: rgba(92, 225, 230, 0.15);
-            --lavender: #e9dfff;
-            --mauve: #c197d2;
-            --pink: #fbc5ff;
-            --blue: #669bf3;
-            --periwinkle: #a1a9fe;
-            --gradient-brand: linear-gradient(135deg, #5ce1e6, #8c52ff);
-            --gradient-feminine: linear-gradient(135deg, #5ce1e6, #8c52ff, #fbc5ff);
+            --accent: #B8A9D4;
+            --accent-glow: rgba(184, 169, 212, 0.15);
+            --cyan: #3A9DAD;
+            --cyan-glow: rgba(58, 157, 173, 0.15);
+            --lavender: #DDD5EE;
+            --mauve: #B8A9D4;
+            --pink: #F2C4C4;
+            --blue: #3A9DAD;
+            --periwinkle: #8E7BB8;
+            --gradient-brand: linear-gradient(135deg, #3A9DAD, #B8A9D4);
+            --gradient-feminine: linear-gradient(135deg, #3A9DAD, #B8A9D4, #F2C4C4);
             --border-default: rgba(255, 255, 255, 0.08);
             --border-hover: rgba(255, 255, 255, 0.15);
         }
 
         /* ===== TYPOGRAPHY ===== */
         h1, h2, h3, h4 {
-            font-family: 'Clash Display', 'Satoshi', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             line-height: 1.1;
         }
@@ -266,7 +266,7 @@
             gap: 8px;
             padding: 14px 28px;
             border-radius: 8px;
-            font-family: 'Satoshi', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
@@ -305,7 +305,7 @@
             opacity: 0.12;
         }
         .btn-primary:hover {
-            box-shadow: 0 0 24px rgba(92, 225, 230, 0.15), 0 0 48px rgba(140, 82, 255, 0.1);
+            box-shadow: 0 0 24px rgba(58, 157, 173, 0.15), 0 0 48px rgba(184, 169, 212, 0.1);
             transform: translateY(-1px);
         }
         .btn-primary span, .btn-primary .btn-arrow {
@@ -319,9 +319,9 @@
             border: 1px solid var(--border-default);
         }
         .btn-ghost:hover {
-            border-color: rgba(140, 82, 255, 0.3);
+            border-color: rgba(184, 169, 212, 0.3);
             color: var(--text-primary);
-            background: rgba(140, 82, 255, 0.04);
+            background: rgba(184, 169, 212, 0.04);
         }
 
         .btn-outline {
@@ -349,7 +349,7 @@
             background: rgba(10, 10, 10, 0.88);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            border-bottom: 1px solid rgba(140, 82, 255, 0.1);
+            border-bottom: 1px solid rgba(184, 169, 212, 0.1);
         }
         .nav-inner {
             display: flex;
@@ -363,7 +363,7 @@
         }
         .nav-logo img { height: 32px; width: auto; }
         .nav-logo-text {
-            font-family: 'Clash Display', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 1rem;
             color: var(--text-primary);
@@ -407,7 +407,7 @@
             background-clip: padding-box, border-box !important;
         }
         .nav-cta:hover {
-            box-shadow: 0 0 20px rgba(92, 225, 230, 0.15), 0 0 40px rgba(140, 82, 255, 0.1) !important;
+            box-shadow: 0 0 20px rgba(58, 157, 173, 0.15), 0 0 40px rgba(184, 169, 212, 0.1) !important;
             transform: translateY(-1px);
         }
         .nav-cta::after { display: none; }
@@ -441,7 +441,7 @@
         }
         .nav-dropdown-menu a:hover {
             color: var(--text-primary);
-            background: rgba(140, 82, 255, 0.06);
+            background: rgba(184, 169, 212, 0.06);
         }
         .nav-dropdown-menu a::after { display: none; }
 
@@ -479,7 +479,7 @@
             width: 800px;
             height: 800px;
             border-radius: 50%;
-            background: radial-gradient(ellipse at center, rgba(92, 225, 230, 0.08) 0%, rgba(140, 82, 255, 0.06) 40%, rgba(251, 197, 255, 0.04) 60%, transparent 75%);
+            background: radial-gradient(ellipse at center, rgba(58, 157, 173, 0.08) 0%, rgba(184, 169, 212, 0.06) 40%, rgba(251, 197, 255, 0.04) 60%, transparent 75%);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -539,7 +539,7 @@
             padding: 48px 0;
             border-top: 1px solid transparent;
             border-bottom: 1px solid transparent;
-            border-image: linear-gradient(90deg, transparent, rgba(92, 225, 230, 0.15), rgba(140, 82, 255, 0.15), transparent) 1;
+            border-image: linear-gradient(90deg, transparent, rgba(58, 157, 173, 0.15), rgba(184, 169, 212, 0.15), transparent) 1;
             overflow: hidden;
         }
         .logos-label {
@@ -646,12 +646,12 @@
 
         /* Featured cards -- gradient backgrounds */
         .service-card.featured {
-            background: linear-gradient(145deg, rgba(92, 225, 230, 0.07) 0%, rgba(140, 82, 255, 0.08) 40%, var(--bg-elevated) 70%);
-            border-color: rgba(140, 82, 255, 0.2);
+            background: linear-gradient(145deg, rgba(58, 157, 173, 0.07) 0%, rgba(184, 169, 212, 0.08) 40%, var(--bg-elevated) 70%);
+            border-color: rgba(184, 169, 212, 0.2);
             padding: 44px 36px;
         }
         .service-card.featured:hover {
-            border-color: rgba(92, 225, 230, 0.3);
+            border-color: rgba(58, 157, 173, 0.3);
         }
         .service-card.featured h3 {
             font-size: 1.35rem;
@@ -733,7 +733,7 @@
             left: 15%;
             right: 15%;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(92, 225, 230, 0.2), rgba(140, 82, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(58, 157, 173, 0.2), rgba(184, 169, 212, 0.2), transparent);
         }
         .step {
             text-align: center;
@@ -743,13 +743,13 @@
             width: 72px;
             height: 72px;
             border-radius: 50%;
-            border: 1px solid rgba(140, 82, 255, 0.25);
-            background: linear-gradient(135deg, rgba(92, 225, 230, 0.08), rgba(140, 82, 255, 0.12));
+            border: 1px solid rgba(184, 169, 212, 0.25);
+            background: linear-gradient(135deg, rgba(58, 157, 173, 0.08), rgba(184, 169, 212, 0.12));
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 24px;
-            font-family: 'Clash Display', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.4rem;
             font-weight: 600;
             color: var(--cyan);
@@ -782,7 +782,7 @@
         }
         /* Pulse glow when animating */
         .step-number.animated {
-            box-shadow: 0 0 20px rgba(92, 225, 230, 0.15), 0 0 40px rgba(140, 82, 255, 0.1);
+            box-shadow: 0 0 20px rgba(58, 157, 173, 0.15), 0 0 40px rgba(184, 169, 212, 0.1);
             border-color: transparent;
         }
         @keyframes stepSpin {
@@ -812,7 +812,7 @@
             background: var(--bg-elevated);
         }
         .result-number {
-            font-family: 'Clash Display', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: clamp(2.2rem, 3.5vw, 2.8rem);
             font-weight: 600;
             background: var(--gradient-brand);
@@ -869,7 +869,7 @@
             position: absolute;
             inset: 0;
             border-radius: 16px;
-            background: linear-gradient(135deg, rgba(92, 225, 230, 0.03), rgba(140, 82, 255, 0.03));
+            background: linear-gradient(135deg, rgba(58, 157, 173, 0.03), rgba(184, 169, 212, 0.03));
             opacity: 0;
             transition: opacity 0.5s;
             pointer-events: none;
@@ -1087,7 +1087,7 @@
             pointer-events: none;
         }
         .liquid-pointer-text {
-            font-family: 'Satoshi', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.95rem;
             color: rgba(245,245,245,0.5);
             max-width: 420px;
@@ -1135,8 +1135,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: radial-gradient(ellipse at 30% 50%, rgba(92,225,230,0.08) 0%, transparent 60%),
-                        radial-gradient(ellipse at 70% 40%, rgba(140,82,255,0.08) 0%, transparent 60%),
+            background: radial-gradient(ellipse at 30% 50%, rgba(58, 157, 173,0.08) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 40%, rgba(184, 169, 212,0.08) 0%, transparent 60%),
                         radial-gradient(ellipse at 50% 80%, rgba(251,197,255,0.05) 0%, transparent 60%),
                         var(--bg-primary);
             z-index: 1;
@@ -1148,11 +1148,11 @@
             width: 280px;
             max-width: 60vw;
             opacity: 0.85;
-            filter: drop-shadow(0 0 40px rgba(92,225,230,0.15));
+            filter: drop-shadow(0 0 40px rgba(58, 157, 173,0.15));
             margin-bottom: 20px;
         }
         .liquid-fallback-text {
-            font-family: 'Clash Display', 'Satoshi', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 600;
             color: #fff;
@@ -1195,8 +1195,8 @@
             transform: translateY(0);
         }
         .scroll-top:hover {
-            border-color: rgba(140, 82, 255, 0.4);
-            box-shadow: 0 0 16px rgba(92, 225, 230, 0.1), 0 0 32px rgba(140, 82, 255, 0.08);
+            border-color: rgba(184, 169, 212, 0.4);
+            box-shadow: 0 0 16px rgba(58, 157, 173, 0.1), 0 0 32px rgba(184, 169, 212, 0.08);
         }
         .scroll-top svg {
             width: 18px;
@@ -1228,7 +1228,7 @@
             width: 600px;
             height: 600px;
             border-radius: 50%;
-            background: radial-gradient(ellipse at center, rgba(92, 225, 230, 0.1) 0%, rgba(140, 82, 255, 0.08) 40%, rgba(251, 197, 255, 0.04) 60%, transparent 75%);
+            background: radial-gradient(ellipse at center, rgba(58, 157, 173, 0.1) 0%, rgba(184, 169, 212, 0.08) 40%, rgba(251, 197, 255, 0.04) 60%, transparent 75%);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -1247,7 +1247,7 @@
         .footer {
             padding: 56px 0 28px;
             border-top: 1px solid transparent;
-            border-image: linear-gradient(90deg, transparent, rgba(92, 225, 230, 0.2), rgba(140, 82, 255, 0.2), rgba(251, 197, 255, 0.15), transparent) 1;
+            border-image: linear-gradient(90deg, transparent, rgba(58, 157, 173, 0.2), rgba(184, 169, 212, 0.2), rgba(251, 197, 255, 0.15), transparent) 1;
         }
         .footer-inner {
             display: grid;
@@ -1263,7 +1263,7 @@
             max-width: 300px;
         }
         .footer-col h4 {
-            font-family: 'Satoshi', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -1373,7 +1373,7 @@
             width: 600px;
             height: 600px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(92, 225, 230, 0.025) 0%, rgba(140, 82, 255, 0.02) 40%, transparent 70%);
+            background: radial-gradient(circle, rgba(58, 157, 173, 0.025) 0%, rgba(184, 169, 212, 0.02) 40%, transparent 70%);
             pointer-events: none;
             z-index: 1;
             transform: translate(-50%, -50%);
@@ -1452,7 +1452,7 @@
             position: absolute;
             inset: 0;
             border-radius: 12px;
-            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(92, 225, 230, 0.05), rgba(140, 82, 255, 0.04), transparent 40%);
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 157, 173, 0.05), rgba(184, 169, 212, 0.04), transparent 40%);
             opacity: 0;
             transition: opacity 0.3s;
             pointer-events: none;
@@ -1469,7 +1469,7 @@
             position: absolute;
             inset: 0;
             border-radius: 12px;
-            background: radial-gradient(300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(92, 225, 230, 0.06), rgba(140, 82, 255, 0.05), transparent 50%);
+            background: radial-gradient(300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 157, 173, 0.06), rgba(184, 169, 212, 0.05), transparent 50%);
             opacity: 0;
             transition: opacity 0.3s;
             pointer-events: none;
@@ -1835,23 +1835,23 @@
             <h2 class="section-heading">Questions We Get a Lot</h2>
             <div class="gs-reveal" style="max-width:800px;margin:44px auto 0;display:flex;flex-direction:column;gap:16px;text-align:left;">
                 <div style="background:var(--bg-elevated);border:1px solid var(--border-default);border-radius:14px;padding:26px 30px;">
-                    <h3 style="font-family:'Clash Display',sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 10px;color:var(--text-primary);">What does AI Powered Dahlia do?</h3>
+                    <h3 style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 10px;color:var(--text-primary);">What does AI Powered Dahlia do?</h3>
                     <p style="margin:0;color:var(--text-secondary);font-size:0.98rem;line-height:1.7;">AI Powered Dahlia is an AI strategy and marketing automation agency founded by Dahlia Imanbay. We design and build AI agents and automation, and we get client websites cited by AI search engines like ChatGPT, Perplexity, and Google AI Mode through SEO, AEO, and GEO.</p>
                 </div>
                 <div style="background:var(--bg-elevated);border:1px solid var(--border-default);border-radius:14px;padding:26px 30px;">
-                    <h3 style="font-family:'Clash Display',sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 10px;color:var(--text-primary);">What is the difference between SEO, AEO, and GEO?</h3>
+                    <h3 style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 10px;color:var(--text-primary);">What is the difference between SEO, AEO, and GEO?</h3>
                     <p style="margin:0;color:var(--text-secondary);font-size:0.98rem;line-height:1.7;">SEO helps your content rank in traditional search results. AEO (Answer Engine Optimization) structures content so AI answer engines can lift a clean, direct answer. GEO (Generative Engine Optimization) optimizes your entire digital footprint so large language models trust and recommend your brand. We use all three together so you show up whether someone searches or asks an AI.</p>
                 </div>
                 <div style="background:var(--bg-elevated);border:1px solid var(--border-default);border-radius:14px;padding:26px 30px;">
-                    <h3 style="font-family:'Clash Display',sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 10px;color:var(--text-primary);">How do you get a business cited by AI search engines?</h3>
+                    <h3 style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 10px;color:var(--text-primary);">How do you get a business cited by AI search engines?</h3>
                     <p style="margin:0;color:var(--text-secondary);font-size:0.98rem;line-height:1.7;">We add AI instruction pages, quotable two to three sentence statements backed by original statistics, full author bios, and FAQs with schema, then we measure which pages get quoted instead of where they rank. We re-audit each site on a monthly basis so the gaps stay filled, because AI search rewards freshness.</p>
                 </div>
                 <div style="background:var(--bg-elevated);border:1px solid var(--border-default);border-radius:14px;padding:26px 30px;">
-                    <h3 style="font-family:'Clash Display',sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 10px;color:var(--text-primary);">Who does AI Powered Dahlia work with?</h3>
+                    <h3 style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 10px;color:var(--text-primary);">Who does AI Powered Dahlia work with?</h3>
                     <p style="margin:0;color:var(--text-secondary);font-size:0.98rem;line-height:1.7;">We work with small and growth-stage businesses, B2B SaaS, professional services, healthcare and life sciences teams, and mission-driven organizations. The common thread is teams that want measurable results from AI, not tools that collect dust.</p>
                 </div>
                 <div style="background:var(--bg-elevated);border:1px solid var(--border-default);border-radius:14px;padding:26px 30px;">
-                    <h3 style="font-family:'Clash Display',sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 10px;color:var(--text-primary);">How do we get started?</h3>
+                    <h3 style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 10px;color:var(--text-primary);">How do we get started?</h3>
                     <p style="margin:0;color:var(--text-secondary);font-size:0.98rem;line-height:1.7;">Book a free strategy call. We start with a short discovery to find your highest-return AI opportunities, then propose a clear scope before any build begins.</p>
                 </div>
             </div>
@@ -1901,6 +1901,7 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
+                        <li><a href="https://dahliaimanbay.com" target="_blank" rel="noopener">Dahlia Imanbay</a></li>
                         <li><a href="about">About</a></li>
                         <li><a href="blog">Blog</a></li>
                         <li><a href="website-grader">Free Grader</a></li>
@@ -2412,10 +2413,10 @@
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'top';
                 var fontSize = 60;
-                ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
+                ctx.font = '600 ' + fontSize + 'px "Montserrat", "Montserrat", Arial, sans-serif';
                 var textWidth = ctx.measureText('AI POWERED DAHLIA').width;
                 fontSize = Math.floor(fontSize * (lw * 0.95) / textWidth);
-                ctx.font = '600 ' + fontSize + 'px "Clash Display", "Satoshi", Arial, sans-serif';
+                ctx.font = '600 ' + fontSize + 'px "Montserrat", "Montserrat", Arial, sans-serif';
                 var textY = logoY + lh + 8;
                 ctx.fillText('AI POWERED DAHLIA', c.width / 2, textY);
 

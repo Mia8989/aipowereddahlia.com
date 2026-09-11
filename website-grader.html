@@ -75,9 +75,9 @@
     }
     </script>
 
-    <!-- Fonts: Clash Display + Satoshi from Fontshare -->
-    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+    <!-- Fonts: Montserrat (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Shared Styles -->
     <link rel="stylesheet" href="assets/css/shared.css">
@@ -89,7 +89,7 @@
             position: absolute; top: -20%; left: 50%;
             transform: translateX(-50%);
             width: 900px; height: 900px;
-            background: radial-gradient(circle, rgba(140,82,255,0.18) 0%, rgba(92,225,230,0.08) 40%, transparent 70%);
+            background: radial-gradient(circle, rgba(184, 169, 212,0.18) 0%, rgba(58, 157, 173,0.08) 40%, transparent 70%);
             pointer-events: none; z-index: 0;
         }
         .page-hero .container { position: relative; z-index: 1; text-align: center; }
@@ -98,8 +98,8 @@
         .hero-badge {
             display: inline-flex; align-items: center; gap: 8px;
             padding: 8px 16px; border-radius: 999px;
-            background: rgba(92, 225, 230, 0.08);
-            border: 1px solid rgba(92, 225, 230, 0.2);
+            background: rgba(58, 157, 173, 0.08);
+            border: 1px solid rgba(58, 157, 173, 0.2);
             color: var(--cyan);
             font-size: 0.8rem; font-weight: 600;
             letter-spacing: 0.08em; text-transform: uppercase;
@@ -141,7 +141,7 @@
             border: 1px solid var(--border-default);
             border-radius: 10px;
             color: var(--text-primary);
-            font-family: 'Satoshi', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.95rem;
             transition: all 0.3s ease; outline: none;
         }
@@ -153,7 +153,7 @@
             background-image: linear-gradient(var(--bg-primary), var(--bg-primary)), var(--gradient-brand);
             background-origin: border-box;
             background-clip: padding-box, border-box;
-            box-shadow: 0 0 20px rgba(92, 225, 230, 0.08), 0 0 40px rgba(140, 82, 255, 0.06);
+            box-shadow: 0 0 20px rgba(58, 157, 173, 0.08), 0 0 40px rgba(184, 169, 212, 0.06);
         }
         .form-group textarea { min-height: 88px; resize: vertical; line-height: 1.6; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -190,12 +190,12 @@
         }
         .loading-step.active {
             color: var(--text-primary);
-            border-color: rgba(140, 82, 255, 0.3);
-            background: rgba(140, 82, 255, 0.04);
+            border-color: rgba(184, 169, 212, 0.3);
+            background: rgba(184, 169, 212, 0.04);
         }
         .loading-step.done {
             color: var(--text-secondary);
-            border-color: rgba(92, 225, 230, 0.3);
+            border-color: rgba(58, 157, 173, 0.3);
         }
         .step-indicator {
             width: 22px; height: 22px; border-radius: 50%;
@@ -250,7 +250,7 @@
             align-items: center; justify-content: center;
         }
         .gauge-number {
-            font-family: 'Clash Display', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 4rem; font-weight: 600;
             line-height: 1;
             background: var(--gradient-brand);
@@ -293,7 +293,7 @@
         }
         .score-card-title svg { width: 18px; height: 18px; color: var(--cyan); }
         .score-card-value {
-            font-family: 'Clash Display', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem; font-weight: 600;
         }
         .score-bar {
@@ -308,10 +308,10 @@
         }
 
         /* Score color helpers */
-        .tone-green { color: #5ce1e6; }
+        .tone-green { color: #3A9DAD; }
         .tone-yellow { color: #ffcf70; }
         .tone-red { color: #ff8a7a; }
-        .bar-green { background: linear-gradient(90deg, #5ce1e6, #8c52ff); }
+        .bar-green { background: linear-gradient(90deg, #3A9DAD, #B8A9D4); }
         .bar-yellow { background: linear-gradient(90deg, #ffcf70, #ff8a4a); }
         .bar-red { background: linear-gradient(90deg, #ff8a7a, #ff5c5c); }
 
@@ -352,16 +352,16 @@
             border: 1px solid rgba(255, 207, 112, 0.2);
         }
         .severity-nice {
-            background: rgba(92, 225, 230, 0.08);
+            background: rgba(58, 157, 173, 0.08);
             color: var(--cyan);
-            border: 1px solid rgba(92, 225, 230, 0.2);
+            border: 1px solid rgba(58, 157, 173, 0.2);
         }
         .severity-dot {
             width: 6px; height: 6px; border-radius: 50%;
             background: currentColor;
         }
         .pain-body h4 {
-            font-family: 'Satoshi', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.98rem; font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 6px;
@@ -385,17 +385,17 @@
             padding: 26px 26px;
         }
         .structure-card h4 {
-            font-family: 'Clash Display', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.05rem; font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 12px;
             display: flex; align-items: center; gap: 8px;
         }
         .structure-card h4 span.slug {
-            font-family: 'Satoshi', monospace;
+            font-family: 'Montserrat', monospace;
             font-size: 0.72rem; font-weight: 500;
             color: var(--cyan);
-            background: rgba(92, 225, 230, 0.08);
+            background: rgba(58, 157, 173, 0.08);
             padding: 3px 8px; border-radius: 6px;
             letter-spacing: 0;
         }
@@ -428,7 +428,7 @@
             content: ''; position: absolute;
             top: -40%; left: 50%; transform: translateX(-50%);
             width: 800px; height: 500px;
-            background: radial-gradient(circle, rgba(140,82,255,0.16) 0%, transparent 60%);
+            background: radial-gradient(circle, rgba(184, 169, 212,0.16) 0%, transparent 60%);
             pointer-events: none;
         }
         .grader-cta > * { position: relative; z-index: 1; }
@@ -1372,7 +1372,7 @@
         const offset = circumference - (circumference * score / 100);
 
         // Color
-        let stroke = '#5ce1e6'; // cyan, green zone
+        let stroke = '#3A9DAD'; // cyan, green zone
         if (score < 40) stroke = '#ff5c5c';
         else if (score < 70) stroke = '#ffcf70';
 

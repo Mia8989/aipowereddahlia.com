@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1200px; font-family:'Montserrat',sans-serif; }
+  .panel { width:1200px; padding:56px 60px 60px; background:#0A0A0F; position:relative; }
+  .kicker { font-weight:700; font-size:16px; letter-spacing:3px; text-transform:uppercase; color:#3A9DAD; margin-bottom:12px; }
+  .title { font-family:'Montserrat',sans-serif; font-weight:600; font-size:40px; line-height:1.12; color:#fff; margin-bottom:8px; letter-spacing:-0.5px; max-width:920px; }
+  .note { font-size:18px; color:#A9AAB6; margin-bottom:32px; }
+  table { width:100%; border-collapse:collapse; }
+  thead th { font-weight:700; font-size:14px; letter-spacing:1.5px; text-transform:uppercase; color:#0A0A0F; background:linear-gradient(120deg,#3A9DAD,#B8A9D4); padding:16px 20px; text-align:left; }
+  thead th:first-child { border-radius:12px 0 0 0; }
+  thead th:last-child { border-radius:0 12px 0 0; text-align:center; }
+  thead th.mid { text-align:center; }
+  tbody td { padding:16px 20px; font-size:19px; color:#E7E7EE; border-bottom:1px solid #1E1E28; vertical-align:middle; }
+  tbody tr:nth-child(even) { background:#12121A; }
+  td.q { font-weight:500; }
+  td.impr { text-align:center; font-family:'Montserrat',sans-serif; font-size:24px; color:#3A9DAD; }
+  td.clicks { text-align:center; }
+  .zero { display:inline-block; min-width:54px; font-weight:700; font-size:16px; color:#FF9BB0; background:rgba(255,155,176,0.10); border:1px solid rgba(255,155,176,0.35); border-radius:999px; padding:5px 0; }
+  .foot { display:flex; justify-content:space-between; align-items:center; margin-top:26px; }
+  .foot .caption { font-size:15px; color:#8A8A98; font-style:italic; }
+  .foot .brand { font-weight:700; font-size:15px; letter-spacing:1px; color:#3A9DAD; }
+  .hl { color:#FF9BB0; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="panel">
+  <div class="kicker">What Search Console showed us</div>
+  <div class="title">The questions people were already asking, unanswered</div>
+  <div class="note">Real question searches that showed our site over 3 months. Look at the last column.</div>
+  <table>
+    <thead><tr><th>The question someone typed into Google</th><th class="mid">Times shown</th><th>Clicks</th></tr></thead>
+    <tbody>
+      <tr><td class="q">how do teams avoid ending up with too many analytics and AI tools?</td><td class="impr">78</td><td class="clicks"><span class="zero">0</span></td></tr>
+      <tr><td class="q">what is citation rate in AI search and AEO?</td><td class="impr">22</td><td class="clicks"><span class="zero">0</span></td></tr>
+      <tr><td class="q">how do you move AI from pilot to production?</td><td class="impr">6</td><td class="clicks"><span class="zero">0</span></td></tr>
+      <tr><td class="q">how do AI agents qualify leads vs collect form data?</td><td class="impr">5</td><td class="clicks"><span class="zero">0</span></td></tr>
+      <tr><td class="q">how much does an AI agent cost a small business?</td><td class="impr">4</td><td class="clicks"><span class="zero">0</span></td></tr>
+    </tbody>
+  </table>
+  <div class="foot">
+    <div class="caption">Shown 115 times. Clicked <span class="hl">zero</span> times. The pages were almost visible, and losing every click.</div>
+    <div class="brand">aipowereddahlia.com</div>
+  </div>
+</div>
+</body>
+</html>

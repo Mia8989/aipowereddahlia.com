@@ -182,9 +182,9 @@
     }
     </script>
 
-    <!-- Fonts: Clash Display + Satoshi from Fontshare -->
-    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&f[]=satoshi@400;500;700&display=swap" rel="stylesheet">
+    <!-- Fonts: Montserrat + Montserrat from Fontshare -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Shared Styles -->
     <link rel="stylesheet" href="assets/css/shared.css">
@@ -196,7 +196,7 @@
         .page-hero { padding: 200px 0 100px; background: var(--bg-primary); }
         .page-hero .section-label { opacity: 0; transform: translateY(20px); }
         .page-hero h1 {
-            background: linear-gradient(135deg, #F472B6, #EC4899, #8c52ff);
+            background: linear-gradient(135deg, #F472B6, #EC4899, #B8A9D4);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
 
@@ -216,7 +216,7 @@
         }
         .solution-text strong { color: var(--text-primary); }
         .solution-link {
-            color: var(--cyan); border-bottom: 1px solid rgba(92, 225, 230, 0.3);
+            color: var(--cyan); border-bottom: 1px solid rgba(58, 157, 173, 0.3);
             transition: border-color 0.2s;
         }
         .solution-link:hover { border-color: var(--cyan); }
@@ -241,11 +241,11 @@
         .funnel-bar:hover { transform: scale(1.02); }
         .funnel-stage-1 .funnel-bar { width: 100%; background: linear-gradient(135deg, rgba(244,114,182,0.2), rgba(236,72,153,0.15)); border: 1px solid rgba(244,114,182,0.25); }
         .funnel-stage-2 .funnel-bar { width: 84%; background: linear-gradient(135deg, rgba(236,72,153,0.18), rgba(168,85,247,0.15)); border: 1px solid rgba(236,72,153,0.22); }
-        .funnel-stage-3 .funnel-bar { width: 68%; background: linear-gradient(135deg, rgba(168,85,247,0.18), rgba(140,82,255,0.15)); border: 1px solid rgba(168,85,247,0.22); }
-        .funnel-stage-4 .funnel-bar { width: 52%; background: linear-gradient(135deg, rgba(140,82,255,0.18), rgba(92,225,230,0.15)); border: 1px solid rgba(140,82,255,0.22); }
-        .funnel-stage-5 .funnel-bar { width: 40%; background: linear-gradient(135deg, rgba(92,225,230,0.2), rgba(92,225,230,0.12)); border: 1px solid rgba(92,225,230,0.25); }
+        .funnel-stage-3 .funnel-bar { width: 68%; background: linear-gradient(135deg, rgba(168,85,247,0.18), rgba(184, 169, 212,0.15)); border: 1px solid rgba(168,85,247,0.22); }
+        .funnel-stage-4 .funnel-bar { width: 52%; background: linear-gradient(135deg, rgba(184, 169, 212,0.18), rgba(58, 157, 173,0.15)); border: 1px solid rgba(184, 169, 212,0.22); }
+        .funnel-stage-5 .funnel-bar { width: 40%; background: linear-gradient(135deg, rgba(58, 157, 173,0.2), rgba(58, 157, 173,0.12)); border: 1px solid rgba(58, 157, 173,0.25); }
         .funnel-name {
-            font-family: 'Clash Display', sans-serif; font-weight: 600;
+            font-family: 'Montserrat', sans-serif; font-weight: 600;
             font-size: 0.95rem; color: var(--text-primary); white-space: nowrap;
         }
         .funnel-type {
@@ -266,7 +266,7 @@
         }
         .email-type-card::before {
             content: ''; position: absolute; inset: 0;
-            background: linear-gradient(135deg, rgba(244,114,182,0.04), rgba(140,82,255,0.04));
+            background: linear-gradient(135deg, rgba(244,114,182,0.04), rgba(184, 169, 212,0.04));
             opacity: 0; transition: opacity 0.3s; border-radius: inherit;
         }
         .email-type-card:hover::before { opacity: 1; }
@@ -589,7 +589,7 @@
                 <div class="faq-item">
                     <button class="faq-question">Will the emails sound like my brand?</button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">Yes. We train AI on your brand voice, just like our <a href="social-media-automation" style="color:var(--cyan);border-bottom:1px solid rgba(92,225,230,0.3);">social media service</a>. Every email sounds like you wrote it &mdash; because the AI learned from your actual communication style.</div>
+                        <div class="faq-answer-inner">Yes. We train AI on your brand voice, just like our <a href="social-media-automation" style="color:var(--cyan);border-bottom:1px solid rgba(58, 157, 173,0.3);">social media service</a>. Every email sounds like you wrote it &mdash; because the AI learned from your actual communication style.</div>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -601,7 +601,7 @@
                 <div class="faq-item">
                     <button class="faq-question">Can you help grow my email list?</button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">Yes. We build opt-in pages, lead magnets, and website integrations that capture subscribers. Pair this with our <a href="website-design" style="color:var(--cyan);border-bottom:1px solid rgba(92,225,230,0.3);">website design</a> and <a href="seo-aeo-geo" style="color:var(--cyan);border-bottom:1px solid rgba(92,225,230,0.3);">SEO services</a> for a complete list-building strategy.</div>
+                        <div class="faq-answer-inner">Yes. We build opt-in pages, lead magnets, and website integrations that capture subscribers. Pair this with our <a href="website-design" style="color:var(--cyan);border-bottom:1px solid rgba(58, 157, 173,0.3);">website design</a> and <a href="seo-aeo-geo" style="color:var(--cyan);border-bottom:1px solid rgba(58, 157, 173,0.3);">SEO services</a> for a complete list-building strategy.</div>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -613,7 +613,7 @@
                 <div class="faq-item">
                     <button class="faq-question">Do I need a large email list to get started?</button>
                     <div class="faq-answer">
-                        <div class="faq-answer-inner">No. We work with lists of all sizes. Even 500 engaged subscribers can drive significant revenue with the right strategy. Quality beats quantity. <a href="contact" style="color:var(--cyan);border-bottom:1px solid rgba(92,225,230,0.3);">Book a call</a> to discuss your list and goals.</div>
+                        <div class="faq-answer-inner">No. We work with lists of all sizes. Even 500 engaged subscribers can drive significant revenue with the right strategy. Quality beats quantity. <a href="contact" style="color:var(--cyan);border-bottom:1px solid rgba(58, 157, 173,0.3);">Book a call</a> to discuss your list and goals.</div>
                     </div>
                 </div>
             </div>
@@ -662,6 +662,7 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
+                        <li><a href="https://dahliaimanbay.com" target="_blank" rel="noopener">Dahlia Imanbay</a></li>
                         <li><a href="about">About</a></li>
                         <li><a href="blog">Blog</a></li>
                         <li><a href="website-grader">Free Grader</a></li>
