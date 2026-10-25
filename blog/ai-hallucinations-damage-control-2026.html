@@ -262,7 +262,7 @@
 
         <h1>AI Hallucinations in Production: A Damage Control Playbook</h1>
 
-        <p>A customer asks your AI support agent about a refund. The agent confidently quotes a 60-day return window. Your actual policy is 30 days. The customer screenshots the response, files a complaint, and a tribunal sides with them. The business honors the 60-day window. Welcome to AI procurement in 2026.</p>
+        <p>A customer asks your AI support agent about a refund. The agent confidently quotes a 60-day return window. Your actual policy is 30 days. The customer screenshots the response, files a complaint, and a tribunal sides with them. The business honors the 60-day window.</p>
 
         <p>This is not a hypothetical. Air Canada lost exactly this case in 2024, when a Canadian civil tribunal ruled the airline had to honor a bereavement fare its chatbot invented. <sup>[1]</sup> The tribunal rejected the defense that the chatbot was "a separate legal entity." DPD's chatbot called itself "useless" and wrote a poem criticizing the company. <sup>[2]</sup> New York City's "MyCity" small business chatbot advised users to break federal labor law. <sup>[3]</sup> In 2025, Cursor's AI support agent invented a single-device login policy that did not exist, triggering visible user cancellations before the company corrected it. <sup>[4]</sup></p>
 
@@ -275,7 +275,7 @@
 
         <h2>Recent Cases Worth Studying</h2>
 
-        <p>These are the incidents that shaped current legal and operational thinking on AI hallucinations. Each one ended differently, and the differences are instructive.</p>
+        <p>These incidents shaped current legal and operational thinking on AI hallucinations. Each one ended differently.</p>
 
         <div class="bar-chart">
             <div class="bar-chart-title">High-Profile AI Hallucination Incidents (2024 to 2025)</div>
@@ -305,7 +305,7 @@
 
         <h2>The 5-Stage Damage Control Playbook</h2>
 
-        <p>The playbook is organized into two halves: before the incident (prevention and detection) and after (response and prevention). Build all five stages before any customer-facing AI agent goes live.</p>
+        <p>The playbook has two halves: before the incident (prevention and detection) and after it (response and prevention). Build all five stages before any customer-facing AI agent goes live.</p>
 
         <div class="audit-step">
             <span class="step-label">Stage 1: Constrain</span>
@@ -322,7 +322,7 @@
         <div class="audit-step">
             <span class="step-label">Stage 3: Detect</span>
             <h3>Log everything and run automated quality checks</h3>
-            <p>Every AI response in production should be logged with the prompt, retrieved context, model output, and any tools called. Run two passes on the logs: an automated classifier looking for high-risk topics (pricing, policy, legal), and a daily sample for human review. The companies that catch hallucinations early have observability. The companies that hear about them on Twitter do not.</p>
+            <p>Every AI response in production should be logged with the prompt, retrieved context, model output, and any tools called. Run two passes on the logs: an automated classifier looking for high-risk topics (pricing, policy, legal), and a daily sample for human review. Teams that catch hallucinations early have logs to search. Teams that hear about them on Twitter do not.</p>
         </div>
 
         <div class="audit-step">
@@ -334,7 +334,7 @@
         <div class="audit-step">
             <span class="step-label">Stage 5: Honor</span>
             <h3>When the AI made the promise, honor it</h3>
-            <p>This is the hardest stage culturally and the one that protects the business most. Once you decide to litigate an AI commitment, you have lost the news cycle regardless of the legal outcome. The Air Canada decision made this explicit, but it was always true commercially. Honor the commitment, refund the customer, document the fix, and use the case as the internal evidence that the prevention work is worth funding.</p>
+            <p>This is the hardest stage culturally, and it protects the business most. Once you decide to litigate an AI commitment, you have lost the news cycle regardless of the legal outcome. The Air Canada decision made this explicit, but it was always true commercially. Honor the commitment, refund the customer, document the fix, and use the case as the internal evidence that the prevention work is worth funding.</p>
         </div>
 
         <div class="stat-callout">
