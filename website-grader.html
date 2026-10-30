@@ -1009,7 +1009,7 @@
         try {
             fetch(GRADER_WEBHOOK_URL, {
                 method: 'POST',
-                mode: 'no-cors',
+                keepalive: true, // real JSON so Make can read the fields; Make webhooks allow CORS
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(Object.assign({ source: 'website-grader', ts: new Date().toISOString() }, payload))
             });
